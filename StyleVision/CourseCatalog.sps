@@ -2,7 +2,7 @@
 <structure version="16" html-doctype="HTML4 Transitional" compatibility-view="IE9" relativeto="*SPS" encodinghtml="UTF-8" encodingrtf="ISO-8859-1" encodingpdf="UTF-8" useimportschema="1" embed-images="1" enable-authentic-scripts="1" authentic-scripts-in-debug-mode-external="0" generated-file-location="DEFAULT">
 	<parameters>
 		<parameter name="language" default="de"/>
-		<parameter name="locationGroup" default="-1"/>
+		<parameter name="locationGroups" default="3"/>
 	</parameters>
 	<schemasources>
 		<namespaces>
@@ -995,6 +995,7 @@
 				&lt;xsl:with-param name=&quot;pDateList&quot; select=&quot;DATE-LIST&quot;/&gt;
 &lt;xsl:with-param name=&quot;language&quot; select=&quot;$language&quot;/&gt;
 &lt;xsl:with-param name=&quot;outputType&quot; select=&quot;$SV_OutputFormat &quot;/&gt;
+&lt;xsl:with-param name=&quot;validCities&quot; select=&apos;string-join(fn:distinct-values($XML4/LOCATION-LIST/COUNTRY-LIST/COUNTRY/CITY-LIST/CITY[GROUP-LIST/GROUP_ID = fn:tokenize($locationGroups, &quot;,&quot;)]/fn:string(NAME)), &quot;,&quot;)&apos;/&gt;
 			&lt;/xsl:call-template&gt;
 "/>
 																													<paragraph>
@@ -1683,533 +1684,6 @@
 					<calltemplate subtype="named" match="Country">
 						<parameters/>
 					</calltemplate>
-					<paragraph paragraphtag="h4">
-						<children>
-							<condition>
-								<children>
-									<conditionbranch xpath="$language = &apos;en&apos;">
-										<children>
-											<text fixtext="Germany"/>
-										</children>
-									</conditionbranch>
-									<conditionbranch xpath="$language = &apos;de&apos;">
-										<children>
-											<text fixtext="Deutschland"/>
-										</children>
-									</conditionbranch>
-								</children>
-							</condition>
-						</children>
-					</paragraph>
-					<tgrid>
-						<properties border="0" cellpadding="0" cellspacing="5" width="100%"/>
-						<children>
-							<tgridbody-cols>
-								<children>
-									<tgridcol>
-										<styles width="1.81in"/>
-									</tgridcol>
-									<tgridcol/>
-								</children>
-							</tgridbody-cols>
-							<tgridbody-rows>
-								<children>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<target>
-															<fixtext value="..\Images\Comelio_Berlin.png"/>
-														</target>
-													</image>
-													<text fixtext="Berlin"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Comelio GmbH"/>
-															<newline/>
-															<text fixtext="Goethestr. 34"/>
-															<newline/>
-															<text fixtext="13086 Berlin "/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +49.30.8145622.00 "/>
-															<newline/>
-															<text fixtext="Fax: +49.30.8145622.10 "/>
-														</children>
-													</paragraph>
-													<newline/>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<target>
-															<fixtext value="..\Images\Comelio_München.png"/>
-														</target>
-													</image>
-													<text fixtext=" München"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Comelio GmbH "/>
-															<newline/>
-															<text fixtext="c/o SSM Rhein-Ruhr GmbH"/>
-															<newline/>
-															<text fixtext="Keltenring 2"/>
-															<newline/>
-															<text fixtext="82041 Oberhaching"/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +49.89.3815686.00"/>
-															<newline/>
-															<text fixtext="Fax: +49.89.3815686.09"/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<styles height="1.56in"/>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<styles height="0.55in" width="0.63in"/>
-														<target>
-															<fixtext value="..\Images\Comelio_Düsseldorf.png"/>
-														</target>
-													</image>
-													<text fixtext="Düsseldorf"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<tgrid>
-														<properties border="0" cellpadding="0" cellspacing="5" width="100%"/>
-														<children>
-															<tgridbody-cols>
-																<children>
-																	<tgridcol>
-																		<properties width="30%"/>
-																	</tgridcol>
-																	<tgridcol/>
-																</children>
-															</tgridbody-cols>
-															<tgridbody-rows>
-																<children>
-																	<tgridrow>
-																		<children>
-																			<tgridcell>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="ecos office center"/>
-																							<newline/>
-																							<text fixtext="Münsterstraße 248"/>
-																							<newline/>
-																							<text fixtext="40470 Düsseldorf"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																			<tgridcell>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="Regus Business Center"/>
-																							<newline/>
-																							<text fixtext="Stadttor 1"/>
-																							<newline/>
-																							<text fixtext="40219 Düsseldorf"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																		</children>
-																	</tgridrow>
-																</children>
-															</tgridbody-rows>
-														</children>
-													</tgrid>
-													<newline/>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Tel: +49.211.6355642.00"/>
-															<newline/>
-															<text fixtext="Fax: +49.211.6355642.09"/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<styles height="0.60in" width="0.66in"/>
-														<target>
-															<fixtext value="..\Images\Comelio_Frankfurt.png"/>
-														</target>
-													</image>
-													<text fixtext=" Frankfurt"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="ecos office center "/>
-															<newline/>
-															<text fixtext="Mainzer Landstr. 27-31"/>
-															<newline/>
-															<text fixtext="60329 Frankfurt"/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +49.69.1732068.30"/>
-															<newline/>
-															<text fixtext="Fax: +49.69.1732068.39"/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<styles height="1.77in"/>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<styles height="0.57in" width="0.63in"/>
-														<target>
-															<fixtext value="..\Images\Comelio_Stuttgart.png"/>
-														</target>
-													</image>
-													<text fixtext="Stuttgart"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<tgrid>
-														<properties border="0" cellpadding="0" cellspacing="5" width="100%"/>
-														<children>
-															<tgridbody-cols>
-																<children>
-																	<tgridcol>
-																		<properties width="30%"/>
-																	</tgridcol>
-																	<tgridcol>
-																		<properties width="30%"/>
-																	</tgridcol>
-																	<tgridcol/>
-																</children>
-															</tgridbody-cols>
-															<tgridbody-rows>
-																<properties valign="top"/>
-																<children>
-																	<tgridrow>
-																		<properties valign="top"/>
-																		<children>
-																			<tgridcell>
-																				<properties valign="top"/>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="ecos office center"/>
-																							<newline/>
-																							<text fixtext="Liebknechtstraße 33"/>
-																							<newline/>
-																							<text fixtext="70565 Stuttgart"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																			<tgridcell>
-																				<properties valign="top"/>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="Regus Business Center"/>
-																							<newline/>
-																							<text fixtext="Königstraße 10C"/>
-																							<newline/>
-																							<text fixtext="70173 Stuttgart"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																			<tgridcell>
-																				<properties valign="top"/>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="Akademie der Diözese "/>
-																							<newline/>
-																							<text fixtext="Rottenburg-Stuttgart"/>
-																							<newline/>
-																							<text fixtext="Tagungszentrum Hohenheim"/>
-																							<newline/>
-																							<text fixtext="Paracelsusstraße 91"/>
-																							<newline/>
-																							<text fixtext="70599 Stuttgart"/>
-																						</children>
-																					</paragraph>
-																					<newline/>
-																				</children>
-																			</tgridcell>
-																		</children>
-																	</tgridrow>
-																</children>
-															</tgridbody-rows>
-														</children>
-													</tgrid>
-													<newline/>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Tel: +49.711.4605127.50"/>
-															<newline/>
-															<text fixtext="Fax: +49.711.4605127.59"/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<target>
-															<fixtext value="..\Images\Comelio_Hamburg.png"/>
-														</target>
-													</image>
-													<text fixtext=" Hamburg"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="WMC Wüpper Management Consulting GmbH"/>
-															<newline/>
-															<text fixtext="Zimmerstraße 1"/>
-															<newline/>
-															<text fixtext="22085 Hamburg"/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +49.40.2093499.60 "/>
-															<newline/>
-															<text fixtext="Fax: +49.40.2093499.69"/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<target>
-															<fixtext value="..\Images\Comelio_Dresden.png"/>
-														</target>
-													</image>
-													<text fixtext=" Dresden"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<tgrid>
-														<properties border="0" cellpadding="0" cellspacing="5" width="100%"/>
-														<children>
-															<tgridbody-cols>
-																<children>
-																	<tgridcol>
-																		<properties width="30%"/>
-																	</tgridcol>
-																	<tgridcol/>
-																</children>
-															</tgridbody-cols>
-															<tgridbody-rows>
-																<children>
-																	<tgridrow>
-																		<children>
-																			<tgridcell>
-																				<properties valign="top"/>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="Ibis Hotel Königstein"/>
-																							<newline/>
-																							<text fixtext="Prager Straße 9"/>
-																							<newline/>
-																							<text fixtext="01069 Dresden"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																			<tgridcell>
-																				<properties valign="top"/>
-																				<children>
-																					<paragraph paragraphtag="p">
-																						<children>
-																							<text fixtext="Hotel Elbflorenz"/>
-																							<newline/>
-																							<text fixtext="Rosenstraße 36 "/>
-																							<newline/>
-																							<text fixtext="01067 Dresden"/>
-																						</children>
-																					</paragraph>
-																				</children>
-																			</tgridcell>
-																		</children>
-																	</tgridrow>
-																</children>
-															</tgridbody-rows>
-														</children>
-													</tgrid>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-								</children>
-							</tgridbody-rows>
-						</children>
-					</tgrid>
-					<paragraph paragraphtag="h4">
-						<children>
-							<condition>
-								<children>
-									<conditionbranch xpath="$language = &apos;en&apos;">
-										<children>
-											<text fixtext="Austria and Switzerland"/>
-										</children>
-									</conditionbranch>
-									<conditionbranch xpath="$language = &apos;de&apos;">
-										<children>
-											<text fixtext="Österreich und Schweiz"/>
-										</children>
-									</conditionbranch>
-								</children>
-							</condition>
-						</children>
-					</paragraph>
-					<tgrid>
-						<properties border="0" cellpadding="0" cellspacing="5" width="100%"/>
-						<children>
-							<tgridbody-cols>
-								<children>
-									<tgridcol>
-										<styles width="1.81in"/>
-									</tgridcol>
-									<tgridcol/>
-								</children>
-							</tgridbody-cols>
-							<tgridbody-rows>
-								<children>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<styles height="0.55in" width="0.64in"/>
-														<target>
-															<fixtext value="..\Images\Comelio_Wien.png"/>
-														</target>
-													</image>
-													<text fixtext="Wien"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Regus Business Centre "/>
-															<newline/>
-															<text fixtext="Mariahilfer Straße 123"/>
-															<newline/>
-															<text fixtext="1060 Wien"/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +43.720.2097.97"/>
-															<newline/>
-															<text fixtext="Fax: +43.720.2097.98 "/>
-														</children>
-													</paragraph>
-													<newline/>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-									<tgridrow>
-										<children>
-											<tgridcell>
-												<properties valign="top"/>
-												<children>
-													<image>
-														<target>
-															<fixtext value="..\Images\Comelio_Zürich.png"/>
-														</target>
-													</image>
-													<text fixtext=" Zürich"/>
-												</children>
-											</tgridcell>
-											<tgridcell>
-												<children>
-													<paragraph paragraphtag="p">
-														<children>
-															<text fixtext="Regus Business Centre"/>
-															<newline/>
-															<text fixtext="Badenerstrasse 549"/>
-															<newline/>
-															<text fixtext="8048 Zürich"/>
-															<newline/>
-															<newline/>
-															<text fixtext="Tel: +41.43500.3375"/>
-															<newline/>
-															<text fixtext="Fax: +41.43500.3376 "/>
-														</children>
-													</paragraph>
-												</children>
-											</tgridcell>
-										</children>
-									</tgridrow>
-								</children>
-							</tgridbody-rows>
-						</children>
-					</tgrid>
-					<newline/>
 				</children>
 			</globaltemplate>
 			<globaltemplate subtype="named" match="Disclaimer">
@@ -2462,10 +1936,10 @@
 								<children>
 									<template subtype="element" match="COUNTRY-LIST">
 										<children>
-											<template subtype="element" filter="if(xs:integer($locationGroup) &lt; 0)
+											<template subtype="element" filter="if(count(fn:tokenize($locationGroups, &quot;,&quot;)) &lt; 1)
 then count(CITY-LIST/CITY/NAME) &gt; 0
 else
-count(CITY-LIST/CITY/GROUP-LIST[GROUP_ID=xs:integer($locationGroup)]/GROUP_ID) &gt; 0" match="COUNTRY">
+count(CITY-LIST/CITY/GROUP-LIST[GROUP_ID = fn:tokenize($locationGroups, &quot;,&quot;) ]/GROUP_ID) &gt; 0" match="COUNTRY">
 												<sort>
 													<key match="count(CITY-LIST/CITY)" order="descending"/>
 												</sort>
@@ -2482,10 +1956,10 @@ count(CITY-LIST/CITY/GROUP-LIST[GROUP_ID=xs:integer($locationGroup)]/GROUP_ID) &
 													</paragraph>
 													<template subtype="element" match="CITY-LIST">
 														<children>
-															<template subtype="element" filter="if(xs:integer($locationGroup) &lt; 0)
+															<template subtype="element" filter="if(count(fn:tokenize($locationGroups, &quot;,&quot;))&lt; 1)
 then count(NAME) &gt; 0
 else
-count(GROUP-LIST[GROUP_ID=xs:integer($locationGroup)]/GROUP_ID) &gt; 0" match="CITY">
+count(GROUP-LIST[GROUP_ID = fn:tokenize($locationGroups, &quot;,&quot;)]/GROUP_ID) &gt; 0" match="CITY">
 																<sort>
 																	<key match="NAME"/>
 																</sort>
@@ -2658,10 +2132,16 @@ count(GROUP-LIST[GROUP_ID=xs:integer($locationGroup)]/GROUP_ID) &gt; 0" match="C
 		</xpath-function-name>
 	</xpath-functions>
 	<xpath-functions>
-		<xpath-function name="getCountryName" value="$XML5/COUNTRY-LIST/COUNTRY[NAME=$country]/NAME[@language=$language]" valuetype="xs:string"/>
+		<xpath-function name="getCountryName" value="$XML5/COUNTRY-LIST/COUNTRY[NAME=$country]/NAME[@language=$language]"/>
 		<xpath-function-name>
 			<variable name="country" valuetype="xs:string"/>
 			<variable name="language" valuetype="xs:string"/>
+		</xpath-function-name>
+	</xpath-functions>
+	<xpath-functions>
+		<xpath-function name="getLocationGroups" value="fn:tokenize($locationGroups, &quot;,&quot;)"/>
+		<xpath-function-name>
+			<variable name="locationGroups" valuetype="xs:string"/>
 		</xpath-function-name>
 	</xpath-functions>
 </structure>
