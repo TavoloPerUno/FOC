@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Comelio (Comelio GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="COURSE-LIST">
+		<xs:annotation>
+			<xs:documentation>Course wise listing</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="COURSE" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TITLE" type="xs:string"/>
+							<xs:element name="SUBTITLE" type="xs:string"/>
+							<xs:element name="SHORT_TITLE" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>COC_SHORT_TITLE from course content table</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="PREDECESSOR" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Predecessor text node with Id attribute and Predecessor title + subtitle as the text value</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CATEGORY">
+								<xs:annotation>
+									<xs:documentation>Category text with id attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SUBCATEGORY">
+								<xs:annotation>
+									<xs:documentation>Subcategory text node with id attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PREREQUISITE">
+								<xs:annotation>
+									<xs:documentation>Prerequisite text node with id attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="COURSE_LEVEL">
+								<xs:annotation>
+									<xs:documentation>Course level text node with id attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="TARGET_GROUP">
+								<xs:annotation>
+									<xs:documentation>Target group text node with id attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MANUFACTURER" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Optional manufacturer text node with ID attribute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="COURSE_METHOD">
+								<xs:annotation>
+									<xs:documentation>Course method text node with ID attribute.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OBJECTIVES" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Course objectives. COC_CONTENTS from course content table.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Module-List">
+								<xs:annotation>
+									<xs:documentation>Module XML</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Module" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="Order" type="xs:string"/>
+													<xs:element name="Length" type="xs:string" minOccurs="0"/>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="Synopsis" type="xs:string" minOccurs="0"/>
+													<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="TRAINER" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Portrait Id</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:anySimpleType">
+											<xs:attribute name="id" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="URL"/>
+							<xs:element name="BOOK_LIST" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BOOK">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="TITLE" type="xs:anySimpleType"/>
+													<xs:element name="LANGUAGE">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:anySimpleType">
+																	<xs:attribute name="id" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="AUTHORS" type="xs:anySimpleType"/>
+													<xs:element name="ISBN" type="xs:anySimpleType"/>
+													<xs:element name="PAGES" type="xs:anySimpleType"/>
+													<xs:element name="PRICE" type="xs:decimal"/>
+													<xs:element name="PUBLISHER" type="xs:anySimpleType"/>
+													<xs:element name="COVER" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Cover image binary data</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="URL" minOccurs="0"/>
+												</xs:all>
+												<xs:attribute name="id" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DATE-LIST" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DATE" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:choice>
+														<xs:element name="CITY">
+															<xs:complexType>
+																<xs:simpleContent>
+																	<xs:extension base="xs:string">
+																		<xs:attribute name="id" use="required"/>
+																	</xs:extension>
+																</xs:simpleContent>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="COURSE">
+															<xs:complexType>
+																<xs:attribute name="id" use="required"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:choice>
+													<xs:element name="START_DATE" type="xs:date"/>
+													<xs:element name="END_DATE" type="xs:date"/>
+													<xs:element name="START_TIME" type="xs:string"/>
+													<xs:element name="END_TIME" type="xs:string"/>
+													<xs:element name="DURATION" type="xs:integer"/>
+													<xs:element name="PRICE">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:decimal">
+																	<xs:attribute name="currencyCode" use="required">
+																		<xs:simpleType>
+																			<xs:restriction base="xs:string">
+																				<xs:length value="3"/>
+																			</xs:restriction>
+																		</xs:simpleType>
+																	</xs:attribute>
+																	<xs:attribute name="currencySymbol" type="xs:string" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:integer" use="required">
+							<xs:annotation>
+								<xs:documentation>CO_ID</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="languageId" type="xs:integer" use="required"/>
+						<xs:attribute name="language" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Language code</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="deliveryType" use="required"/>
+						<xs:attribute name="duration" type="xs:float" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

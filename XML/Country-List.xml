@@ -1,0 +1,43 @@
+﻿<COUNTRY-LIST>
+<COUNTRY>
+<NAME language='de'>Deutschland</NAME>
+<NAME language='en'>Germany</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Österreich</NAME>
+<NAME language='en'>Austria</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Schweiz</NAME>
+<NAME language='en'>Switzerland</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Niederlande</NAME>
+<NAME language='en'>Netherlands</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Schweden</NAME>
+<NAME language='en'>Sweden</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Norwegen</NAME>
+<NAME language='en'>Norway</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Dänemark</NAME>
+<NAME language='en'>Denmark</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Finnland</NAME>
+<NAME language='en'>Finland</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Vereinigte Staaten (USA)</NAME>
+<NAME language='en'>USA</NAME>
+</COUNTRY>
+<COUNTRY>
+<NAME language='de'>Indien</NAME>
+<NAME language='en'>India</NAME>
+</COUNTRY>
+
+</COUNTRY-LIST>

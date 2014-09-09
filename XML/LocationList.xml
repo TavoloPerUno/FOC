@@ -1,0 +1,335 @@
+<LOCATION-LIST>
+  <COUNTRY-LIST>
+    <COUNTRY name="Austria">
+      <CITY-LIST>
+        <CITY id="9">
+          <NAME>Wien</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <PHONE>+43.720.2097.97</PHONE>
+          <FAX>+43.720.2097.98</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>2</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Wien</STATE>
+          <ROOM-LIST>
+            <ROOM id="1042">
+              <NAME>Regus Business Centre</NAME>
+              <STREET>Mariahilfer Straße 123</STREET>
+              <ZIP>1060</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="Germany">
+      <CITY-LIST>
+        <CITY id="2">
+          <NAME>Berlin</NAME>
+          <TYPE>Comelio GmbH</TYPE>
+          <PHONE>+49.30.8145622.00  </PHONE>
+          <FAX>+49.30.8145622.10</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+            <GROUP_ID>2</GROUP_ID>
+            <GROUP_ID>3</GROUP_ID>
+            <GROUP_ID>4</GROUP_ID>
+            <GROUP_ID>8</GROUP_ID>
+            <GROUP_ID>9</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Berlin</STATE>
+          <ROOM-LIST>
+            <ROOM id="1">
+              <NAME />
+              <STREET>Goethestraße 34</STREET>
+              <ZIP>13086</ZIP>
+              <DATE-LIST>
+                <DATE id="812341">
+                  <COURSE id="1010330">Schreiben im Beruf - Sachtexte professionell und stilsicher schreiben</COURSE>
+                  <START_DATE>2014-09-04</START_DATE>
+                  <END_DATE>2014-09-05</END_DATE>
+                  <START_TIME>10:00:00</START_TIME>
+                  <END_TIME>16:30:00</END_TIME>
+                  <DURATION>2</DURATION>
+                  <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+                </DATE>
+              </DATE-LIST>
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="3">
+          <NAME>Hamburg</NAME>
+          <TYPE>Comelio GmbH (WMC GmbH)</TYPE>
+          <PHONE>+49.40.2093499.60  </PHONE>
+          <FAX>+49.40.2093499.69</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Mecklenburg-Vorpommern</STATE>
+          <ROOM-LIST>
+            <ROOM id="1039">
+              <NAME>Wüpper Management Consulting GmbH</NAME>
+              <STREET>Zimmerstraße 1</STREET>
+              <ZIP>22085</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="4">
+          <NAME>Frankfurt</NAME>
+          <TYPE>Comelio GmbH (Ecos Office)</TYPE>
+          <PHONE>+49.69.1732068.30</PHONE>
+          <FAX>+49.69.1732068.39</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Hessen</STATE>
+          <ROOM-LIST>
+            <ROOM id="1034">
+              <NAME>Ecos Office Centre</NAME>
+              <STREET>Mainzer Landstraße 27-31</STREET>
+              <ZIP>60329</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="5">
+          <NAME>München</NAME>
+          <TYPE>Comelio GmbH (G Hotel)</TYPE>
+          <PHONE>+49.89.3815686.00</PHONE>
+          <FAX>+49.89.3815686.09</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Bayern</STATE>
+          <ROOM-LIST>
+            <ROOM id="1032">
+              <NAME>c/o SSM Rhein-Ruhr GmbH</NAME>
+              <DEPARTMENT />
+              <STREET>Keltenring 2</STREET>
+              <ZIP>82041</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="6">
+          <NAME>Stuttgart</NAME>
+          <TYPE>Comelio GmbH (Ecos Office)</TYPE>
+          <PHONE>+49.711.4605127.50</PHONE>
+          <FAX>+49.711.4605127.59</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Baden-Würtemberg</STATE>
+          <ROOM-LIST>
+            <ROOM id="1035">
+              <NAME>Ecos Office Centre</NAME>
+              <STREET>Liebknechtstraße 33</STREET>
+              <ZIP>70565</ZIP>
+              <DATE-LIST />
+            </ROOM>
+            <ROOM id="1036">
+              <NAME>Regus Business Center</NAME>
+              <STREET>Königstraße 10C</STREET>
+              <ZIP>70173</ZIP>
+              <DATE-LIST />
+            </ROOM>
+            <ROOM id="1038">
+              <NAME>Akademie der Diözese Rottenburg-Stuttgart</NAME>
+              <DEPARTMENT>Tagungszentrum Hohenheim</DEPARTMENT>
+              <STREET>Paracelsusstraße 91</STREET>
+              <ZIP>70599</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="15">
+          <NAME>Düsseldorf</NAME>
+          <TYPE>Comelio GmbH (Ecos Office)</TYPE>
+          <PHONE>+49.211.6355642.00</PHONE>
+          <FAX>+49.211.6355642.09</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+            <GROUP_ID>9</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Nordrhein-Westfahlen</STATE>
+          <ROOM-LIST>
+            <ROOM id="14">
+              <NAME>Regus Business Centre</NAME>
+              <STREET>Stadttor 1</STREET>
+              <ZIP>D-40219</ZIP>
+              <DATE-LIST />
+            </ROOM>
+            <ROOM id="1033">
+              <NAME>Ecos Office Centre</NAME>
+              <STREET>Münsterstraße 248</STREET>
+              <ZIP>40470</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+        <CITY id="18">
+          <NAME>Dresden</NAME>
+          <TYPE>Comelio GmbH (Hotel Elbflorenz)</TYPE>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>1</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Sachsen</STATE>
+          <ROOM-LIST>
+            <ROOM id="1016">
+              <NAME>Hotel Elbflorenz</NAME>
+              <STREET>Rosenstraße 36</STREET>
+              <ZIP>D-01067</ZIP>
+              <DATE-LIST />
+            </ROOM>
+            <ROOM id="1041">
+              <NAME>Ibis Hotel Königstein</NAME>
+              <STREET>Prager Straße 9</STREET>
+              <ZIP>01069</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="India">
+      <CITY-LIST>
+        <CITY id="20">
+          <NAME>Chennai</NAME>
+          <TYPE>Comelio Business Solutions Pvt. Ltd.</TYPE>
+          <PHONE>+91.44.420.13545</PHONE>
+          <FAX>+91.44.420.13551</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>7</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Tamilnadu</STATE>
+          <ROOM-LIST />
+        </CITY>
+        <CITY id="27">
+          <NAME>Mumbai</NAME>
+          <TYPE>Comelio Business Solutions Pvt. Ltd. (Regus)</TYPE>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>7</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Tamilnadu</STATE>
+          <ROOM-LIST />
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="Netherlands">
+      <CITY-LIST>
+        <CITY id="22">
+          <NAME>Amsterdam</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>9</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>North Holland</STATE>
+          <ROOM-LIST />
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="Norway">
+      <CITY-LIST>
+        <CITY id="23">
+          <NAME>Oslo</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>8</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Oslo</STATE>
+          <ROOM-LIST />
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="Sweden">
+      <CITY-LIST>
+        <CITY id="24">
+          <NAME>Stockholm</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <PHONE />
+          <FAX />
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>4</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Stockholm County</STATE>
+          <ROOM-LIST />
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="Switzerland">
+      <CITY-LIST>
+        <CITY id="10">
+          <NAME>Zürich</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <PHONE>+41.43500.3375</PHONE>
+          <FAX>+41.43500.3376</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>3</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Zürich</STATE>
+          <ROOM-LIST>
+            <ROOM id="1025">
+              <NAME>Regus Business Centre</NAME>
+              <STREET>Badenerstrasse 549</STREET>
+              <ZIP>CH-8048</ZIP>
+              <DATE-LIST />
+            </ROOM>
+          </ROOM-LIST>
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+    <COUNTRY name="USA">
+      <CITY-LIST>
+        <CITY id="19">
+          <NAME>Miami</NAME>
+          <TYPE>Comelio, Inc. (Regus)</TYPE>
+          <PHONE>+1.305.395.7962</PHONE>
+          <FAX>+1.305.395.7964</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>5</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Florida</STATE>
+          <ROOM-LIST />
+        </CITY>
+        <CITY id="21">
+          <NAME>New York</NAME>
+          <TYPE>Comelio, Inc. (Regus)</TYPE>
+          <PHONE>+1.212.380.1181</PHONE>
+          <FAX>+1.305.395.7964</FAX>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>5</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>New York</STATE>
+          <ROOM-LIST />
+        </CITY>
+        <CITY id="26">
+          <NAME>Chicago</NAME>
+          <TYPE>Comelio GmbH (Regus)</TYPE>
+          <EMAIL>info@comelio.com</EMAIL>
+          <GROUP-LIST>
+            <GROUP_ID>5</GROUP_ID>
+          </GROUP-LIST>
+          <STATE>Illinois</STATE>
+          <ROOM-LIST />
+        </CITY>
+      </CITY-LIST>
+    </COUNTRY>
+  </COUNTRY-LIST>
+</LOCATION-LIST>

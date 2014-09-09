@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Comelio (Comelio GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="LOCATION-LIST">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="COUNTRY-LIST">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COUNTRY" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CITY-LIST">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CITY" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="NAME" type="xs:string"/>
+																<xs:element name="TYPE" type="xs:string"/>
+																<xs:element name="PHONE" type="xs:string" minOccurs="0"/>
+																<xs:element name="FAX" type="xs:string" minOccurs="0"/>
+																<xs:element name="EMAIL" type="xs:string"/>
+																<xs:element name="GROUP-LIST">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="GROUP_ID" type="xs:integer" maxOccurs="unbounded"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="STATE" type="xs:string" minOccurs="0"/>
+																<xs:element name="MARKETING_TEXT" type="xs:anySimpleType" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>The text used in quote document for the particular location</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="ROOM-LIST">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="ROOM" minOccurs="0" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="NAME" type="xs:string"/>
+																						<xs:element name="DEPARTMENT" type="xs:string" minOccurs="0"/>
+																						<xs:element name="STREET" type="xs:string"/>
+																						<xs:element name="ZIP" type="xs:string"/>
+																						<xs:element name="PHONE" type="xs:string" minOccurs="0"/>
+																						<xs:element name="FAX" type="xs:string" minOccurs="0"/>
+																						<xs:element name="EMAIL" type="xs:string" minOccurs="0"/>
+																						<xs:element name="DIRECTIONS" type="xs:anySimpleType" minOccurs="0">
+																							<xs:annotation>
+																								<xs:documentation>The text used in confirmation documents for the particular location </xs:documentation>
+																							</xs:annotation>
+																						</xs:element>
+																						<xs:element name="DATE-LIST" minOccurs="0">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element name="DATE" minOccurs="0">
+																										<xs:complexType>
+																											<xs:sequence>
+																												<xs:choice>
+																													<xs:element name="CITY">
+																														<xs:complexType>
+																															<xs:simpleContent>
+																																<xs:extension base="xs:string">
+																																	<xs:attribute name="id" use="required"/>
+																																</xs:extension>
+																															</xs:simpleContent>
+																														</xs:complexType>
+																													</xs:element>
+																													<xs:element name="COURSE">
+																														<xs:complexType>
+																															<xs:simpleContent>
+																																<xs:extension base="xs:string">
+																																	<xs:attribute name="id" use="required"/>
+																																</xs:extension>
+																															</xs:simpleContent>
+																														</xs:complexType>
+																													</xs:element>
+																												</xs:choice>
+																												<xs:element name="START_DATE" type="xs:date"/>
+																												<xs:element name="END_DATE" type="xs:date"/>
+																												<xs:element name="START_TIME" type="xs:string">
+																													<xs:annotation>
+																														<xs:documentation>Optional field, to specify start time of online trainings</xs:documentation>
+																													</xs:annotation>
+																												</xs:element>
+																												<xs:element name="END_TIME" type="xs:string"/>
+																												<xs:element name="DURATION" type="xs:decimal"/>
+																												<xs:element name="PRICE">
+																													<xs:complexType>
+																														<xs:simpleContent>
+																															<xs:extension base="xs:decimal">
+																																<xs:attribute name="currencyCode" use="required">
+																																	<xs:simpleType>
+																																		<xs:restriction base="xs:string">
+																																			<xs:length value="3"/>
+																																		</xs:restriction>
+																																	</xs:simpleType>
+																																</xs:attribute>
+																																<xs:attribute name="currencySymbol" type="xs:string" use="required"/>
+																															</xs:extension>
+																														</xs:simpleContent>
+																													</xs:complexType>
+																												</xs:element>
+																											</xs:sequence>
+																											<xs:attribute name="id" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																					<xs:attribute name="id" type="xs:integer" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:integer" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

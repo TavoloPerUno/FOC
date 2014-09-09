@@ -1,0 +1,4753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<fo:layout-master-set>
+		<fo:simple-page-master master-name="TOC-page" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="2cm" margin-left="1.5cm" margin-right="0.5cm">
+			<fo:region-body region-name="xsl-region-body" margin-bottom="1cm"/>
+			<fo:region-before extent="1cm" region-name="TOC-region-before"/>
+			<fo:region-after extent="1cm" region-name="TOC-region-after"/>
+		</fo:simple-page-master>
+		<fo:simple-page-master master-name="First" page-height="29.7cm" page-width="21cm" margin-top="7cm" margin-bottom="2cm" margin-left="0.5cm" margin-right="1.5cm">
+			<fo:region-body region-name="xsl-region-body" background-color="linen" margin-bottom="1cm"/>
+			<fo:region-before extent="1cm" region-name="first-region-before"/>
+			<fo:region-after extent="1cm" region-name="first-region-after"/>
+		</fo:simple-page-master>
+		<fo:simple-page-master master-name="Odd" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="2cm" margin-left="1.5cm" margin-right="0.5cm">
+			<fo:region-body region-name="xsl-region-body" background-color="linen" margin-top="1cm" margin-bottom="1cm"/>
+			<fo:region-before extent="1cm" region-name="odd-region-before"/>
+			<fo:region-after extent="1cm" region-name="odd-region-after"/>
+		</fo:simple-page-master>
+		<fo:simple-page-master master-name="Even" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="2cm" margin-left="0.5cm" margin-right="1.5cm">
+			<fo:region-body region-name="xsl-region-body" background-color="linen" margin-top="1cm" margin-bottom="1cm"/>
+			<fo:region-before extent="1cm" region-name="even-region-before"/>
+			<fo:region-after extent="1cm" region-name="even-region-after"/>
+		</fo:simple-page-master>
+		<fo:page-sequence-master master-name="Chapter">
+			<fo:repeatable-page-master-alternatives>
+				<fo:conditional-page-master-reference master-reference="TOC-page" page-position="first"/>
+				<fo:conditional-page-master-reference master-reference="Odd" odd-or-even="odd"/>
+				<fo:conditional-page-master-reference master-reference="Even" odd-or-even="even"/>
+			</fo:repeatable-page-master-alternatives>
+		</fo:page-sequence-master>
+		<fo:page-sequence-master master-name="TOC">
+			<fo:repeatable-page-master-alternatives>
+				<fo:conditional-page-master-reference master-reference="TOC-page" page-position="first"/>
+				<fo:conditional-page-master-reference master-reference="Odd" odd-or-even="odd"/>
+				<fo:conditional-page-master-reference master-reference="Even" odd-or-even="even"/>
+			</fo:repeatable-page-master-alternatives>
+		</fo:page-sequence-master>
+	</fo:layout-master-set>
+	<fo:page-sequence master-reference="TOC" force-page-count="even" initial-page-number="1">
+		<fo:static-content flow-name="first-region-after">
+			<fo:block text-align="right">Seite <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="even-region-after">
+			<fo:block text-align="left">Page <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="odd-region-after">
+			<fo:block text-align="right">Page <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="even-region-before">
+			<fo:block text-align="center">Comelio GmbH - www.comelio-seminare.com</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="odd-region-before">
+			<fo:block text-align="center">
+				<fo:block text-align="center">Kurskatalog</fo:block>
+			</fo:block>
+		</fo:static-content>
+		<fo:flow flow-name="xsl-region-body">
+			<fo:block font-size="14pt" font-family="Times" text-align="center" font-variant="small-caps" color="rgb(124,176,13)">
+				<fo:block text-align="center">Kurskatalog</fo:block>
+			</fo:block>
+		</fo:flow>
+	</fo:page-sequence>
+	<fo:page-sequence master-reference="Chapter" force-page-count="even" initial-page-number="auto">
+		<fo:static-content flow-name="first-region-after">
+			<fo:block text-align="right">Page <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="even-region-after">
+			<fo:block text-align="left">Page <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="odd-region-after">
+			<fo:block text-align="right">Page <fo:page-number/>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="even-region-before">
+			<fo:block text-align="center">Comelio GmbH - www.comelio-seminare.com</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="odd-region-before">
+			<fo:block text-align="center">Kurskatalog</fo:block>
+		</fo:static-content>
+		<fo:flow flow-name="xsl-region-body">
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Deskriptive und induktive Statistik</fo:block>
+			<fo:block>
+<fo:inline-container inline-progression-dimension="33.3%">
+<fo:block text-align="start">
+Left Text
+</fo:block>
+</fo:inline-container><fo:inline-container inline-progression-dimension="33.3%">
+<fo:block text-align="center">
+Center Text
+</fo:block>
+</fo:inline-container><fo:inline-container inline-progression-dimension="33.3%">
+<fo:block text-align="end">
+Right Text
+</fo:block>
+</fo:inline-container>
+</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course Id</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022774</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>R Foundation</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>R ist eine freie Programmiersprache für statistisches Rechnen und statistische Grafiken. R gilt zunehmend als die statistische Standardsprache sowohl im kommerziellen als auch im wissenschaftlichen Bereich. Der Funktionsumfang von R kann durch eine Vielzahl von Paketen erweitert und an spezifische statistische Problemstellungen angepasst werden. Dieses Seminar zeigt Ihnen zunächst, wie sie mit R grundsätzlich arbeiten können. Danach lernen Sie, typische Fragestellungen für kategoriale und metrische Daten mit R zu beantworten.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Einführung in R</fo:block>
+			<fo:block>[0.5 Days] Aufrufen und Beenden von R -  Fragebogen und Kodierung - Data Frames: Ansprechen einzelner Variablen, Auswählen von Fällen, Transformation von Daten</fo:block>
+			<fo:block>B) Allgemeines Arbeiten mit R</fo:block>
+			<fo:block>[0.5 Days] R-Arbeitsumgebung - R-Grafik - Weiterverwenden des R-Outputs - Einlesen von R-Befehlen - Einlesen und Schreiben externer Dateien</fo:block>
+			<fo:block>C) Kategoriale Daten</fo:block>
+			<fo:block>[1 Day] Kommen alle Kategorien gleich häufig vor? - Entsprechen Häufigkeiten bestimmten Vorgaben? - Hat ein Anteil einen bestimmten Wert? - Unterscheiden sich Anteile in zwei oder mehr Gruppen? - Sind zwei kategoriale Variablen unabhängig? - Unterscheidet sich das Risiko in zwei Gruppen?</fo:block>
+			<fo:block>D) Metrische Daten</fo:block>
+			<fo:block>[1 Day] Wie kann man die Verteilung von metrischen Daten beschreiben? - Ist der Mittelwert der Grundgesamtheit anders als eine bestimmte Vorgabe? - Folgt eine metrische Variable einer bestimmten Verteilung? - Wie stark ist der Zusammenhang? - Welche Form hat der Zusammenhang? - Unterscheiden sich Mittelwerte? - Wie kann man den zeitlichen Verlauf beschreiben?</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Multivariate Verfahren mit R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024692</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Fortgeschrittene</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Mit Multivariaten Verfahren (Multivariate Analyse(methoden), Abk.: MVA) werden multivariat verteilte statistische Variablen untersucht. Man betrachtet hier nicht eine Variable isoliert (univariat verteilt), sondern das Zusammenwirken mehrerer Variablen zugleich und damit ihre Abhängigkeitsstruktur. Multivariate Verfahren lassen sich gliedern in "Strukturprüfende Verfahren" und "Strukturentdeckende Verfahren". Das Seminar behandelt 8 wichtige Verfahren der multivariaten Analysemethoden. Dies sind Cluster-, Diskriminanz- und Explorative Faktorenanalyse, Kreuztabellierung und Kontingenzanalyse, Logistische Regression, Regressionsanalyse, Varianzanalyse und Zeitreihenanalyse. Die Themen werden anhand von Vorträgen eingeführt und dann anhand von praktischen Übungen durchgeführt. Teilnehmer/innen sollen nach dem Seminar in der Lage sein, die genannten Verfahren zu verstehen und bewerten zu können, um sie dann mit Erfolg auch für die konkrete Datenanalyse einzusetzen.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-28</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Multiple Regressionsanalyse</fo:block>
+			<fo:block>[0.5 Days] Wie stark ist der als linear unterstellte Zusammenhang zwischen metrisch-skalierten Variablen? – Modellformulierung – Schätzung der Regressionsfunktion – Prüfung der Regressionsfunktion – Prüfung der Regressionskoeffizienten – Prüfung der Modellprämissen</fo:block>
+			<fo:block>B) Zeitreihenanalyse</fo:block>
+			<fo:block>[0.25 Days] Wie stark ist der Zusammenhang zwischen einer metrisch-skalierten abhängigen Variablen und metrisch-skalierten Zeitreihendaten? – Visualisierung der Zeitreihe – Formulierung des Modells – Schätzung des Modells – Erstellung von Prognosen – Prüfung der Prognosegüte</fo:block>
+			<fo:block>C) Varianzanalyse (ANOVA)</fo:block>
+			<fo:block>[0.25 Days] Wie gut kann eine metrisch-skalierte abhängige Variable durch nominal skalierte unabhängige Variable erklärt werden? – Problemformulierung – Analyse der Abweichungsquadrate – Prüfung der statistischen Unabhängigkeit</fo:block>
+			<fo:block>D) Diskriminanzanalyse</fo:block>
+			<fo:block>[0.25 Days] Welche Variablen können gegebene Objektgruppen signifikant voneinander unterscheiden? – Definition der Gruppen – Definition der Gruppen – Formulierung , Schätzung und Prüfung der Diskriminanzfunktion – Prüfung der Merkmalsvariablen – Klassifikation neuer Elemente</fo:block>
+			<fo:block>E) Logistische Regression</fo:block>
+			<fo:block>[0.5 Days] Mit welcher Wahrscheinlichkeit können Objekte einer bestimmten Gruppe zugeordnet werden? – Modellformulierung – Schätzung der logistischen Regressionsfunktion – Interpretation der Regressionskoeffizienten – Prüfung des Gesamtmodells – Prüfung der Merkmalsvariablen</fo:block>
+			<fo:block>F) Kontingenzanalyse (Kreuztabellierung)</fo:block>
+			<fo:block>[0.25 Days] Besteht ein statistisch signifikanter Zusammenhang zwischen zwei nominal-skalierten Variablen? – Erstellung der Kreuztabelle – Ergebnisinterpretation – Prüfung der Zusammenhänge</fo:block>
+			<fo:block>G) Explorative Faktorenanalyse</fo:block>
+			<fo:block>[0.5 Days] Wie können metrisch-skalierte Variablen zu hypothetischen Größen (Faktoren) zusammengefasst werden? – Variablenauswahl und Korrelationsmatrix – Extraktion der Faktoren – Bestimmung der Kommunalitäten – Zahl der Faktoren – Faktorinterpretation – Bestimmung der Faktorenwerte</fo:block>
+			<fo:block>H) Clusteranalyse</fo:block>
+			<fo:block>[0.5 Days] Wie können Objekte, die durch verschiedene Merkmale beschrieben sind, zu homogenen Gruppen zusammenfasst werden? – Bestimmung der Ähnlichkeiten – Auswahl des Fusionsalgorithmus – Bestimmung der Clusteranzahl</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Data Mining mit R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024719</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Manager</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Data Mining übertrifft einfache Analysetechniken an Wirkungsweise und Ergebnissen und bietet eine Methodik, die auf erweiterten statistischen und algorithmischen Konzepten des maschinellen Lernens  beruht. Es unterstützt die Entwicklung und Gewinnung von wertvollem Unternehmenswissen anhand komplexer Analyseverfahren. Dieses Seminar macht Sie mit den Konzepten von Data Mining vertraut und hilft Ihnen bei der Entscheidung und Bewertung in Projekten, die Data Mining einführen helfen. Das Seminar zeigt den Teilnehmern aufgrund von Theorie und Beispielen, die sowohl selbst nachgerechnet wie auch mit Hilfe eines Data Mining-Werkzeugs nachvollzogen werden können, welche typischen Analyseverfahren zur Verfügung stehen und wie gängige Algorithmen in diesen Verfahren funktionieren.  Es sind grundlegende Kenntnisse der Mathematik und Statistik notwendig, die bei Bedarf allerdings auch an den entsprechenden Stellen im Seminar noch einmal wiederholt werden. Die Theorie wird anhand von Vorträgen und Diskussionen vermittelt und durch praktische Übungen in der Software Weka ergänzt.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Hamburg</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-28</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Data Mining-Grundlagen </fo:block>
+			<fo:block>[0.5 Days] Statistik, multivariate Statistik und Data Mining – Data Mining-Kreislauf - Daten-Vorverarbeitung: Beschreibende Datenaggregation, Datenbereinigung, Datenintegration und –transformation – Datenreduktion – Diskretisierung und Konzept-Hierarchien – Data Mining und Business Intelligence: Datenbanken, Data Warehouses und OLAP als Basis für Data Mining</fo:block>
+			<fo:block>B) Data Mining mit der Assoziationsanalyse </fo:block>
+			<fo:block>[0.25 Days] Suchen von häufigen Kombinationen (Frequent Itemset Mining) – Apriori-Algorithmus - Assoziationsregeln und Assoziationsanalyse - Warenkorbanalyse</fo:block>
+			<fo:block>C) Data Mining mit Entscheidungsbäumen</fo:block>
+			<fo:block>[0.25 Days] Ableitung von Entscheidungsbäumen – Auswahl von Attributen – Beschneidung von Bäumen – Ableitung von Regeln - Gütemaße und Vergleich von Modellen</fo:block>
+			<fo:block>D) Data Mining mit Wahrscheinlichkeitstheorie</fo:block>
+			<fo:block>[0.25 Days] Wahrscheinlichkeitstheorie und Bayes Theorem –Naïve Bayes-Algorithmus – Bayes Netze</fo:block>
+			<fo:block>E) Fortgeschrittene Data Mining-Verfahren für Klassifikation</fo:block>
+			<fo:block>[0.25 Days] Künstliche neuronale Netze und der  Backpropagation-Algorithmus - Support Vector Machines für linear und nicht-linear trennbare Daten – Klassifikation mit Assoziationsanalyse – Lazy und Eager Learners</fo:block>
+			<fo:block>F) Cluster-Analyse</fo:block>
+			<fo:block>[0.5 Days] Einführung in die Cluster Analyse – Ähnlichkeits- und Distanzmessung - Varianten und grundlegende Techniken – Partitionierende Methoden: k-Means-Verfahren - Hierarchische Methoden: agglomerative und divisive Verfahren  – Weitere Verfahren: Dichte- und Grid-basierte Methoden</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Zeitreihenanalyse mit R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022775</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>R Foundation</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Der Funktionsumfang von R kann durch eine Vielzahl von Paketen erweitert und an spezifische statistische Problemstellungen angepasst werden. Speziell für die Analyse von Zeitreihen gibt es auch eine Vielzahl von Paketen. Dieses Seminar zeigt Ihnen, wie Sie Zeitreihen beschreiben (Autokorrelation, Perioden, Komponentenzerlegung und Trendanalyse) und für Zeitreihen Modelle entwickeln können. Dabei lernen Sie, wie Sie AR-/MA- und ARMA-/ARIMA-Modelle für univariate Zeitreihen und VARMA-Modelle für multivariate Zeitreihen ableiten. Darüber hinaus sehen Sie, wie Sie lineare und nichtlineare Modelle (ARCH-Modelle) entwickeln. Mit Hilfe dieser Modelle und weiterer Techniken kann man dann Prognosen in der Zeit durchführen.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-28</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Grundlagen und einfache Methoden</fo:block>
+			<fo:block>[1 Day] Stationäre Zeitreihen: Darstellung von Zeitreihen, Autokovarianz und Autokorrelation, Stationarität, Kennfunktionen - Komponentenmodell - Deterministische Trends: Trendbestimmung mittels Regression, Bestimmung der glatten Komponente - Saisonbereinigung - Transformationen - Einfache Extrapolationsverfahren</fo:block>
+			<fo:block>B) Lineare Zeitreihenmodelle</fo:block>
+			<fo:block>[0.75 Days] Autoregressive Modelle: Definition und grundlegende Eigenschaften, Schätzen von AR-Parametern, Spezfikation von AR-Modellen - MA-Modelle: Definition und grundlegende Eigenschaften, Schätzen und Anpassen von MA-Modellen - ARMA-Modelle - ARIMA-Modelle</fo:block>
+			<fo:block>C) Differenzen- und Trendinstationarität</fo:block>
+			<fo:block>[0.25 Days] Instationaritäten - Einheitswurzeltests</fo:block>
+			<fo:block>D) Prognosen</fo:block>
+			<fo:block>[0.5 Days] Exponentielle Glättung - Prognose mit ARIMA-Modellen - Trendextrapolation mit ARIMA-Störungen</fo:block>
+			<fo:block>E) Periodizitäten in Zeitreihen</fo:block>
+			<fo:block>[0.5 Days] Periodizitäten und periodische Trends - Periodogramm: Definition, Interpretation, Statistische Tests - Spektren: Definition und Eigenschaften, Lineare Filter im Frequenzbereich - Spektralschätzung</fo:block>
+			<fo:block>F) Mehrdimensionale Zeitreihen</fo:block>
+			<fo:block>[0.5 Days] Kenngrößen mehrdimensionaler Zeitreihen - Mehrdimensionale Zeitreihen und ihre Modelle: VARMA-Prozesse, Ko-Integration</fo:block>
+			<fo:block>G) Nichtlineare Modelle für Zeitreihen</fo:block>
+			<fo:block>[0.5 Days] Nichtlinearität in Zeitreihen - Markov-switching Modelle: Markov-Ketten, Markov-switching autoregressive Prozesse, Inferenz - Bedingt heteroskedastische Modelle: ARCH-Modelle, Modellanpassung und Parameterschätzung</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Regressionsanalyse mit R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022776</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>R Foundation</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Regressionsanalysen sind statistische Analyseverfahren mit dem Ziel, Beziehungen zwischen einer abhängigen und einer oder mehreren unabhängigen Variablen festzustellen. Sie wird insbesondere verwendet, wenn Zusammenhänge quantitativ zu beschreiben oder Werte der abhängigen Variablen zu prognostizieren sind. Mit R stehen eine Vielzahl von Analysemöglichkeiten bereit. Dieses Seminar zeigt Ihnen ausgehend von der einfachen linearen Regression, wie Sie lineare und nichtlineare Regressionsmodelle mit mehreren Variablen ableiten und für Prognose nutzen können. Neben metrischen Zielvariablen sehen Sie auch, wie Sie mit logistischer Regression die Vorhersage von kategorialen Zielgrößen modellieren können. Das Seminar geht dann zusätzlich auch auf nichtparametrische Regression ein.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-28</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Einfache lineare Regression</fo:block>
+			<fo:block>[0.25 Days] Regression als Deskription - Regressionsgerade - Bestimmtheitsmaß - Schätzen und Testen im einfachen lineare Regressionsmodell: Konfidenzintervalle, Prognoseintervalle, Tests - Residualanalyse</fo:block>
+			<fo:block>B) Multiple lineare Regression</fo:block>
+			<fo:block>[0.75 Days] Das klassische lineare Regressionsmodell: Parameterschätzung, Tests, Konfidenz- und Prognoseintervalle, Variablenselektion, Modell-Check - Das allgemeine lineare Regressionsmodell: KQ- und GKQ-Schätzung, Heteroskedastische Störungen, Clusterweise Regression - Multivariate multiple Regression: Das multivariate lineare Modell, Parameterschätzung</fo:block>
+			<fo:block>C) Lineare Regression mit vielen Regressoren</fo:block>
+			<fo:block>[0.5 Days] Hauptkomponentenregression - Partial Least Squares-Regression - Reduzierte Rang-Regression</fo:block>
+			<fo:block>D) Nichtlineare Regression</fo:block>
+			<fo:block>[0.25 Days] Formen nichtlinearer Abhängigkeiten - Linearisierbare Zusammenhänge - Polynomiale Regressionsmodelle - Inferenzmethoden</fo:block>
+			<fo:block>E) Nichtparametrische Regression</fo:block>
+			<fo:block>[0.5 Days] Kernregression und Nächste-Nachbarn - Lokale polynomiale Glättung - Spline-Regression - Additive Modelle - Regressionsbäume</fo:block>
+			<fo:block>F) Quantilsregression</fo:block>
+			<fo:block>[0.25 Days] Quantilsfunktion - Regressionsquantile - Parameterschätzung</fo:block>
+			<fo:block>G) Logistische Regression</fo:block>
+			<fo:block>[0.5 Days] Binomialverteilte Zielgrößen und ihre Modellschätzung - Logitmodelle für mehrkategoriale Zielgrößen - Schätzen und Testen für mehrkategoriale Modelle</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistische Datenanalyse 1</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022777</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>IBM SPSS Statistics ist ein umfassendes System zum Analysieren von Daten. Mit SPSS Statistics können Sie Daten aus nahezu allen Dateitypen entnehmen und aus ihnen Berichte in Tabellenform, Diagramme sowie grafische Darstellungen von Verteilungen und Trends, deskriptive Statistiken und komplexe statistische Analysen erstellen. Dieses Seminar zeigt Ihnen die grafische Benutzeroberfläche von SPSS Statistics und dient als Vorbereitung für die statistische Analyse mit SPSS.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-26</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1050 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Datendateien</fo:block>
+			<fo:block>Öffnen von Datendateien - Dateiinformationen - Speichern von Datendateien - Datenansicht - Variablenansicht - Eingeben von Daten - Bearbeiten von Daten - Suchen nach Fällen, Variablen und Imputationen - Suchen und Ersetzen von Daten- und Attributwerten - Umgang mit mehreren Datenquellen</fo:block>
+			<fo:block>B) Vorbereitung und Transformation von Daten</fo:block>
+			<fo:block>Variableneigenschaften - Definieren von Variableneigenschaften - Festlegen des Messniveaus für Variablen mit unbekanntem Messniveau - Mehrfachantworten-Sets - Ermitteln doppelter Fälle - Visuelles Klassieren - Berechnen von Variablen - Häufigkeiten von Werten in Fällen zählen - Werte verschieben - Umkodieren von Werten - Rangfolge bilden - Datentransformationen für Zeitreihen</fo:block>
+			<fo:block>C) Ausgaben</fo:block>
+			<fo:block>Viewer - Ausgabe exportieren - Ausdrucken von Viewer-Dokumenten</fo:block>
+			<fo:block>D) Pivot-Tabellen</fo:block>
+			<fo:block>Bearbeiten von Pivot-Tabellen - Arbeiten mit Schichten - Ein- und Ausblenden von Elementen - Tabellenvorlagen - Tabelleneigenschaften - Zelleneigenschaften - Erstellen eines Diagramms aus einer Pivot-Tabelle</fo:block>
+			<fo:block>E) Arbeiten mit der Befehlssyntax</fo:block>
+			<fo:block>Regeln für die Syntax - Übernehmen der Befehlssyntax aus Dialogfeldern - Verwenden des Syntax-Editors</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Strukturgleichungsmodellierung mit SPSS Amos</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024740</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Die Analyse mit Strukturgleichungsmodellen ist ein statistisches Verfahren zum Testen und Schätzen kausaler Zusammenhänge. Dabei kann überprüft werden, ob die vor der Anwendung des Verfahrens angenommenen Hypothesen mit den gegebenen Variablen übereinstimmen. Mit IBM SPSS Amos können Sie Modelle spezifizieren, schätzen, bewerten und präsentieren, um hypothetische Beziehungen zwischen Variablen zu zeigen. Diese Software ermöglicht eine akkuratere Modellerstellung als mit Methoden der multivariaten Statistik. SPSS Amos gibt Ihnen die Möglichkeit, Einstellungs- und Verhaltensmodelle zu erstellen, die komplexe Beziehungen abbilden. Eine Besonderheit von Strukturgleichungsmodellen ist das Überprüfen latenter (nicht direkt beobachtbarer) Variablen. Pfadanalyse, Faktorenanalyse und Regressionsanalyse können als Spezialfälle von Strukturgleichungsmodellen angesehen werden.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block/>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Modell und Wirklichkeit</fo:block>
+			<fo:block>[0.25 Days] Charakteristika wissenschaftlicher Hypothesen - Allgemeine Vorgehensweise zur empirischen Prüfung - Kausalhypothesen und der Begriff der Kausalität - Messung von Kausalität - Latente und manifeste Variablen - Indikatoren</fo:block>
+			<fo:block>B) Kovarianzanalyse (Analysis of Covariance - ANCOVA)</fo:block>
+			<fo:block>[0.25 Days] Wiederholung Varianzanalyse (ANOVA) - Auswirkung von nicht relevanten unabhängigen Faktoren auf die abhängige Variable ausblenden - Voraussetzungen - Durchführung und Ergebnisbewertung</fo:block>
+			<fo:block>C) Pfadanalyse mit SPSS Amos</fo:block>
+			<fo:block>[0.25 Days] Pfadmodelle als Form einer multiplen, auf Kausalzusammenhänge orientierte Regressionsanalyse - Pfadmodell erstellen - Daten laden und analysieren - Ergebnisbewertung</fo:block>
+			<fo:block>D) Faktorenanalyse mit SPSS Amos</fo:block>
+			<fo:block>[0.25 Days] Fundamentaltheorem der Faktorenanalyse - Extraktion der Faktoren - Rotation der Faktoren - Güteprüfung - Faktorwerte - Gleichzeitige Faktorenanalyse für mehrere Gruppen</fo:block>
+			<fo:block>E) Theorie der Strukturgleichungsmodellierung</fo:block>
+			<fo:block>[0.25 Days] Pfadanalyse (SGM mit manifesten Variablen), Kausalanalyse (SGM mit latenten Variablen) in Form des kovarianzanalytischen Ansatzes sowie des varianzanalytischen Ansatzes, Vergleich der kausalanalytischen Ansätze</fo:block>
+			<fo:block>F) Kausalanalyse mit SPSS Amos</fo:block>
+			<fo:block>[0.75 Days] Analyse von SGM mit latenten Variablen (Kausalanalyse) -  Allgemeiner Modellbildungs- und Prüfungsprozess - Konstrukt-Operationalisierung - Konfirmatorische Faktorenanalyse zur Prüfung reflektiver Messmodelle von latenten Variablen (hypothetischen Konstrukten) - Prüfung von Hypothesensystemen mit Hilfe des kovarianzanalytischen Ansatzes</fo:block>
+			<fo:block>G) Verfahrensvarianten und Erweiterungen der Strukturgleichungsanalyse</fo:block>
+			<fo:block>[0.5 Days] Besonderheiten formativer Messmodelle - MIMIC-Modelle (Multiple Indicators Multiple Causes) in SPSS Amos - Second-Order-Faktorenanalyse (SFA) in SPSS Amos</fo:block>
+			<fo:block>H) Analyse mehrerer Gruppen in SPSS Amos</fo:block>
+			<fo:block>[0.5 Days] Mehrgruppen-Faktoranalayse - Mehrgruppen-Kausalanalyse (MGKA) und die vergleichende Analyse von Kausalmodellen in mehreren Gruppen (Stichproben)</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Zeitreihenanalyse</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024741</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Einsteiger</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Eine Zeitreihe ist eine zeitabhängige Folge von Datenpunkten. Die Zeitreihenanalyse beschäftigt sich mit der mathematisch-statistischen Analyse von Zeitreihen und der Vorhersage ihrer künftigen Entwicklung. Sie ist eine Spezialform der Regressionsanalyse. Das Zeitreihenanalyse-Seminar zeigt eine Auswahl an Methoden, Zeitreihenanalysen mit Hilfe von IBM SPSS Forecasting durchzuführen. Im ersten Teil lernen Sie, wie sie eine Zeitreihe beschreiben und in zentralen Kenngrößen zusammenfassen können. Der zweite Teil stellt die univariate Zeitreihenanalyse vor. Sie beinhaltet die Zerlegung einer Zeitreihe sowie die Ableitung von (autoregressiven) Regressionsmodellen mit AR, MA und AR(I)MA-Modellen.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block/>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Univariate Beschreibung von Zeitreihen</fo:block>
+			<fo:block>[0.25 Days] Schätzung der Momentfunktionen (Erwartungswert, Auto-Kovarianz) - Auto-Korrelation: Lag-Operator, Erstellung und Interpretation des Korrelogramms - Glättung von Zeitreihen: Gleitende Durchschnitte, exponentielles Glätten - Transformation von Zeitreihen durch Filter – Differenzen erster und zweiter Ordnung</fo:block>
+			<fo:block>B) Zerlegung von Zeitreihen durch deterministische Modelle</fo:block>
+			<fo:block>[0.5 Days] Komponentenmodelle: additiv und multiplikativ - Saisonale Strukturen bei Zeitreihen: Trend, Saisonbereinigung und Ableitung der Saisonfigur, Prognose und Residualanalyse - Niveau-Veränderung  - Lineare, parabolische, logistische, exponentielle Anpassung und Regression von Zeitreihen – Polynome  - Gütemaße</fo:block>
+			<fo:block>C) Periodizitäten bei Zeitreihen</fo:block>
+			<fo:block>[0.25 Days] Trigonometrische Funktionen und ihre Bedeutung für periodische Trends – Perioden und Frequenzen - Periodogramm:  Ableitung und Interpretation – Regressionsmodelle mit periodischen Schwingungen – Spektren und Spektralschätzung von Zeitreihen</fo:block>
+			<fo:block>D) Univariate lineare Zeitreihenmodelle mit AR(I)MA</fo:block>
+			<fo:block>[0.75 Days] Stationarität bei Zeitreihen – White Noise-Prozesse - AR (Autoregressive)- Modelle - MA (Moving Average)-Modelle - ARMA und ARIMA-Modelle – Prognose - Residualanalyse – Statistische Tests bei linearen Zeitreihenmodellen – Gütemaße und Modellauswahl</fo:block>
+			<fo:block>E) Prognose mit Zeitreihenmodellen</fo:block>
+			<fo:block>[0.25 Days] Zeitreihenmodelle für Prognose nutzen - Prognosen variieren</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistische Datenanalyse 2 (Multivariate Verfahren)</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022778</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Fortgeschrittene</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>IBM SPSS stellt Analysten die statistischen Kernfunktionen bereit, die diese zur Beantwortungen grundlegender Fragen in Business und Forschung benötigen. Mit den Tools dieser Software können die Benutzer Daten in kürzester Zeit anzeigen, Hypothesen im Hinblick auf weitere Tests formulieren und Verfahren zur Klärung der Beziehungen zwischen Variablen, zur Erstellung von Clustern, zur Ermittlung von Trends und zum Treffen von Prognosen durchführen. Dieses Seminar zeigt Ihnen den Einsatz von IBM SPSS anhand von verschiedenen gängigen Analysetechniken.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1950 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1950 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1950 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Regression</fo:block>
+			<fo:block>[0.75 Days] Wie lässt sich der (nicht-)lineare Zusammenhang zwischen Variablen formalisieren? - GLM-Univariat - Lineare Regression - Ordinale Regression - Kurvenanpassung - Regression mit partiellen kleinsten Quadraten</fo:block>
+			<fo:block>B) Diskriminanzanalyse</fo:block>
+			<fo:block>[0.25 Days] Welche Variablen können gegebene Objektgruppen signifikant voneinander unterscheiden? – Definition der Gruppen – Definition der Gruppen – Formulierung , Schätzung und Prüfung der Diskriminanzfunktion – Prüfung der Merkmalsvariablen – Klassifikation neuer Elemente</fo:block>
+			<fo:block>C) Explorative Faktorenanalyse</fo:block>
+			<fo:block>[0.5 Days] Wie können metrisch-skalierte Variablen zu hypothetischen Größen (Faktoren) zusammengefasst werden? – Variablenauswahl und Korrelationsmatrix – Extraktion der Faktoren – Bestimmung der Kommunalitäten – Zahl der Faktoren – Faktorinterpretation – Bestimmung der Faktorenwerte</fo:block>
+			<fo:block>D) Entscheidungsbäume</fo:block>
+			<fo:block>[0.5 Days] Erstellen von Entscheidungsbäumen: Auswählen von Kategorien, Validierung, Kriterien für den Aufbau des Baums, Ausgabe - Baumeditor: Arbeiten mit umfangreichen Bäumen, Steuern der im Baum angezeigten Daten - Datenannahmen und -anforderungen - Konstruieren eines Bewertungsmodells - Fehlende Werte in Baummodellen</fo:block>
+			<fo:block>E) Clusteranalyse</fo:block>
+			<fo:block>[0.5 Days] Wie können Objekte, die durch verschiedene Merkmale beschrieben sind, zu homogenen Gruppen zusammenfasst werden? - Distanzberechnungen - Analyse Nächstgelegener Nachbar - Two-Step-Clusteranalyse - Hierarchische Clusteranalyse - Clusterzentrenanalyse</fo:block>
+			<fo:block>F) Neuronale Netzwerke</fo:block>
+			<fo:block>[0.5 Days] Wie können aufgrund von Erfahrungsdaten (Lerndaten) Gruppen gebildet oder unterschieden werden sowie nicht-lineare Zusammenhänge zwischen Variablen entdeckt werden? - Struktur neuronaler Netzwerke - Mehrschichtiges Perzeptron: Partitionen, Architektur, Training, Ausgabe - Radiale Basisfunktion: Architektur, Training</fo:block>
+			<fo:block>G) Zeitreihen</fo:block>
+			<fo:block>[1 Day] Wie stark ist der Zusammenhang zwischen einer metrisch-skalierten abhängigen Variablen und metrisch-skalierten Zeitreihendaten? - Transformieren von Daten - Zeitreihenmodellierung: Exponentielles Glätten, Benutzerdefinierte ARIMA-Modelle, Ausgabe - Saisonale Zerlegung - Spektraldiagramme - Prognosen - Ermitteln von signifikanten Einflussvariablen</fo:block>
+			<fo:block>H) Analyse kategorialer Daten</fo:block>
+			<fo:block>[1 Day] Kategoriale Regression - Korrespondenzanalyse - Multdimensionale Skalierung</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistische Datenanalyse 3 (Fragebogen und Marketing)</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2022779</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Fortgeschrittene</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Vortrag mit Beispielen und Übungen.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Die IBM SPSS Statistics Premium Edition hilft u. a. Datenanalysten, Planern, Prognostikern, Umfrageexperten, Programmauswertern und Fachkräften im Datenbankmarketing, ihre Aufgaben in jeder Phase des Analyseprozesses mühelos zu erledigen. Eingeschlossen ist ein breites Spektrum von vollständig integrierten Statistikfunktionen und verwandten Produkten für spezielle Analyseaufgaben im gesamten Unternehmen. Dieses Seminar fokussiert den Einsatz von IBM SPSS im Bereich Marketing und der Auswertung von Fragebogen-Daten.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>München</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1550 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1550 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stuttgart</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1550 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1950 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Explorative Datenanalyse</fo:block>
+			<fo:block>[0.5 Days] Kreuztabellen - Zusammenfassen von Werten - OLAP-Würfel - Stichproben und T-Tests - Varianzkomponenten - Einfaktorielle ANOVA - Custom Tables: Einfache Tabellen für kategoriale Variablen, Stapeln, Verschachteln und Schichten von kategorialen
+Variablen, Gesamtsummen und Zwischenergebnisse, Berechnete Kategorien</fo:block>
+			<fo:block>B) Generalized Linear Models (GLM)</fo:block>
+			<fo:block>[0.5 Days] Verallgemeinerte lineare Modelle - Verallgemeinerte lineare gemischte Modelle - Modell für loglineare Analyse - Allgemeine loglineare Analyse - Logit-loglineare Analyse</fo:block>
+			<fo:block>C) Analyse kategorialer Daten</fo:block>
+			<fo:block>[0.5 Days] Kategoriale Regression: Definieren der Skala in der kategorialen Regression, Diskretisierung, Fehlende Werte, Ausgabe - Kategoriale Hauptkomponentenanalyse: Skala und Gewicht definieren, Diskretisierung, Fehlende Werte, Ausgabe</fo:block>
+			<fo:block>D) Conjoint-Analyse</fo:block>
+			<fo:block>[0.25 Days] Profilmethode: Orthogonales Feld, Die experimentellen Stimuli,  Datenerfassung und -analyse - Erzeugen eines orthogonalen Designs - Anzeige</fo:block>
+			<fo:block>E) Multidimensionale Skalierung</fo:block>
+			<fo:block>[0.25 Days] Multidimensionale Skalierung: Ähnlichkeiten analysieren, Distanzen aus Daten erstellen, Definieren eines Modells für die multidimensionale Skalierung, Ausgabe - Multidimensionale Entfaltung: Definieren eines Modells, Ausgabe</fo:block>
+			<fo:block>F) Korrespondenzanalyse</fo:block>
+			<fo:block>[0.25 Days] Definieren des Zeilen- und Spaltenbereichs bei der Korrespondenzanalyse - Modell - Statistiken - Diagramme - Mehrfachkorrespondenzanalyse: Definition des Variablengewichts bei der Mehrfachkorrespondenzanalyse, Diskretisierung, Fehlende Werte, Ausgabe, Diagramme</fo:block>
+			<fo:block>G) Analyse von komplexen Stichproben</fo:block>
+			<fo:block>[0.5 Days] Stichprobenziehung mithilfe eines komplexen Plans - Vorbereiten einer komplexen Stichprobe für die Analyse - Häufigkeiten, Kreuztabellen und Deskriptive Statistiken - Regression für komplexe Stichproben: Logistische Regression, Ordinale Regression, Cox-Regression</fo:block>
+			<fo:block>H) Direktmarketing</fo:block>
+			<fo:block>[0.25 Days] RFM-Analyse - Clusteranalyse - Profile über potenzielle Kunden - Responseraten nach Postleitzahlen - Kaufneigung - Kontrollpakettest</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Descriptive and Inductive Statistics using R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024697</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Beginning</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Lecture with examples and exercises.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Statistics is the study of the collection, organization, analysis, interpretation and presentation of data. It deals with all aspects of data, including the planning of data collection in terms of the design of surveys and experiments. Descriptive statistics is the discipline of quantitatively describing the main features of a collection of data, or the quantitative description itself. Statistical inference (or inductive statistics) is the process of drawing conclusions from data that is subject to random variation, for example, observational errors or sampling variation. This training provides you with a substantial overview of both descriptive and inductive statistics. All topics are firstly explained in presentations with the fundamental mathematical theory and examples followed secondly by hands-on exercices.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>51850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Dresden</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>51850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>51850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2700 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>25000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>23000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2250 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-22</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Introduction to Statistics</fo:block>
+			<fo:block>[0.5 Days] Descriptive and Inductive Statistics - Uni-/Bi- and Multi-variate Statistics - Summary tables: Grouped data, Frequency distributions, Contingency tables - Statistical graphics: Bar chart, Biplot, Box plot, Histogram</fo:block>
+			<fo:block>B) Descriptive Statistics: Univariate Analysis</fo:block>
+			<fo:block>[1 Day] Location: Mean (Arithmetic, Geometric, Harmonic), Median, Mode - Dispersion: Range, Standard deviation, Coefficient of variation, Percentiles, Interquartile range - Shape: Variance, Skewness, Kurtosis, Moments</fo:block>
+			<fo:block>C) Descriptive Statistics: Bivariate Analysis</fo:block>
+			<fo:block>[1 Day] Dependence: Pearson product-moment correlation, Rank correlation (Spearman's rho, Kendall's tau), Partial correlation, Scatter plot - Linear regression: Simple linear regression, Ordinary least squares - Regression analysis: Errors and residuals, Regression model validation, Mixed effects models</fo:block>
+			<fo:block>D) Inductive Statistics: Probability Theory</fo:block>
+			<fo:block>[0.75 Days] Probability axioms - Probability space Sample space - Elementary event - Random variable - Probability measure - Complementary event - Joint probability - Marginal probability - Conditional probability - Independence - Conditional independence - Law of total probability - Law of large numbers - Bayes' theorem - Venn diagram - Tree diagram</fo:block>
+			<fo:block>E) Inductive Statistics: Probability Distributions</fo:block>
+			<fo:block>[0.5 Days] Introduction:  Probability mass function, Probability density function, Probability distribution function - Discrete univariate distributions: Binomial, Poisson, Geometric, Hypergeometric - Continuous univariate distributions: Uniform, Exponential, Normal (Gaussian)</fo:block>
+			<fo:block>F) Inductive Statistics: Frequentist Inference</fo:block>
+			<fo:block>[0.5 Days] Unbiased estimators (Mean unbiased minimum variance, Median unbiased) -  Confidence interval - Testing hypotheses - Alpha-/Beta-Error and Power</fo:block>
+			<fo:block>G) Inductive Statistics: Specific Tests</fo:block>
+			<fo:block>[0.75 Days] Z (normal) - Student's t-test - F - Goodness of fit (Chi-squared) - ­Signed-rank (1-sample, 2-sample, 1-way anova)</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">R - Multivariate Analysis using R</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2024695</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Advanced</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Lecture with examples and exercises.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>Multivariate statistics is a form of statistics encompassing the simultaneous observation and analysis of more than one variable. The application of multivariate statistics is multivariate analysis. Multivariate statistics concerns understanding the different aims and background of each of the different forms of multivariate analysis, and how they relate to each other. The practical implementation of multivariate statistics to a particular problem may involve several types of univariate and multivariate analysis in order to understand the relationships between variables and their relevance to the actual problem being studied. This training is one part of a pair of courses on multivariate statistics. It helps you understand the techniques of complex and more advanced data analysis for marketing, controlling and engineering.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-21</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-23</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-09</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-01</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-29</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Dresden</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Dresden</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1800 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-27</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1800 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>17900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>16450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Multivariate Regression Analysis </fo:block>
+			<fo:block>[0.5 Days] Determination of a formula that can describe how elements in a vector of variables respond simultaneously to changes in others.</fo:block>
+			<fo:block>B) Multivariate Analysis of Variance (ANOVA and MANOVA)</fo:block>
+			<fo:block>[0.5 Days] Comparing multivariate means of several groups using the variance-covariance between variables in testing the statistical significance of the mean differences.</fo:block>
+			<fo:block>C) Discriminant Analysis</fo:block>
+			<fo:block>[0.5 Days] Examination whether a set of variables can be used to distinguish between two or more groups of cases.</fo:block>
+			<fo:block>D) Logistic Regression</fo:block>
+			<fo:block>[0.5 Days] Prediction of the outcome of a categorical dependent variable based on one or more predictor variables.</fo:block>
+			<fo:block>E) Factor Analysis</fo:block>
+			<fo:block>[0.5 Days] Extraction of a specified number of synthetic variables (latent variables or factors), fewer than the original set, leaving the remaining unexplained variation as error.</fo:block>
+			<fo:block>F) Clustering</fo:block>
+			<fo:block>[0.5 Days] Assignment of objects into groups (clusters) so that objects (cases) from the same cluster are more similar to each other than objects from different clusters.</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistical Data Analysis 1</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2023679</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Beginning</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Presentation with examples and hands-on labs.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>IBM SPSS Statistics is a comprehensive system for analyzing data. SPSS Statistics can take data from almost any type offile and use them to generate tabulated reports, charts and plots of distributions and trends, descriptive statistics, and complex statistical analyses. This training shows you how to use the graphical user interface of SPSS Statistics. You will learn how to make the most out of the wide range of statistical procedures for basic analyses and reports, including counts, crosstabs and descriptive statistics.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-07</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1200 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-24</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-25</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-19</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1000 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>27500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>27500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1400 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1400 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>27500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-12</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>27500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-17</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1400 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>13500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>13500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>12100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>12100 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1150 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Data Files</fo:block>
+			<fo:block>Opening data files - File information - Saving data files - Comparing datasets - Data View - Variable View - Entering data - Editing data - Finding cases, variables, or imputations - Finding and replacing data and attribute values - Working with Multiple Data Sources</fo:block>
+			<fo:block>B) Data preparation and transformation</fo:block>
+			<fo:block>Variable properties - Defining Variable Properties - Setting measurement level for variables with unknown measurement level - Multiple Response Sets - Copying Data Properties - Visual Binning - Count Occurrences of Values within Cases - Identifying Duplicate Cases - Computing Variables - Recoding Values - Rank Cases - Time Series Data Transformations</fo:block>
+			<fo:block>C) Outputs</fo:block>
+			<fo:block>Viewer - Export output - Viewer printing - Saving output</fo:block>
+			<fo:block>D) Pivot Tables</fo:block>
+			<fo:block>Manipulating a pivot table - Workingwithlayers - Showing and hiding items - Table properties - Cell properties - Footnotes and captions</fo:block>
+			<fo:block>E) Working with Command Syntax</fo:block>
+			<fo:block>Syntax Rules - Using the Syntax Editor</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistical Data Analysis 3 (Questionnaires, Surveys and Market Research)</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2023681</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Advanced</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Presentation with examples and hands-on labs.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>IBM SPSS Direct Marketing helps you understand your customers in greater depth, improve your marketing campaigns and maximize the ROI of your marketing budget. This training shows you how to conduct sophisticated analyses of your customers or contacts – and with a high level of confidence in your results. You will get to know concepts like cluster analysis, prospect profiling, Conjoint Analysis, Multidimensional Scaling, Correspondence Analysis or the analysis of complex samples.
+</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1800 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>17900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>16450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Exploratory Data Analysis</fo:block>
+			<fo:block>[0.5 Days] Crosstabs - Summarizing Values ​​- OLAP Cubes - Sample t-Tests - Components of Variance - One-Way ANOVA - Custom Tables: Simple Tables for Categorical Variables, Stacking, Nesting, and Layers with Categorical Variables, Totals and Subtotals, Computed Categories</fo:block>
+			<fo:block>B) Generalized Linear Models (GLM)</fo:block>
+			<fo:block>[0.5 Days] Generalized Linear Models - Generalized Linear Mixed Models - Model Loglinear Analysis - General Loglinear Analysis - Logit Loglinear Analysis</fo:block>
+			<fo:block>C) Analysis of Categorical Data</fo:block>
+			<fo:block>[0.5 Days] Categorical Regression: Define the Scale in the Categorical Regression, Discretization, Missing Values​​, Output - Categorical Principal Components Analysis: Defining Scale and Weight, Discretization, Missing Values​​, Output</fo:block>
+			<fo:block>D) Conjoint Analysis</fo:block>
+			<fo:block>[0.25 Days] Profile Method: Orthogonal Field, Experimental Stimuli, Data Collection and Analysis - Generating an Orthogonal Design - Display</fo:block>
+			<fo:block>E) Multidimensional Scaling</fo:block>
+			<fo:block>[0.25 Days] Multidimensional Scaling Analysis of Similarities, Creating Distances from Data - Defining a Model for the Multidimensional Scaling - Multidimensional Unfolding: Defining a Model Output</fo:block>
+			<fo:block>F) Correspondence Analysis</fo:block>
+			<fo:block>[0.25 Days] Defining the Row and Column Range in the Correspondence Analysis - Model - Statistics - Charts - Multiple Correspondence Analysis: Definition of the Variables´ Weight in the Multiple Correspondence Analysis, Discretization, Missing Values​​, Output, Diagrams</fo:block>
+			<fo:block>G) Analyse von komplexen Stichproben</fo:block>
+			<fo:block>[0.5 Days] Stichprobenziehung mithilfe eines komplexen Plans - Vorbereiten einer komplexen Stichprobe für die Analyse - Häufigkeiten, Kreuztabellen und Deskriptive Statistiken - Regression für komplexe Stichproben: Logistische Regression, Ordinale Regression, Cox-Regression</fo:block>
+			<fo:block>H) Direktmarketing</fo:block>
+			<fo:block>[0.25 Days] RFM-Analyse - Clusteranalyse - Profile über potenzielle Kunden - Responseraten nach Postleitzahlen - Kaufneigung - Kontrollpakettest</fo:block>
+			<fo:block page-break-after="always"/>
+			<fo:block font-size="12pt" color="rgb(124,176,13)" font-variant="small-caps" font-family="Times" text-align="center" font-weight="bold">SPSS - Statistical Data Analysis 2 (Multivariate Analysis)</fo:block>
+			<fo:table width="100%" table-layout="fixed" font-size="10pt" font-family="sans-serif" text-align="justify">
+				<fo:table-column column-number="1" column-width="50%"/>
+				<fo:table-column column-number="2" column-width="50%"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="30%"/>
+									<fo:table-column column-number="2" column-width="60%"/>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Course ID</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2023680</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Level</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Advanced</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Target group</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Information Workers</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Manufacturer</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>IBM</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Method</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Lecture with examples and exercises.</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+							<fo:block>Course objectives</fo:block>
+							<fo:block>The IBM SPSS Statistics Premium Edition helps data analysts, planners, forecasters, survey researchers, program evaluators and database marketers – among others – to easily accomplish tasks at every phase of the analytical process. It includes a broad array of fully integrated Statistics capabilities and related products for specialized analytical tasks across the enterprise. The software will improve productivity significantly and help achieve superior results for specific projects and business goals. This training covers topics as the analysis of categorical and numeric data , linear and nonlinear models, decision trees, articial neural networks, forecasting and time series and more.</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block>
+								<fo:block>Dates</fo:block>
+								<fo:table width="100%" table-layout="fixed">
+									<fo:table-column column-number="1" column-width="25%"/>
+									<fo:table-column column-number="2" column-width="25%"/>
+									<fo:table-column column-number="3" column-width="25%"/>
+									<fo:table-column column-number="4" column-width="25%"/>
+									<fo:table-header>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>City</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Start</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>End</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>Net Price</fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-header>
+									<fo:table-body>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-10-15</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Amsterdam</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-12-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1650 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-14</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-16</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Berlin</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-03</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-11-05</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1350 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chennai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-18</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-20</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Chicago</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Düsseldorf</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Frankfurt</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1500 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-06-30</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-07-02</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1800 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Miami</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-08</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-09-10</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1800 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Mumbai</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>37850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>New York</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-04</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-06</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Oslo</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>17900 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Stockholm</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>16450 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Wien</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1600 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+										<fo:table-row>
+											<fo:table-cell>
+												<fo:block>Zürich</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-11</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>2014-08-13</fo:block>
+											</fo:table-cell>
+											<fo:table-cell>
+												<fo:block>1850 </fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</fo:table-body>
+								</fo:table>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+			<fo:block>Course Contents</fo:block>
+			<fo:block>A) Regression</fo:block>
+			<fo:block>[0.5 Days] GLM Univariate - Linear Regression - Ordinal Regression - Curve Fitting - Partial Least Squares Regression</fo:block>
+			<fo:block>B) Discriminant Analysis</fo:block>
+			<fo:block>[0.25 Days] Defining Ranges - Selecting Cases - Stepwise Method - Classifying</fo:block>
+			<fo:block>C) Exploratory Factor Analysis</fo:block>
+			<fo:block>[0.25 Days] Selecting Cases - Descriptive Statistics - Factor Extraction - Rotation - Factor Values</fo:block>
+			<fo:block>D) Decision Trees</fo:block>
+			<fo:block>[0.5 Days] Creating Decision Trees: Selecting Categories, Validation Criteria for the Construction of the Tree - Tree Editor: Working with Large Trees, Controlling the Data Displayed in the Tree - Data Assumptions and Requirements - Construct a Valuation Model - Missing Values ​​in Tree Models</fo:block>
+			<fo:block>E) Cluster Analysis</fo:block>
+			<fo:block>[0.5 Days] Distance Calculations - Nearest Neighbor Analysis - Two-Step Cluster Analysis - Hierarchical Cluster Analysis - Cluster Analysis</fo:block>
+			<fo:block>F) Artificial Neural Networks</fo:block>
+			<fo:block>[0.5 Days] Structure of Neural Networks - Multilayer Perceptron: Partitions, Architecture, Training, Editing - Radial Basis Function: Architecture, Training</fo:block>
+			<fo:block>G) Time Series</fo:block>
+			<fo:block>[0.5 Days] Transforming Data - Time Series Modeling: Exponential Smoothing, Custom ARIMA Models, Output - Seasonal Decomposition - Spectra - Forecasts - Determining Significant Predictors</fo:block>
+			<fo:block page-break-after="always"/>
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) by Comelio (Comelio GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="PORTRAIT-LIST">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Portrait">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Summary" minOccurs="0"/>
+							<xs:element name="Publication-List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Publication" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Title" type="xs:string"/>
+													<xs:element name="Publisher" type="xs:string"/>
+													<xs:element name="ISBN" type="xs:string"/>
+													<xs:element name="Link" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="URL" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Experience" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Projects" type="xs:string" minOccurs="0"/>
+										<xs:element name="Research" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Link-List" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Title" type="xs:string" minOccurs="0"/>
+													<xs:element name="URL" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="IMAGE-LIST" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Image list</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="IMAGE" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>Image node with binary data</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:anySimpleType">
+														<xs:attribute name="id" use="required">
+															<xs:annotation>
+																<xs:documentation>Portrait file Id</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="name" use="required">
+															<xs:annotation>
+																<xs:documentation>Portrait file name</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" use="required"/>
+						<xs:attribute name="languageId" type="xs:integer" use="required"/>
+						<xs:attribute name="language" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
