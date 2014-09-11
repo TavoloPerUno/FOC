@@ -1524,162 +1524,169 @@
 			<globaltemplate subtype="named" match="Locations">
 				<parameters/>
 				<children>
-					<condition>
+					<level>
 						<children>
-							<conditionbranch xpath="$language = &apos;en&apos;">
+							<marker xpath="if($language = &apos;en&apos;) 
+then &apos;a. Locations&apos;
+else &apos;a. Standorte&apos;" name="TOC" id="coTitle" uses="xpath"/>
+							<condition>
 								<children>
-									<paragraph paragraphtag="h3">
+									<conditionbranch xpath="$language = &apos;en&apos;">
 										<children>
-											<text fixtext="Locations"/>
-										</children>
-									</paragraph>
-									<tgrid>
-										<properties border="0" width="100%"/>
-										<children>
-											<tgridbody-cols>
+											<paragraph paragraphtag="h3">
 												<children>
-													<tgridcol>
-														<styles width="2.42in"/>
-													</tgridcol>
-													<tgridcol/>
+													<text fixtext="a. Locations"/>
 												</children>
-											</tgridbody-cols>
-											<tgridbody-rows>
+											</paragraph>
+											<tgrid>
+												<properties border="0" width="100%"/>
 												<children>
-													<tgridrow>
+													<tgridbody-cols>
 														<children>
-															<tgridcell>
-																<children>
-																	<image>
-																		<target>
-																			<fixtext value="..\Images\Locations_Map_GER-AT-CH.png"/>
-																		</target>
-																	</image>
-																</children>
-															</tgridcell>
-															<tgridcell>
-																<children>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="Our trainings take place at various locations in the German-speaking countries."/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="Public trainings:">
-																				<properties class="emphasis"/>
-																			</text>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="You can enroll for public trainings at our training centers across Germany like in Berlin, Dresden, Hamburg, München / Munich, Düsseldorf, Frankfurt, and Stuttgart. Not all public trainings will be organized in all cities but you can still book a particular training for your team in one of our training and conference centers."/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="In Austria you can attend seminars and trainings in Wien / Vienna while we offer training dates in Switzerland in Zürich / Zurich."/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<properties class="emphasis"/>
-																		<children>
-																			<text fixtext="On-site trainings:"/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="We have mobile and flexible trainers / lecturers who like to visit you and your team for an on-site training or a training in a conference center or hotel near you."/>
-																		</children>
-																	</paragraph>
-																</children>
-															</tgridcell>
+															<tgridcol>
+																<styles width="2.42in"/>
+															</tgridcol>
+															<tgridcol/>
 														</children>
-													</tgridrow>
-												</children>
-											</tgridbody-rows>
-										</children>
-									</tgrid>
-								</children>
-							</conditionbranch>
-							<conditionbranch xpath="$language = &apos;de&apos;">
-								<children>
-									<paragraph paragraphtag="h3">
-										<children>
-											<text fixtext="Standorte"/>
-										</children>
-									</paragraph>
-									<tgrid>
-										<properties border="0" width="100%"/>
-										<children>
-											<tgridbody-cols>
-												<children>
-													<tgridcol>
-														<styles width="2.42in"/>
-													</tgridcol>
-													<tgridcol/>
-												</children>
-											</tgridbody-cols>
-											<tgridbody-rows>
-												<children>
-													<tgridrow>
+													</tgridbody-cols>
+													<tgridbody-rows>
 														<children>
-															<tgridcell>
+															<tgridrow>
 																<children>
-																	<image>
-																		<target>
-																			<fixtext value="..\Images\Locations_Map_GER-AT-CH.png"/>
-																		</target>
-																	</image>
-																</children>
-															</tgridcell>
-															<tgridcell>
-																<children>
-																	<paragraph paragraphtag="p">
+																	<tgridcell>
 																		<children>
-																			<text fixtext="Unsere Seminare finden an verschiedenen Standorten in der DACH-Region statt."/>
+																			<image>
+																				<target>
+																					<fixtext value="..\Images\Locations_Map_GER-AT-CH.png"/>
+																				</target>
+																			</image>
 																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
+																	</tgridcell>
+																	<tgridcell>
 																		<children>
-																			<text fixtext="Öffentliche Seminare:">
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Our trainings take place at various locations in the German-speaking countries."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Public trainings:">
+																						<properties class="emphasis"/>
+																					</text>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="You can enroll for public trainings at our training centers across Germany like in Berlin, Dresden, Hamburg, München / Munich, Düsseldorf, Frankfurt, and Stuttgart. Not all public trainings will be organized in all cities but you can still book a particular training for your team in one of our training and conference centers."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="In Austria you can attend seminars and trainings in Wien / Vienna while we offer training dates in Switzerland in Zürich / Zurich."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
 																				<properties class="emphasis"/>
-																			</text>
+																				<children>
+																					<text fixtext="On-site trainings:"/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="We have mobile and flexible trainers / lecturers who like to visit you and your team for an on-site training or a training in a conference center or hotel near you."/>
+																				</children>
+																			</paragraph>
 																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="Unsere Seminare können Sie an unseren Standorten in Deutschland in Berlin, Dresden, Hamburg, München, Düsseldorf, Frankfurt und Stuttgart buchen. Nicht alle öffentlichen Seminare finden an allen Standorten statt. Doch gibt es die Möglichkeit, für Ihre Gruppe unsere Seminarzentren für en individuelles Training zu verwenden."/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="In Österreich bieten wir Seminare in Wien und in der Schweiz in Zürich an."/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<properties class="emphasis"/>
-																		<children>
-																			<text fixtext="Inhouse Seminare:"/>
-																		</children>
-																	</paragraph>
-																	<paragraph paragraphtag="p">
-																		<children>
-																			<text fixtext="Wir sind regional flexibel und kommen auch gerne direkt zu Ihnen oder organisieren ein für Sie angepasstes Seminar in einem Tagungszentrum in Ihrer Stadt."/>
-																		</children>
-																	</paragraph>
+																	</tgridcell>
 																</children>
-															</tgridcell>
+															</tgridrow>
 														</children>
-													</tgridrow>
+													</tgridbody-rows>
 												</children>
-											</tgridbody-rows>
+											</tgrid>
 										</children>
-									</tgrid>
+									</conditionbranch>
+									<conditionbranch xpath="$language = &apos;de&apos;">
+										<children>
+											<paragraph paragraphtag="h3">
+												<children>
+													<text fixtext="a. Standorte"/>
+												</children>
+											</paragraph>
+											<tgrid>
+												<properties border="0" width="100%"/>
+												<children>
+													<tgridbody-cols>
+														<children>
+															<tgridcol>
+																<styles width="2.42in"/>
+															</tgridcol>
+															<tgridcol/>
+														</children>
+													</tgridbody-cols>
+													<tgridbody-rows>
+														<children>
+															<tgridrow>
+																<children>
+																	<tgridcell>
+																		<children>
+																			<image>
+																				<target>
+																					<fixtext value="..\Images\Locations_Map_GER-AT-CH.png"/>
+																				</target>
+																			</image>
+																		</children>
+																	</tgridcell>
+																	<tgridcell>
+																		<children>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Unsere Seminare finden an verschiedenen Standorten in der DACH-Region statt."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Öffentliche Seminare:">
+																						<properties class="emphasis"/>
+																					</text>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Unsere Seminare können Sie an unseren Standorten in Deutschland in Berlin, Dresden, Hamburg, München, Düsseldorf, Frankfurt und Stuttgart buchen. Nicht alle öffentlichen Seminare finden an allen Standorten statt. Doch gibt es die Möglichkeit, für Ihre Gruppe unsere Seminarzentren für en individuelles Training zu verwenden."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="In Österreich bieten wir Seminare in Wien und in der Schweiz in Zürich an."/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<properties class="emphasis"/>
+																				<children>
+																					<text fixtext="Inhouse Seminare:"/>
+																				</children>
+																			</paragraph>
+																			<paragraph paragraphtag="p">
+																				<children>
+																					<text fixtext="Wir sind regional flexibel und kommen auch gerne direkt zu Ihnen oder organisieren ein für Sie angepasstes Seminar in einem Tagungszentrum in Ihrer Stadt."/>
+																				</children>
+																			</paragraph>
+																		</children>
+																	</tgridcell>
+																</children>
+															</tgridrow>
+														</children>
+													</tgridbody-rows>
+												</children>
+											</tgrid>
+										</children>
+									</conditionbranch>
 								</children>
-							</conditionbranch>
+							</condition>
 						</children>
-					</condition>
+					</level>
 					<newline/>
 					<calltemplate subtype="named" match="Country">
 						<parameters/>
@@ -1689,28 +1696,35 @@
 			<globaltemplate subtype="named" match="Disclaimer">
 				<parameters/>
 				<children>
-					<condition>
+					<level>
 						<children>
-							<conditionbranch xpath="$language = &apos;en&apos;">
+							<marker xpath="if($language = &apos;en&apos;)
+then &apos;b. Disclaimer&apos;
+else &apos;b. Impressum&apos;" name="TOC" id="coTitle" uses="xpath"/>
+							<condition>
 								<children>
-									<paragraph paragraphtag="h3">
+									<conditionbranch xpath="$language = &apos;en&apos;">
 										<children>
-											<text fixtext="Disclaimer"/>
+											<paragraph paragraphtag="h3">
+												<children>
+													<text fixtext="b. Disclaimer"/>
+												</children>
+											</paragraph>
 										</children>
-									</paragraph>
-								</children>
-							</conditionbranch>
-							<conditionbranch xpath="$language = &apos;de&apos;">
-								<children>
-									<paragraph paragraphtag="h3">
+									</conditionbranch>
+									<conditionbranch xpath="$language = &apos;de&apos;">
 										<children>
-											<text fixtext="Impressum"/>
+											<paragraph paragraphtag="h3">
+												<children>
+													<text fixtext="b. Impressum"/>
+												</children>
+											</paragraph>
 										</children>
-									</paragraph>
+									</conditionbranch>
 								</children>
-							</conditionbranch>
+							</condition>
 						</children>
-					</condition>
+					</level>
 					<newline/>
 					<newline/>
 					<newline/>

@@ -10,12 +10,17 @@
 	</xsl:param>
 	<xsl:param name="SV_GeneratedFileNamePrefix" select="if ( $SV_BaseOutputFileName ) then $SV_BaseOutputFileName else &apos;CourseCatalog&apos;" as="xs:string?"/>
 	<xsl:param name="language" select="'de'"/>
+	<xsl:param name="locationGroups" select="'3'"/>
 	<xsl:param name="XML2"/>
 	<xsl:variable name="XML" select="/"/>
 	<xsl:param name="XML3"/>
+	<xsl:param name="XML4"/>
+	<xsl:param name="XML5"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/XML%20Schema/Translation-List.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/XML%20Schema/CourseList.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/XML%20Schema/Number-List.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
+	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/1%20Sept/XML%20Schema/LocationList.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
+	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/1%20Sept/XML%20Schema/Country-List.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
 	<xsl:variable name="fo:layout-master-set">
 		<fo:layout-master-set>
 			<fo:simple-page-master master-name="page-master-0-even" margin-left="0.50in" margin-right="0.50in" page-height="11.69in" page-width="8.27in" margin-top="0.30in" margin-bottom="0.30in">
@@ -50,6 +55,7 @@
 	<xsl:variable name="altova:CssImages">
 		<altova:CssImage altova:sUrl="file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/Images/greenGradient.png"/>
 	</xsl:variable>
+	<xsl:key name="altova:id-key" match="document-node()|node()|@*" use="generate-id()"/>
 	<xsl:variable name="altova:bDoFirstSectionBreak" as="xs:boolean" select="true()"/>
 	<xsl:variable name="altova:sCssSwitch" as="xs:string" select="''"/>
 	<xsl:variable name="altova:nodeCssClasses">
@@ -68,8 +74,14 @@
 		<Class sFile="" sSelector="cityHeader">
 			<Styles background-color="#B2C675" color="Black" font-size="10pt" margin-top="2pt" padding=".2em"/>
 		</Class>
+		<Class sFile="" sSelector="cityThumbnail">
+			<Styles height=".55in" width=".63in"/>
+		</Class>
 		<Class sFile="" sSelector="dateCell">
 			<Styles border-bottom-color="#B2C675" border-bottom-style="solid" border-bottom-width="1pt" border-left-color="#B2C675" border-left-style="solid" border-left-width="1pt" border-right-color="#B2C675" border-right-style="solid" border-right-width="1pt" display="block" font-family="Verdana, Geneva, sans-serif" font-size="9pt" margin="0pt" text-align="center" width="auto"/>
+		</Class>
+		<Class sFile="" sSelector="emphasis">
+			<Styles font-weight="bold"/>
 		</Class>
 		<Class sFile="" sSelector="htmlTable">
 			<Styles display="inline-table" float="right"/>
@@ -93,6 +105,8 @@
 	<xsl:variable name="altova:design-xslt-tree-view-before-toc">
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<altova:main-document url="{if ($SV_BaseOutputFileName) then concat($SV_BaseOutputFileName,'.fo') else ''}">
 			<fo:root>
 				<xsl:copy-of select="$fo:layout-master-set"/>
@@ -459,8 +473,13 @@
 									<altova:toc altova:name="toc"/>
 								</fo:block>
 								<altova:page-break/>
+								<xsl:call-template name="Locations"/>
 								<altova:line-break/>
+								<altova:page-break/>
 								<xsl:apply-templates select="COURSE-LIST"/>
+								<altova:line-break/>
+								<altova:page-break/>
+								<xsl:call-template name="Disclaimer"/>
 								<altova:line-break/>
 							</xsl:for-each>
 						</fo:block>
@@ -537,7 +556,7 @@
 					</fo:block>
 					<xsl:for-each select="descendant::altova:level[ ancestor::altova:level[1] is current() ]">
 						<xsl:variable name="altova:current-level-id" select="generate-id()"/>
-						<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+						<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 							<xsl:for-each select="descendant::altova:marker[ @altova:name = &apos;TOC&apos; and @altova:id = &apos;coSubtitle&apos; and ancestor::altova:level[1] is current() ]">
 								<xsl:variable name="altova:current-marker-id" select="generate-id()"/>
 								<altova:basic-link-container>
@@ -679,6 +698,8 @@
 	<xsl:template match="COURSE-LIST">
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<xsl:for-each select="COURSE[sps:getSubtitleNumber( TITLE,SUBTITLE, @id ) = &quot;i&quot;]">
 			<xsl:sort select="TITLE" data-type="text" order="ascending"/>
 			<xsl:sort select="SUBTITLE" data-type="text" order="ascending"/>
@@ -848,7 +869,7 @@
 													<xsl:variable name="altova:ColumnData"/>
 													<fo:table-body height="auto" width="auto" start-indent="0pt">
 														<fo:table-row height="auto" width="auto">
-															<fo:table-cell font-family="Verdana" font-size="10pt" padding="2" display-align="before">
+															<fo:table-cell border-right-color="gray" border-right-style="dotted" border-right-width="thin" font-family="Verdana" font-size="10pt" padding="2" display-align="before">
 																<fo:block-container overflow="hidden">
 																	<fo:block text-align="left">
 																		<xsl:variable name="altova:table">
@@ -861,7 +882,7 @@
 																						<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" line-height="111%" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="before">
 																							<fo:block-container overflow="hidden">
 																								<fo:block text-align="left">
-																									<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																									<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																										<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Focus.png&apos;"/>
 																										<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																											<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -950,7 +971,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="@id">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -974,7 +995,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="@language">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1000,7 +1021,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="@duration">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1057,7 +1078,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="@deliveryType">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1081,7 +1102,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="TARGET_GROUP">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1105,7 +1126,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="PREREQUISITE">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1129,7 +1150,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="COURSE_METHOD">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1153,7 +1174,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																	<xsl:for-each select="COURSE_LEVEL">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1181,9 +1202,9 @@
 															</fo:table-cell>
 															<fo:table-cell empty-cells="hide" font-family="Verdana" font-size="10pt" height="auto" min-width="0pt" padding="2" display-align="before">
 																<fo:block-container overflow="hidden">
-																	<fo:block text-align="right">
+																	<fo:block text-align="left">
 																		<xsl:if test="fn:count(fn:distinct-values(DATE-LIST/DATE[@id &gt; 0]/@id) )&gt; 0">
-																			<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																			<fo:block color="#618f05" font-size="14pt" font-weight="bold" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																				<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Dates.png&apos;"/>
 																				<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																					<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1256,12 +1277,10 @@
 																				<xsl:with-param name="pDateList" select="DATE-LIST"/>
 																				<xsl:with-param name="language" select="$language"/>
 																				<xsl:with-param name="outputType" select="$SV_OutputFormat "/>
+																				<xsl:with-param name="validCities" select='string-join(fn:distinct-values($XML4/LOCATION-LIST/COUNTRY-LIST/COUNTRY/CITY-LIST/CITY[GROUP-LIST/GROUP_ID = fn:tokenize($locationGroups, ",")]/fn:string(NAME)), ",")'/>
 																			</xsl:call-template>
 																			<fo:block font-size="0.13in" line-height="171%" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
 																				<fo:block font-size="10pt" line-height="normal" margin="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
-																					<fo:inline font-size="4pt" baseline-shift="super">
-																						<xsl:text>*</xsl:text>
-																					</fo:inline>
 																					<xsl:choose>
 																						<xsl:when test="$language = &apos;en&apos;">
 																							<fo:inline>
@@ -1286,7 +1305,7 @@
 											</xsl:variable>
 											<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
 											<fo:block font-size="0.13in" keep-together.within-page="auto" keep-together.within-column="auto" line-height="171%" margin-right="5pt + 100% - 100%" space-before="0" space-after="0" margin="0pt">
-												<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+												<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 													<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Overview.png&apos;"/>
 													<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 														<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1461,7 +1480,7 @@
 												<xsl:variable name="altova:ColumnData"/>
 												<fo:table-body height="auto" width="auto" start-indent="0pt">
 													<fo:table-row height="auto" width="auto">
-														<fo:table-cell font-family="Verdana" font-size="10pt" padding="2" display-align="before">
+														<fo:table-cell border-right-color="gray" border-right-style="dotted" border-right-width="thin" font-family="Verdana" font-size="10pt" padding="2" display-align="before">
 															<fo:block-container overflow="hidden">
 																<fo:block text-align="left">
 																	<xsl:variable name="altova:table">
@@ -1474,7 +1493,7 @@
 																					<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" line-height="111%" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="before">
 																						<fo:block-container overflow="hidden">
 																							<fo:block text-align="left">
-																								<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																								<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																									<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Focus.png&apos;"/>
 																									<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																										<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1563,7 +1582,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="@id">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1587,7 +1606,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="@language">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1613,7 +1632,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="@duration">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1670,7 +1689,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="@deliveryType">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1694,7 +1713,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="TARGET_GROUP">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1718,7 +1737,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="PREREQUISITE">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1742,7 +1761,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="COURSE_METHOD">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1766,7 +1785,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 																																<xsl:for-each select="COURSE_LEVEL">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1794,9 +1813,9 @@
 														</fo:table-cell>
 														<fo:table-cell empty-cells="hide" font-family="Verdana" font-size="10pt" height="auto" min-width="0pt" padding="2" display-align="before">
 															<fo:block-container overflow="hidden">
-																<fo:block text-align="right">
+																<fo:block text-align="left">
 																	<xsl:if test="fn:count(fn:distinct-values(DATE-LIST/DATE[@id &gt; 0]/@id) )&gt; 0">
-																		<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																		<fo:block color="#618f05" font-size="14pt" font-weight="bold" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																			<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Dates.png&apos;"/>
 																			<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																				<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1869,12 +1888,10 @@
 																			<xsl:with-param name="pDateList" select="DATE-LIST"/>
 																			<xsl:with-param name="language" select="$language"/>
 																			<xsl:with-param name="outputType" select="$SV_OutputFormat "/>
+																			<xsl:with-param name="validCities" select='string-join(fn:distinct-values($XML4/LOCATION-LIST/COUNTRY-LIST/COUNTRY/CITY-LIST/CITY[GROUP-LIST/GROUP_ID = fn:tokenize($locationGroups, ",")]/fn:string(NAME)), ",")'/>
 																		</xsl:call-template>
 																		<fo:block font-size="0.13in" line-height="171%" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
 																			<fo:block font-size="10pt" line-height="normal" margin="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
-																				<fo:inline font-size="4pt" baseline-shift="super">
-																					<xsl:text>*</xsl:text>
-																				</fo:inline>
 																				<xsl:choose>
 																					<xsl:when test="$language = &apos;en&apos;">
 																						<fo:inline>
@@ -1899,7 +1916,7 @@
 										</xsl:variable>
 										<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
 										<fo:block font-size="0.13in" keep-together.within-page="auto" keep-together.within-column="auto" line-height="171%" margin-right="5pt + 100% - 100%" space-before="0" space-after="0" margin="0pt">
-											<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+											<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 												<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Overview.png&apos;"/>
 												<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 													<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1991,8 +2008,10 @@
 	<xsl:template match="DATE-LIST">
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<altova:line-break/>
-		<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+		<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 			<xsl:choose>
 				<xsl:when test="$language = &apos;en&apos;">
 					<fo:inline>
@@ -2111,12 +2130,14 @@
 	<xsl:template match="Module-List">
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<xsl:if test="not(preceding-sibling::Module-List)">
 			<xsl:for-each select="..">
 				<fo:block font-size="0.13in" keep-together.within-page="auto" keep-together.within-column="auto" line-height="171%" margin-right="5pt + 100% - 100%" page-break-after="always" space-before="0" space-after="0" margin="0pt">
 					<xsl:for-each select="Module-List">
 						<fo:block font-size="10pt" keep-together.within-page="always" keep-together.within-column="always" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
-							<fo:block color="#7cb00d" font-size="14pt" font-weight="bold" keep-together.within-page="always" keep-together.within-column="always" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+							<fo:block color="#618f05" font-size="14pt" font-weight="bold" keep-together.within-page="always" keep-together.within-column="always" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 								<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Details2.png&apos;"/>
 								<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 									<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -2341,6 +2362,8 @@
 	<xsl:template name="AddressBerlin">
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 			<fo:inline>
 				<xsl:text>Comelio GmbH - Goethestr. 34 -13086 Berlin</xsl:text>
@@ -2351,6 +2374,725 @@
 		<xsl:param name="Value" as="xs:string*" select="&apos;&apos;"/>
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+	</xsl:template>
+	<xsl:template name="Introduction">
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<xsl:choose>
+			<xsl:when test="$language = &apos;en&apos;">
+				<fo:inline>
+					<xsl:text>Course Catalog</xsl:text>
+				</fo:inline>
+			</xsl:when>
+			<xsl:when test="$language = &apos;de&apos;">
+				<fo:inline>
+					<xsl:text>Kurskatalog</xsl:text>
+				</fo:inline>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+	<xsl:template name="Locations">
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<altova:level>
+			<altova:marker altova:name="TOC" altova:id="coTitle">
+				<xsl:attribute name="altova:entrytext">
+					<xsl:value-of select="if($language = 'en') 
+then 'a. Locations'
+else 'a. Standorte'"/>
+				</xsl:attribute>
+			</altova:marker>
+			<xsl:choose>
+				<xsl:when test="$language = &apos;en&apos;">
+					<fo:block font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+						<fo:inline>
+							<xsl:text>a. Locations</xsl:text>
+						</fo:inline>
+					</fo:block>
+					<xsl:variable name="altova:table">
+						<fo:table table-layout="fixed" width="100%" border-spacing="2pt">
+							<fo:table-column column-width="2.420in"/>
+							<fo:table-column column-width="proportional-column-width(1)"/>
+							<xsl:variable name="altova:CurrContextGrid_8" select="."/>
+							<xsl:variable name="altova:ColumnData"/>
+							<fo:table-body start-indent="0pt">
+								<fo:table-row>
+									<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+										<fo:block-container overflow="hidden">
+											<fo:block text-align="left">
+												<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Locations_Map_GER-AT-CH.png&apos;"/>
+												<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
+													<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
+														<xsl:when test="unparsed-text-available($altova:sUrlOrData, 'x-binarytobase64')">
+															<xsl:sequence select="altovaext:get-width-and-height-from-image-data(xs:base64Binary(unparsed-text($altova:sUrlOrData, 'x-binarytobase64')))"/>
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:sequence select="(0, 0)"/>
+														</xsl:otherwise>
+													</xsl:choose>
+													<xsl:sequence select="(0, 0)" use-when="not(function-available('altovaext:get-width-and-height-from-image-data'))"/>
+												</xsl:variable>
+												<fo:external-graphic>
+													<xsl:if test="$altova:seqWidthHeight[2] != 0">
+														<xsl:attribute name="scaling" select="'non-uniform'"/>
+														<xsl:variable name="sContent-height">
+															<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+																<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[2], &apos;px&apos;)"/>
+															</xsl:call-template>
+														</xsl:variable>
+														<xsl:if test="$sContent-height != ''">
+															<xsl:attribute name="content-height">
+																<xsl:value-of select="$sContent-height"/>
+															</xsl:attribute>
+														</xsl:if>
+													</xsl:if>
+													<xsl:if test="$altova:seqWidthHeight[1] != 0">
+														<xsl:attribute name="scaling" select="'non-uniform'"/>
+														<xsl:variable name="sContent-width">
+															<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+																<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[1], &apos;px&apos;)"/>
+															</xsl:call-template>
+														</xsl:variable>
+														<xsl:if test="$sContent-width != ''">
+															<xsl:attribute name="content-width">
+																<xsl:value-of select="$sContent-width"/>
+															</xsl:attribute>
+														</xsl:if>
+													</xsl:if>
+													<xsl:attribute name="src">
+														<xsl:text>url(</xsl:text>
+														<xsl:call-template name="altova:double-backslash">
+															<xsl:with-param name="text">
+																<xsl:value-of select="string(&apos;../Images/Locations_Map_GER-AT-CH.png&apos;)"/>
+															</xsl:with-param>
+															<xsl:with-param name="text-length">
+																<xsl:value-of select="string-length(string(&apos;../Images/Locations_Map_GER-AT-CH.png&apos;))"/>
+															</xsl:with-param>
+														</xsl:call-template>
+														<xsl:text>)</xsl:text>
+													</xsl:attribute>
+												</fo:external-graphic>
+												<fo:inline>
+													<xsl:text>&#x200B;</xsl:text>
+												</fo:inline>
+											</fo:block>
+										</fo:block-container>
+									</fo:table-cell>
+									<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+										<fo:block-container overflow="hidden">
+											<fo:block text-align="left">
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>Our trainings take place at various locations in the German-speaking countries.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline font-weight="bold">
+														<xsl:text>Public trainings:</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>You can enroll for public trainings at our training centers across Germany like in Berlin, Dresden, Hamburg, München / Munich, Düsseldorf, Frankfurt, and Stuttgart. Not all public trainings will be organized in all cities but you can still book a particular training for your team in one of our training and conference centers.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>In Austria you can attend seminars and trainings in Wien / Vienna while we offer training dates in Switzerland in Zürich / Zurich.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>On-site trainings:</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>We have mobile and flexible trainers / lecturers who like to visit you and your team for an on-site training or a training in a conference center or hotel near you.</xsl:text>
+													</fo:inline>
+												</fo:block>
+											</fo:block>
+										</fo:block-container>
+									</fo:table-cell>
+								</fo:table-row>
+							</fo:table-body>
+						</fo:table>
+					</xsl:variable>
+					<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
+				</xsl:when>
+				<xsl:when test="$language = &apos;de&apos;">
+					<fo:block font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+						<fo:inline>
+							<xsl:text>a. Standorte</xsl:text>
+						</fo:inline>
+					</fo:block>
+					<xsl:variable name="altova:table">
+						<fo:table table-layout="fixed" width="100%" border-spacing="2pt">
+							<fo:table-column column-width="2.420in"/>
+							<fo:table-column column-width="proportional-column-width(1)"/>
+							<xsl:variable name="altova:CurrContextGrid_9" select="."/>
+							<xsl:variable name="altova:ColumnData"/>
+							<fo:table-body start-indent="0pt">
+								<fo:table-row>
+									<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+										<fo:block-container overflow="hidden">
+											<fo:block text-align="left">
+												<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Locations_Map_GER-AT-CH.png&apos;"/>
+												<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
+													<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
+														<xsl:when test="unparsed-text-available($altova:sUrlOrData, 'x-binarytobase64')">
+															<xsl:sequence select="altovaext:get-width-and-height-from-image-data(xs:base64Binary(unparsed-text($altova:sUrlOrData, 'x-binarytobase64')))"/>
+														</xsl:when>
+														<xsl:otherwise>
+															<xsl:sequence select="(0, 0)"/>
+														</xsl:otherwise>
+													</xsl:choose>
+													<xsl:sequence select="(0, 0)" use-when="not(function-available('altovaext:get-width-and-height-from-image-data'))"/>
+												</xsl:variable>
+												<fo:external-graphic>
+													<xsl:if test="$altova:seqWidthHeight[2] != 0">
+														<xsl:attribute name="scaling" select="'non-uniform'"/>
+														<xsl:variable name="sContent-height">
+															<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+																<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[2], &apos;px&apos;)"/>
+															</xsl:call-template>
+														</xsl:variable>
+														<xsl:if test="$sContent-height != ''">
+															<xsl:attribute name="content-height">
+																<xsl:value-of select="$sContent-height"/>
+															</xsl:attribute>
+														</xsl:if>
+													</xsl:if>
+													<xsl:if test="$altova:seqWidthHeight[1] != 0">
+														<xsl:attribute name="scaling" select="'non-uniform'"/>
+														<xsl:variable name="sContent-width">
+															<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+																<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[1], &apos;px&apos;)"/>
+															</xsl:call-template>
+														</xsl:variable>
+														<xsl:if test="$sContent-width != ''">
+															<xsl:attribute name="content-width">
+																<xsl:value-of select="$sContent-width"/>
+															</xsl:attribute>
+														</xsl:if>
+													</xsl:if>
+													<xsl:attribute name="src">
+														<xsl:text>url(</xsl:text>
+														<xsl:call-template name="altova:double-backslash">
+															<xsl:with-param name="text">
+																<xsl:value-of select="string(&apos;../Images/Locations_Map_GER-AT-CH.png&apos;)"/>
+															</xsl:with-param>
+															<xsl:with-param name="text-length">
+																<xsl:value-of select="string-length(string(&apos;../Images/Locations_Map_GER-AT-CH.png&apos;))"/>
+															</xsl:with-param>
+														</xsl:call-template>
+														<xsl:text>)</xsl:text>
+													</xsl:attribute>
+												</fo:external-graphic>
+												<fo:inline>
+													<xsl:text>&#x200B;</xsl:text>
+												</fo:inline>
+											</fo:block>
+										</fo:block-container>
+									</fo:table-cell>
+									<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+										<fo:block-container overflow="hidden">
+											<fo:block text-align="left">
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>Unsere Seminare finden an verschiedenen Standorten in der DACH-Region statt.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline font-weight="bold">
+														<xsl:text>Öffentliche Seminare:</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>Unsere Seminare können Sie an unseren Standorten in Deutschland in Berlin, Dresden, Hamburg, München, Düsseldorf, Frankfurt und Stuttgart buchen. Nicht alle öffentlichen Seminare finden an allen Standorten statt. Doch gibt es die Möglichkeit, für Ihre Gruppe unsere Seminarzentren für en individuelles Training zu verwenden.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>In Österreich bieten wir Seminare in Wien und in der Schweiz in Zürich an.</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>Inhouse Seminare:</xsl:text>
+													</fo:inline>
+												</fo:block>
+												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+													<fo:inline>
+														<xsl:text>Wir sind regional flexibel und kommen auch gerne direkt zu Ihnen oder organisieren ein für Sie angepasstes Seminar in einem Tagungszentrum in Ihrer Stadt.</xsl:text>
+													</fo:inline>
+												</fo:block>
+											</fo:block>
+										</fo:block-container>
+									</fo:table-cell>
+								</fo:table-row>
+							</fo:table-body>
+						</fo:table>
+					</xsl:variable>
+					<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
+				</xsl:when>
+			</xsl:choose>
+		</altova:level>
+		<altova:line-break/>
+		<xsl:call-template name="Country"/>
+	</xsl:template>
+	<xsl:template name="Disclaimer">
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<altova:level>
+			<altova:marker altova:name="TOC" altova:id="coTitle">
+				<xsl:attribute name="altova:entrytext">
+					<xsl:value-of select="if($language = 'en')
+then 'b. Disclaimer'
+else 'b. Impressum'"/>
+				</xsl:attribute>
+			</altova:marker>
+			<xsl:choose>
+				<xsl:when test="$language = &apos;en&apos;">
+					<fo:block font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+						<fo:inline>
+							<xsl:text>b. Disclaimer</xsl:text>
+						</fo:inline>
+					</fo:block>
+				</xsl:when>
+				<xsl:when test="$language = &apos;de&apos;">
+					<fo:block font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+						<fo:inline>
+							<xsl:text>b. Impressum</xsl:text>
+						</fo:inline>
+					</fo:block>
+				</xsl:when>
+			</xsl:choose>
+		</altova:level>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Frankfurt%20Interior-s.jpg&apos;"/>
+		<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
+			<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
+				<xsl:when test="unparsed-text-available($altova:sUrlOrData, 'x-binarytobase64')">
+					<xsl:sequence select="altovaext:get-width-and-height-from-image-data(xs:base64Binary(unparsed-text($altova:sUrlOrData, 'x-binarytobase64')))"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:sequence select="(0, 0)"/>
+				</xsl:otherwise>
+			</xsl:choose>
+			<xsl:sequence select="(0, 0)" use-when="not(function-available('altovaext:get-width-and-height-from-image-data'))"/>
+		</xsl:variable>
+		<fo:external-graphic>
+			<xsl:if test="$altova:seqWidthHeight[2] != 0">
+				<xsl:attribute name="scaling" select="'non-uniform'"/>
+				<xsl:variable name="sContent-height">
+					<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+						<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[2], &apos;px&apos;)"/>
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:if test="$sContent-height != ''">
+					<xsl:attribute name="content-height">
+						<xsl:value-of select="$sContent-height"/>
+					</xsl:attribute>
+				</xsl:if>
+			</xsl:if>
+			<xsl:if test="$altova:seqWidthHeight[1] != 0">
+				<xsl:attribute name="scaling" select="'non-uniform'"/>
+				<xsl:variable name="sContent-width">
+					<xsl:call-template name="altova:MakeValueAbsoluteIfPixels">
+						<xsl:with-param name="sValue" select="concat($altova:seqWidthHeight[1], &apos;px&apos;)"/>
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:if test="$sContent-width != ''">
+					<xsl:attribute name="content-width">
+						<xsl:value-of select="$sContent-width"/>
+					</xsl:attribute>
+				</xsl:if>
+			</xsl:if>
+			<xsl:attribute name="src">
+				<xsl:text>url(</xsl:text>
+				<xsl:call-template name="altova:double-backslash">
+					<xsl:with-param name="text">
+						<xsl:value-of select="string(&apos;../Images/Frankfurt%20Interior-s.jpg&apos;)"/>
+					</xsl:with-param>
+					<xsl:with-param name="text-length">
+						<xsl:value-of select="string-length(string(&apos;../Images/Frankfurt%20Interior-s.jpg&apos;))"/>
+					</xsl:with-param>
+				</xsl:call-template>
+				<xsl:text>)</xsl:text>
+			</xsl:attribute>
+		</fo:external-graphic>
+		<fo:inline>
+			<xsl:text>&#x200B;</xsl:text>
+		</fo:inline>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<altova:line-break/>
+		<xsl:variable name="altova:table">
+			<fo:table table-layout="fixed" width="100%" border-spacing="2pt">
+				<fo:table-column column-width="20%"/>
+				<fo:table-column column-width="30%"/>
+				<fo:table-column column-width="proportional-column-width(1)"/>
+				<xsl:variable name="altova:CurrContextGrid_10" select="."/>
+				<xsl:variable name="altova:ColumnData"/>
+				<fo:table-body start-indent="0pt">
+					<fo:table-row>
+						<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="before">
+							<fo:block-container overflow="hidden">
+								<fo:block text-align="left">
+									<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+										<fo:inline>
+											<xsl:text>Comelio GmbH</xsl:text>
+										</fo:inline>
+										<altova:line-break/>
+										<fo:inline>
+											<xsl:text>Goethestr. 34</xsl:text>
+										</fo:inline>
+										<altova:line-break/>
+										<fo:inline>
+											<xsl:text>13086 Berlin</xsl:text>
+										</fo:inline>
+										<altova:line-break/>
+										<fo:inline>
+											<xsl:text>Germany</xsl:text>
+										</fo:inline>
+									</fo:block>
+								</fo:block>
+							</fo:block-container>
+						</fo:table-cell>
+						<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="before">
+							<fo:block-container overflow="hidden">
+								<fo:block text-align="left">
+									<xsl:variable name="List0xD84AB50">
+										<fo:list-block provisional-distance-between-starts="7mm" provisional-label-separation="2mm">
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<fo:inline>
+															<xsl:text>Tel: +49.30.8145622.00</xsl:text>
+														</fo:inline>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<fo:inline>
+															<xsl:text>Fax: +49.30.8145622.10</xsl:text>
+														</fo:inline>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+										</fo:list-block>
+									</xsl:variable>
+									<xsl:if test="$List0xD84AB50//fo:list-item[1]">
+										<xsl:copy-of select="$List0xD84AB50"/>
+									</xsl:if>
+								</fo:block>
+							</fo:block-container>
+						</fo:table-cell>
+						<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="before">
+							<fo:block-container overflow="hidden">
+								<fo:block text-align="left">
+									<xsl:variable name="List0xD84ABB8">
+										<fo:list-block provisional-distance-between-starts="7mm" provisional-label-separation="2mm">
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<altova:hyperlink href="{&apos;http://www.comelio.com&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>www.comelio.com</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+														<fo:inline>
+															<xsl:text> | </xsl:text>
+														</fo:inline>
+														<altova:hyperlink href="{&apos;http://www.comelio.de&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>.de</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+														<fo:inline>
+															<xsl:text> | </xsl:text>
+														</fo:inline>
+														<altova:hyperlink href="{&apos;http://www.comelio.at&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>.at</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+														<fo:inline>
+															<xsl:text> | </xsl:text>
+														</fo:inline>
+														<altova:hyperlink href="{&apos;http://www.comelio.ch&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>.ch</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<altova:hyperlink href="{&apos;http://www.comelio-seminare.com&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>www.comelio-seminare.com</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<altova:hyperlink href="{&apos;mailto:info@comelio.com&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>info@comelio.com</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<altova:hyperlink href="{&apos;https://www.facebook.com/comeliogroup&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>https://www.facebook.com/comeliogroup</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+											<fo:list-item>
+												<fo:list-item-label end-indent="label-end()" text-align="right">
+													<fo:block font-family="Courier">&#x2022;</fo:block>
+												</fo:list-item-label>
+												<fo:list-item-body start-indent="body-start()">
+													<fo:block>
+														<altova:hyperlink href="{&apos;https://twitter.com/Comelio&apos;}" color="black" text-decoration="underline">
+															<fo:inline>
+																<xsl:text>https://twitter.com/Comelio</xsl:text>
+															</fo:inline>
+														</altova:hyperlink>
+													</fo:block>
+												</fo:list-item-body>
+											</fo:list-item>
+										</fo:list-block>
+									</xsl:variable>
+									<xsl:if test="$List0xD84ABB8//fo:list-item[1]">
+										<xsl:copy-of select="$List0xD84ABB8"/>
+									</xsl:if>
+								</fo:block>
+							</fo:block-container>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+		</xsl:variable>
+		<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
+		<altova:line-break/>
+	</xsl:template>
+	<xsl:template name="Country">
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<xsl:for-each select="$XML4">
+			<xsl:for-each select="LOCATION-LIST">
+				<xsl:for-each select="COUNTRY-LIST">
+					<xsl:for-each select="COUNTRY[if(count(fn:tokenize($locationGroups, &quot;,&quot;)) &lt; 1)
+then count(CITY-LIST/CITY/NAME) &gt; 0
+else
+count(CITY-LIST/CITY/GROUP-LIST[GROUP_ID = fn:tokenize($locationGroups, &quot;,&quot;) ]/GROUP_ID) &gt; 0]">
+						<xsl:sort select="count(CITY-LIST/CITY)" data-type="text" order="descending"/>
+						<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+							<xsl:for-each select="sps:getCountryName( @name ,  $language)">
+								<altova:inline-container-substitute>
+									<xsl:choose>
+										<xsl:when test=". instance of element() or . instance of document-node()">
+											<xsl:apply-templates/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="."/>
+										</xsl:otherwise>
+									</xsl:choose>
+								</altova:inline-container-substitute>
+							</xsl:for-each>
+						</fo:block>
+						<xsl:for-each select="CITY-LIST">
+							<xsl:for-each select="CITY[if(count(fn:tokenize($locationGroups, &quot;,&quot;))&lt; 1)
+then count(NAME) &gt; 0
+else
+count(GROUP-LIST[GROUP_ID = fn:tokenize($locationGroups, &quot;,&quot;)]/GROUP_ID) &gt; 0]">
+								<xsl:sort select="NAME" data-type="text" order="ascending"/>
+								<xsl:variable name="altova:table">
+									<fo:table border="0.00in" padding=".1em" table-layout="fixed" width="100%" border-spacing="2pt">
+										<fo:table-column column-width="25%"/>
+										<fo:table-column column-width="auto"/>
+										<xsl:variable name="altova:CurrContextGrid_11" select="."/>
+										<xsl:variable name="altova:ColumnData"/>
+										<fo:table-body start-indent="0pt">
+											<fo:table-row>
+												<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+													<fo:block-container overflow="hidden">
+														<fo:block text-align="left">
+															<xsl:call-template name="cityThumbnail">
+																<xsl:with-param name="city" select="NAME"/>
+																<xsl:with-param name="outputType" select="$SV_OutputFormat "/>
+															</xsl:call-template>
+														</fo:block>
+													</fo:block-container>
+												</fo:table-cell>
+												<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
+													<fo:block-container overflow="hidden">
+														<fo:block text-align="left">
+															<xsl:variable name="altova:table">
+																<fo:table border="0.00in" alignment-baseline="before-edge" width="auto" table-layout="fixed" border-spacing="2pt">
+																	<xsl:for-each select="ROOM-LIST">
+																		<xsl:for-each select="ROOM">
+																			<fo:table-column column-width="proportional-column-width(1)"/>
+																		</xsl:for-each>
+																	</xsl:for-each>
+																	<xsl:variable name="altova:CurrContextGrid_12" select="."/>
+																	<xsl:variable name="altova:ColumnData">
+																		<xsl:for-each select="ROOM-LIST">
+																			<altova:Element altova:sDesignElemId="13" altova:sNodeId="{generate-id(.)}" altova:sDocumentUri="{document-uri(root(.))}">
+																				<xsl:for-each select="ROOM">
+																					<altova:Element altova:sDesignElemId="14" altova:sNodeId="{generate-id(.)}" altova:sDocumentUri="{document-uri(root(.))}"/>
+																				</xsl:for-each>
+																			</altova:Element>
+																		</xsl:for-each>
+																	</xsl:variable>
+																	<fo:table-body start-indent="0pt">
+																		<fo:table-row border="0.00in">
+																			<xsl:variable name="altova:nodesNextPseudo" select="$altova:ColumnData/altova:Element[ @altova:sDesignElemId = 13 ]"/>
+																			<xsl:for-each select="for $altova:nodePseudo in $altova:nodesNextPseudo return key('altova:id-key',$altova:nodePseudo/@altova:sNodeId,document($altova:nodePseudo/@altova:sDocumentUri))">
+																				<xsl:variable name="altova:posCurrPseudo" select="position()"/>
+																				<xsl:variable name="altova:nodeCurrPseudo" select="$altova:nodesNextPseudo[ $altova:posCurrPseudo ]"/>
+																				<xsl:variable name="altova:nodesNextPseudo" select="$altova:nodeCurrPseudo/altova:Element[ @altova:sDesignElemId = 14 ]"/>
+																				<xsl:for-each select="for $altova:nodePseudo in $altova:nodesNextPseudo return key('altova:id-key',$altova:nodePseudo/@altova:sNodeId,document($altova:nodePseudo/@altova:sDocumentUri))">
+																					<xsl:variable name="altova:posCurrPseudo" select="position()"/>
+																					<xsl:variable name="altova:nodeCurrPseudo" select="$altova:nodesNextPseudo[ $altova:posCurrPseudo ]"/>
+																					<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" padding=".05em" display-align="center">
+																						<fo:block-container overflow="hidden">
+																							<fo:block text-align="left">
+																								<xsl:for-each select="NAME">
+																									<altova:inline-container-substitute>
+																										<xsl:apply-templates/>
+																									</altova:inline-container-substitute>
+																								</xsl:for-each>
+																								<altova:line-break/>
+																								<xsl:for-each select="DEPARTMENT">
+																									<altova:inline-container-substitute>
+																										<xsl:apply-templates/>
+																									</altova:inline-container-substitute>
+																								</xsl:for-each>
+																								<xsl:for-each select="STREET">
+																									<altova:inline-container-substitute>
+																										<xsl:apply-templates/>
+																									</altova:inline-container-substitute>
+																								</xsl:for-each>
+																								<altova:line-break/>
+																								<xsl:for-each select="ZIP">
+																									<altova:inline-container-substitute>
+																										<xsl:apply-templates/>
+																									</altova:inline-container-substitute>
+																								</xsl:for-each>
+																								<fo:inline>
+																									<xsl:text>&#160;</xsl:text>
+																								</fo:inline>
+																								<xsl:value-of select="../../NAME"/>
+																							</fo:block>
+																						</fo:block-container>
+																					</fo:table-cell>
+																				</xsl:for-each>
+																			</xsl:for-each>
+																		</fo:table-row>
+																	</fo:table-body>
+																</fo:table>
+															</xsl:variable>
+															<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
+															<altova:line-break/>
+															<fo:inline>
+																<xsl:text>Tel:</xsl:text>
+															</fo:inline>
+															<xsl:for-each select="PHONE">
+																<altova:inline-container-substitute>
+																	<xsl:apply-templates/>
+																</altova:inline-container-substitute>
+															</xsl:for-each>
+															<altova:line-break/>
+															<fo:inline>
+																<xsl:text>Fax:</xsl:text>
+															</fo:inline>
+															<xsl:for-each select="FAX">
+																<altova:inline-container-substitute>
+																	<xsl:apply-templates/>
+																</altova:inline-container-substitute>
+															</xsl:for-each>
+														</fo:block>
+													</fo:block-container>
+												</fo:table-cell>
+											</fo:table-row>
+										</fo:table-body>
+									</fo:table>
+								</xsl:variable>
+								<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
+							</xsl:for-each>
+						</xsl:for-each>
+					</xsl:for-each>
+				</xsl:for-each>
+			</xsl:for-each>
+		</xsl:for-each>
 	</xsl:template>
 	<xsl:template name="altova:double-backslash">
 		<xsl:param name="text"/>
@@ -2965,6 +3707,8 @@
 		<xsl:param name="itemTitle" as="xs:string"/>
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<xsl:sequence select="count( distinct-values($XML/COURSE-LIST/COURSE[TITLE &lt;=$itemTitle]/TITLE) )"/>
 	</xsl:function>
 	<xsl:function name="sps:getSubtitleNumber" as="xs:string">
@@ -2973,13 +3717,34 @@
 		<xsl:param name="itemId" as="xs:integer"/>
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<xsl:sequence select="$XML3/Number-List/Number[Integer=count(distinct-values($XML/COURSE-LIST/COURSE[TITLE = $itemTitle and SUBTITLE &lt; $itemSubtitle]/@id)) + count(distinct-values($XML/COURSE-LIST/COURSE[TITLE = $itemTitle and SUBTITLE = $itemSubtitle and @id &lt;= $itemId]/@id))]/SRoman"/>
 	</xsl:function>
 	<xsl:function name="sps:getCalendarWidth" as="xs:string">
 		<xsl:param name="cityCount" as="xs:integer"/>
 		<xsl:variable name="XML2" select="document($XML2)"/>
 		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
 		<xsl:sequence select="if ( $cityCount &gt;= 3 ) then &apos;60%&apos; else if ($cityCount = 2) then &apos;40%&apos; else &apos;20%&apos;"/>
+	</xsl:function>
+	<xsl:function name="sps:getCountryName">
+		<xsl:param name="country" as="xs:string"/>
+		<xsl:param name="language" as="xs:string"/>
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<xsl:sequence select="$XML5/COUNTRY-LIST/COUNTRY[NAME=$country]/NAME[@language=$language]"/>
+	</xsl:function>
+	<xsl:function name="sps:getLocationGroups">
+		<xsl:param name="locationGroups" as="xs:string"/>
+		<xsl:variable name="XML2" select="document($XML2)"/>
+		<xsl:variable name="XML3" select="document($XML3)"/>
+		<xsl:variable name="XML4" select="document($XML4)"/>
+		<xsl:variable name="XML5" select="document($XML5)"/>
+		<xsl:sequence select="fn:tokenize($locationGroups, &quot;,&quot;)"/>
 	</xsl:function>
 	<xsl:variable name="altova:nDefaultFontSizePt" as="xs:integer" select="12"/>
 	<xsl:variable name="altova:nCmPerIn" as="xs:double" select="2.54"/>
