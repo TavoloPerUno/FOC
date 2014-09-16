@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) by Comelio (Comelio GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="INVOICE">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FROM_ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TYPE" type="xs:string"/>
+							<xs:element name="STREET" type="xs:string"/>
+							<xs:element name="ZIP" type="xs:string"/>
+							<xs:element name="CITY" type="xs:string"/>
+							<xs:element name="COUNTRY" type="xs:string"/>
+							<xs:element name="PHONE" type="xs:string"/>
+							<xs:element name="FAX" type="xs:string"/>
+							<xs:element name="EMAIL" type="xs:string"/>
+							<xs:element name="CONTACT_PERSON" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TO_ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COMPANY_NAME" type="xs:string" minOccurs="0"/>
+							<xs:element name="CONTACT_PERSON">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="FIRST_NAME" type="xs:string"/>
+										<xs:element name="LAST_NAME" type="xs:string"/>
+										<xs:element name="TITLE" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="STREET" type="xs:string"/>
+							<xs:element name="ZIP" type="xs:string"/>
+							<xs:element name="CITY" type="xs:string"/>
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DATES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DATE" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="COURSE_TITLE"/>
+										<xs:element name="START_DATE" type="xs:date"/>
+										<xs:element name="END_DATE" type="xs:date"/>
+										<xs:element name="CITY" type="xs:string"/>
+										<xs:element name="PRICE">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="RATE" type="xs:float"/>
+													<xs:element name="QUANTITY" type="xs:integer"/>
+													<xs:element name="CURRENCY_CODE" type="xs:string"/>
+													<xs:element name="DISCOUNT" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DISCOUNT_NAME" type="xs:string"/>
+																<xs:element name="DISCOUNT_VALUE" type="xs:float"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OTHERS" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PARTICULAR" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PARTICULAR_NAME"/>
+										<xs:element name="PRICE">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="RATE" type="xs:float"/>
+													<xs:element name="QUANTITY" type="xs:integer"/>
+													<xs:element name="CURRENCY_CODE" type="xs:string"/>
+													<xs:element name="DISCOUNT">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DISCOUNT_NAME" type="xs:string"/>
+																<xs:element name="DISCOUNT_VALUE" type="xs:float"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:integer" use="required"/>
+			<xs:attribute name="date" type="xs:date" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

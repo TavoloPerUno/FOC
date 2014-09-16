@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<structure version="16" html-doctype="HTML4 Transitional" compatibility-view="IE9" relativeto="*SPS" encodinghtml="UTF-8" encodingrtf="ISO-8859-1" encodingpdf="UTF-8" useimportschema="1" embed-images="1" enable-authentic-scripts="1" authentic-scripts-in-debug-mode-external="0" generated-file-location="DEFAULT">
+<structure version="16" enforce-relative-filepaths="1" html-doctype="HTML4 Transitional" compatibility-view="IE9" relativeto="*SPS" encodinghtml="UTF-8" encodingrtf="ISO-8859-1" encodingpdf="UTF-8" useimportschema="1" embed-images="1" enable-authentic-scripts="1" authentic-scripts-in-debug-mode-external="0" generated-file-location="DEFAULT">
 	<parameters>
 		<parameter name="language" default="de"/>
 		<parameter name="locationGroups" default="3"/>
@@ -9,11 +9,11 @@
 			<nspair prefix="vc" uri="http://www.w3.org/2007/XMLSchema-versioning"/>
 		</namespaces>
 		<schemasources>
-			<xsdschemasource name="XML2" schemafile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\Translation-List.xsd" workingxmlfile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\Translation-List.xml"/>
-			<xsdschemasource name="XML" main="1" schemafile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\CourseList.xsd" workingxmlfile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\R+SPSS.xml"/>
-			<xsdschemasource name="XML3" schemafile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\Number-List.xsd" workingxmlfile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\Number-List.xml"/>
-			<xsdschemasource name="XML4" schemafile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML Schema\LocationList.xsd" workingxmlfile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML\LocationList.xml"/>
-			<xsdschemasource name="XML5" schemafile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML Schema\Country-List.xsd" workingxmlfile="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML\Country-List.xml"/>
+			<xsdschemasource name="XML2" schemafile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\Translation-List.xsd" workingxmlfile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\Translation-List.xml"/>
+			<xsdschemasource name="XML" main="1" schemafile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\CourseList.xsd" workingxmlfile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\R+SPSS.xml"/>
+			<xsdschemasource name="XML3" schemafile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML Schema\Number-List.xsd" workingxmlfile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XML\Number-List.xml"/>
+			<xsdschemasource name="XML4" schemafile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML Schema\LocationList.xsd" workingxmlfile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML\LocationList.xml"/>
+			<xsdschemasource name="XML5" schemafile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML Schema\Country-List.xsd" workingxmlfile="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\1 Sept\XML\Country-List.xml"/>
 		</schemasources>
 	</schemasources>
 	<modules/>
@@ -34,7 +34,7 @@
 		<Project version="3" app="AuthenticView"/>
 	</script-project>
 	<importedxslt>
-		<file url="C:\Users\Manoradhan M\Desktop\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XSLT\groupingInXSLT1.xslt"/>
+		<file url="..\..\..\Projects\Catalogs\Catalogs\StyleCatalogs\25 Aug\XSLT\groupingInXSLT1.xslt"/>
 	</importedxslt>
 	<globalstyles>
 		<rules selector="body">
