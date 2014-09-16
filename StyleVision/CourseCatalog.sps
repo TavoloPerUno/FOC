@@ -41,7 +41,7 @@
 			<media>
 				<media value="all"/>
 			</media>
-			<rule font-family="Verdana, Geneva, sans-serif" font-size="12pt" line-height="170%"/>
+			<rule font-family="Verdana, Geneva, sans-serif" font-size="12pt" line-height="170%" margin-top="0pt"/>
 		</rules>
 		<rules selector="h1">
 			<media>
@@ -200,7 +200,7 @@
 				<document-properties/>
 				<children>
 					<documentsection>
-						<properties columncount="1" columngap="0.50in" headerfooterheight="fixed" pagemultiplepages="0" pagenumberingformat="1" pagenumberingstartat="auto" pagestart="next" paperheight="11.69in" papermarginbottom="0.8in" papermarginfooter="0.30in" papermarginheader="0.30in" papermarginleft="0.50in" papermarginright="0.50in" papermargintop="0.65in" paperwidth="8.27in"/>
+						<properties columncount="1" columngap="0.50in" headerfooterheight="fixed" pagemultiplepages="0" pagenumberingformat="1" pagenumberingstartat="auto" pagestart="next" paperheight="11.69in" papermarginbottom="0.8in" papermarginfooter="0.30in" papermarginheader="0.30in" papermarginleft="0.50in" papermarginright="0.50in" papermargintop=".8in" paperwidth="8.27in"/>
 						<children>
 							<globaltemplate subtype="pagelayout" match="headerfirst">
 								<children>
@@ -228,6 +228,7 @@
 											<tgridbody-rows>
 												<children>
 													<tgridrow>
+														<styles height="0.33in" vertical-align="top"/>
 														<children>
 															<tgridcell>
 																<properties align="left"/>
@@ -275,10 +276,11 @@
 											<tgridbody-rows>
 												<children>
 													<tgridrow>
+														<styles height="0.41in" vertical-align="top"/>
 														<children>
 															<tgridcell>
 																<properties align="left"/>
-																<styles font-size="10pt" padding="0" vertical-align="middle"/>
+																<styles font-size="10pt" padding="0" vertical-align="top"/>
 																<children>
 																	<field>
 																		<styles color="#a5a5a5"/>
@@ -287,9 +289,10 @@
 															</tgridcell>
 															<tgridcell>
 																<properties align="right"/>
-																<styles font-size="10pt" padding="0" vertical-align="bottom"/>
+																<styles font-size="10pt" padding="0" vertical-align="top"/>
 																<children>
 																	<image>
+																		<styles vertical-align="top"/>
 																		<target>
 																			<fixtext value="..\Images\Comelio-Logo-Small.png"/>
 																		</target>
@@ -474,6 +477,7 @@
 									<marker xpath="concat(sps:getTitleNumber( TITLE ), &apos;. &apos;, TITLE)" name="TOC" id="coTitle" uses="xpath"/>
 									<paragraph conditional-processing="$SV_OutputFormat = &apos;HTML&apos;">
 										<properties class="HTMLh2"/>
+										<styles padding-top="0pt"/>
 										<children>
 											<paragraph conditional-processing="$SV_OutputFormat = &apos;PDF&apos;" paragraphtag="h2">
 												<styles display="inline" float="left" text-align="left" vertical-align="middle"/>
@@ -496,6 +500,7 @@
 									</paragraph>
 									<paragraph conditional-processing="$SV_OutputFormat = &apos;HTML&apos;">
 										<properties class="HTMLBorder"/>
+										<styles padding-top="0pt"/>
 										<children>
 											<template subtype="source" match="XML">
 												<children>
@@ -527,13 +532,13 @@
 																				<styles border="0pt"/>
 																				<children>
 																					<tgridrow>
-																						<styles border="0pt"/>
+																						<styles border="0pt" height="auto"/>
 																						<children>
 																							<tgridcell>
 																								<styles border-bottom-color="black" border-bottom-style="dotted" border-bottom-width="thin" border-left="0pt" border-right="0pt" border-top="0pt" padding="0pt" vertical-align="bottom"/>
 																								<children>
 																									<paragraph paragraphtag="h3">
-																										<styles border-top-color="#7cb00d" border-top-width="1pt"/>
+																										<styles border-top-color="#7cb00d" border-top-width="1pt" margin-top="0pt" padding-top="0pt"/>
 																										<children>
 																											<text fixtext="("/>
 																											<autocalc xpath="sps:getSubtitleNumber( TITLE, SUBTITLE,@id)"/>
@@ -611,6 +616,7 @@
 																																<styles line-height="111%" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" width="auto"/>
 																																<children>
 																																	<paragraph paragraphtag="h4">
+																																		<styles margin-top="0pt" padding-top="0pt"/>
 																																		<children>
 																																			<image>
 																																				<target>
@@ -657,7 +663,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
-																																										<styles padding-right="0pt"/>
+																																										<styles margin-top="0pt" padding-right="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 2 and Language = $language]/Value"/>
 																																										</children>
@@ -667,7 +673,7 @@
 																																							<tgridcell>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="attribute" match="id">
 																																												<children>
@@ -691,6 +697,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 13 and Language = $language]/Value"/>
 																																										</children>
@@ -700,7 +707,7 @@
 																																							<tgridcell>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="attribute" match="language">
 																																												<children>
@@ -721,6 +728,7 @@
 																																								<styles margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt"/>
 																																								<children>
 																																									<paragraph paragraphtag="p">
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 12 and Language = $language]/Value">
 																																												<styles font-weight="bold"/>
@@ -733,7 +741,7 @@
 																																								<styles width="auto"/>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="attribute" match="duration">
 																																												<children>
@@ -798,6 +806,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 8 and Language = $language]/Value"/>
 																																										</children>
@@ -807,7 +816,7 @@
 																																							<tgridcell>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="attribute" match="deliveryType">
 																																												<children>
@@ -828,6 +837,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 3 and Language = $language]/Value"/>
 																																										</children>
@@ -837,7 +847,7 @@
 																																							<tgridcell>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="element" match="TARGET_GROUP">
 																																												<children>
@@ -858,7 +868,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
-																																										<styles padding-right="0pt"/>
+																																										<styles margin-top="0pt" padding-right="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 9 and Language = $language]/Value"/>
 																																										</children>
@@ -869,7 +879,7 @@
 																																								<styles height="auto" line-height="111%" width="auto"/>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles padding-left="0pt" text-align="left"/>
+																																										<styles margin-top="0pt" padding-left="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="element" match="PREREQUISITE">
 																																												<children>
@@ -890,6 +900,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 10 and Language = $language]/Value"/>
 																																										</children>
@@ -900,7 +911,7 @@
 																																								<styles height="auto" line-height="111%" width="auto"/>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="element" match="COURSE_METHOD">
 																																												<children>
@@ -921,6 +932,7 @@
 																																								<children>
 																																									<paragraph paragraphtag="p">
 																																										<properties class="caption"/>
+																																										<styles margin-top="0pt" padding-top="0pt"/>
 																																										<children>
 																																											<autocalc xpath="$XML2/Translation-List/Translation[number(ID) = 11 and Language = $language]/Value"/>
 																																										</children>
@@ -930,7 +942,7 @@
 																																							<tgridcell>
 																																								<children>
 																																									<paragraph paragraphtag="p">
-																																										<styles text-align="left"/>
+																																										<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																																										<children>
 																																											<template subtype="element" match="COURSE_LEVEL">
 																																												<children>
@@ -967,7 +979,7 @@
 																											<conditionbranch xpath="fn:count(fn:distinct-values(DATE-LIST/DATE[@id &gt; 0]/@id) )&gt; 0">
 																												<children>
 																													<paragraph paragraphtag="h4">
-																														<styles text-align="left"/>
+																														<styles margin-top="0pt" padding-top="0pt" text-align="left"/>
 																														<children>
 																															<image>
 																																<target>
@@ -999,10 +1011,10 @@
 			&lt;/xsl:call-template&gt;
 "/>
 																													<paragraph>
-																														<styles display="block" text-align="right" width="100%"/>
+																														<styles display="block" margin-top="0pt" padding-top="0pt" text-align="right" width="100%"/>
 																														<children>
 																															<paragraph paragraphtag="p">
-																																<styles display="table" line-height="normal" margin="0pt" text-align="right" width="100%"/>
+																																<styles display="table" line-height="normal" margin="0pt" margin-top="0pt" padding-top="0pt" text-align="right" width="100%"/>
 																																<children>
 																																	<condition>
 																																		<children>
@@ -1035,9 +1047,10 @@
 																		</children>
 																	</tgrid>
 																	<paragraph>
-																		<styles keep-together="auto" margin-right="5pt"/>
+																		<styles keep-together="always" margin-right="5pt" margin-top="0pt" padding-top="0pt"/>
 																		<children>
 																			<paragraph paragraphtag="h4">
+																				<styles keep-together="always" margin-top="0pt" padding-top="0pt"/>
 																				<children>
 																					<image>
 																						<target>
@@ -1061,6 +1074,7 @@
 																				</children>
 																			</paragraph>
 																			<paragraph paragraphtag="p">
+																				<styles keep-together="always" margin-top="0pt" padding-top="0pt"/>
 																				<children>
 																					<template subtype="element" match="OBJECTIVES">
 																						<children>
@@ -1073,8 +1087,6 @@
 																		</children>
 																	</paragraph>
 																	<calltemplate subtype="element" match="Module-List"/>
-																	<newline/>
-																	<newline/>
 																</children>
 																<variables/>
 															</template>
@@ -1231,6 +1243,7 @@
 								<children>
 									<paragraph paragraphtag="p">
 										<properties class="keepTogether"/>
+										<styles keep-together="always"/>
 										<children>
 											<paragraph paragraphtag="h4">
 												<properties class="keepTogether"/>
@@ -1264,6 +1277,7 @@
 																<children>
 																	<paragraph paragraphtag="h5">
 																		<properties class="keepTogether"/>
+																		<styles keep-together="always"/>
 																		<children>
 																			<template subtype="element" match="Order">
 																				<children>
@@ -1286,6 +1300,7 @@
 																	</paragraph>
 																	<paragraph paragraphtag="p">
 																		<properties class="keepTogether"/>
+																		<styles keep-together="always"/>
 																		<children>
 																			<condition>
 																				<children>
@@ -1373,8 +1388,10 @@
 														<children>
 															<paragraph paragraphtag="p">
 																<properties class="keepTogether"/>
+																<styles keep-together="always"/>
 																<children>
 																	<paragraph paragraphtag="h5">
+																		<styles keep-together="always"/>
 																		<children>
 																			<template subtype="element" match="Order">
 																				<children>
@@ -1396,6 +1413,7 @@
 																		</children>
 																	</paragraph>
 																	<paragraph paragraphtag="p">
+																		<styles keep-together="always"/>
 																		<children>
 																			<condition>
 																				<children>

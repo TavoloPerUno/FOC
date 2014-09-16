@@ -24,21 +24,21 @@
 	<xsl:variable name="fo:layout-master-set">
 		<fo:layout-master-set>
 			<fo:simple-page-master master-name="page-master-0-even" margin-left="0.50in" margin-right="0.50in" page-height="11.69in" page-width="8.27in" margin-top="0.30in" margin-bottom="0.30in">
-				<fo:region-body margin-top="0.35in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
-				<fo:region-before region-name="even-page-header" overflow="hidden" extent="0.35in"/>
+				<fo:region-body margin-top="0.50in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
+				<fo:region-before region-name="even-page-header" overflow="hidden" extent="0.50in"/>
 			</fo:simple-page-master>
 			<fo:simple-page-master master-name="page-master-0-odd" margin-left="0.50in" margin-right="0.50in" page-height="11.69in" page-width="8.27in" margin-top="0.30in" margin-bottom="0.30in">
-				<fo:region-body margin-top="0.35in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
-				<fo:region-before region-name="odd-page-header" overflow="hidden" extent="0.35in"/>
+				<fo:region-body margin-top="0.50in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
+				<fo:region-before region-name="odd-page-header" overflow="hidden" extent="0.50in"/>
 			</fo:simple-page-master>
 			<fo:simple-page-master master-name="page-master-0-even-first" margin-left="0.50in" margin-right="0.50in" page-height="11.69in" page-width="8.27in" margin-top="0.30in" margin-bottom="0.30in">
-				<fo:region-body margin-top="0.35in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
-				<fo:region-before region-name="even-page-header-first" overflow="hidden" extent="0.35in"/>
+				<fo:region-body margin-top="0.50in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
+				<fo:region-before region-name="even-page-header-first" overflow="hidden" extent="0.50in"/>
 				<fo:region-after region-name="even-page-footer-first" overflow="hidden" extent="0.50in"/>
 			</fo:simple-page-master>
 			<fo:simple-page-master master-name="page-master-0-odd-first" margin-left="0.50in" margin-right="0.50in" page-height="11.69in" page-width="8.27in" margin-top="0.30in" margin-bottom="0.30in">
-				<fo:region-body margin-top="0.35in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
-				<fo:region-before region-name="odd-page-header-first" overflow="hidden" extent="0.35in"/>
+				<fo:region-body margin-top="0.50in" margin-bottom="0.50in" column-count="1" column-gap="0.50in"/>
+				<fo:region-before region-name="odd-page-header-first" overflow="hidden" extent="0.50in"/>
 				<fo:region-after region-name="odd-page-footer-first" overflow="hidden" extent="0.50in"/>
 			</fo:simple-page-master>
 			<fo:page-sequence-master master-name="page-master-0">
@@ -151,7 +151,7 @@
 										<xsl:variable name="altova:CurrContextGrid_1" select="."/>
 										<xsl:variable name="altova:ColumnData"/>
 										<fo:table-body start-indent="0pt">
-											<fo:table-row>
+											<fo:table-row height="0.33in" alignment-baseline="before-edge">
 												<fo:table-cell font-family="Verdana" font-size="10pt" padding="0" display-align="center">
 													<fo:block-container overflow="hidden">
 														<fo:block text-align="left">
@@ -238,15 +238,15 @@
 										<xsl:variable name="altova:CurrContextGrid_2" select="."/>
 										<xsl:variable name="altova:ColumnData"/>
 										<fo:table-body start-indent="0pt">
-											<fo:table-row>
-												<fo:table-cell font-family="Verdana" font-size="10pt" padding="0" display-align="center">
+											<fo:table-row height="0.41in" alignment-baseline="before-edge">
+												<fo:table-cell font-family="Verdana" font-size="10pt" padding="0" display-align="before">
 													<fo:block-container overflow="hidden">
 														<fo:block text-align="left">
 															<fo:page-number color="#a5a5a5"/>
 														</fo:block>
 													</fo:block-container>
 												</fo:table-cell>
-												<fo:table-cell font-family="Verdana" font-size="10pt" padding="0" display-align="after">
+												<fo:table-cell font-family="Verdana" font-size="10pt" padding="0" display-align="before">
 													<fo:block-container overflow="hidden">
 														<fo:block text-align="right">
 															<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Comelio-Logo-Small.png&apos;"/>
@@ -261,7 +261,7 @@
 																</xsl:choose>
 																<xsl:sequence select="(0, 0)" use-when="not(function-available('altovaext:get-width-and-height-from-image-data'))"/>
 															</xsl:variable>
-															<fo:external-graphic>
+															<fo:external-graphic alignment-baseline="before-edge">
 																<xsl:if test="$altova:seqWidthHeight[2] != 0">
 																	<xsl:attribute name="scaling" select="'non-uniform'"/>
 																	<xsl:variable name="sContent-height">
@@ -712,7 +712,7 @@
 				</altova:marker>
 				<xsl:choose>
 					<xsl:when test="$SV_OutputFormat = &apos;HTML&apos;">
-						<fo:block background-image="url(file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/Images/greenGradient.png)" background-size="cover" border-top-left-radius="9pt" border-top-right-radius="9pt" box-shadow="0.01in 0.01in 0.02in #000" color="white" font-size="18pt" line-height="150%" margin="0" margin-top="2pt" padding-bottom="2pt" padding-left="15pt" padding-right="inherit" padding-top="2pt" width="100%" margin-right="0 + 100% - 100%" space-before="0" space-after="0">
+						<fo:block background-image="url(file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/Images/greenGradient.png)" background-size="cover" border-top-left-radius="9pt" border-top-right-radius="9pt" box-shadow="0.01in 0.01in 0.02in #000" color="white" font-size="18pt" line-height="150%" margin="0" margin-top="2pt" padding-bottom="2pt" padding-left="15pt" padding-right="inherit" padding-top="0pt" width="100%" margin-right="0 + 100% - 100%" space-before="0" space-after="0">
 							<xsl:choose>
 								<xsl:when test="$SV_OutputFormat = &apos;PDF&apos;">
 									<fo:block background-image="url(file:///C:/Users/Manoradhan%20M/Desktop/Projects/Catalogs/Catalogs/StyleCatalogs/25%20Aug/Images/greenGradient.png)" background-repeat="repeat" color="white" font-size="18pt" line-height="150%" margin-bottom="0pt" margin-left="0pt" margin-right="0pt + 100% - 100%" margin-top="0pt" padding-bottom="2pt" padding-left="15pt" padding-right="inherit" padding-top="2pt" text-align="left" display-align="center" font-weight="bold" space-before="0.75em" space-after="0.75em" margin="0pt">
@@ -780,7 +780,7 @@
 				</xsl:choose>
 				<xsl:choose>
 					<xsl:when test="$SV_OutputFormat = &apos;HTML&apos;">
-						<fo:block background-color="white" border="1pt solid #A9A9A9" border-bottom-left-radius="12pt" border-bottom-right-radius="12pt" box-shadow="0.01in 0.01in 0.02in #000" font-size="0.13in" line-height="171%" margin-bottom="10pt" margin-right="5pt + 100% - 100%" padding-bottom="2pt" padding-left="13pt" padding-right="inherit" padding-top="2pt" width="100%" space-before="0" space-after="0" margin="0pt">
+						<fo:block background-color="white" border="1pt solid #A9A9A9" border-bottom-left-radius="12pt" border-bottom-right-radius="12pt" box-shadow="0.01in 0.01in 0.02in #000" font-size="0.13in" line-height="171%" margin-bottom="10pt" margin-right="5pt + 100% - 100%" padding-bottom="2pt" padding-left="13pt" padding-right="inherit" padding-top="0pt" width="100%" space-before="0" space-after="0" margin="0pt">
 							<xsl:for-each select="$XML">
 								<xsl:for-each select="COURSE-LIST">
 									<xsl:for-each select="COURSE[TITLE=$coTitle]">
@@ -800,11 +800,11 @@
 													<xsl:variable name="altova:CurrContextGrid_3" select="."/>
 													<xsl:variable name="altova:ColumnData"/>
 													<fo:table-body border="0pt" start-indent="0pt">
-														<fo:table-row border="0pt">
+														<fo:table-row border="0pt" height="auto">
 															<fo:table-cell border-bottom-color="black" border-bottom-style="dotted" border-bottom-width="thin" border-left="0pt" border-right="0pt" border-top="0pt" font-family="Verdana" font-size="10pt" padding="0pt" border="solid 1pt gray" display-align="after">
 																<fo:block-container overflow="hidden">
 																	<fo:block text-align="left">
-																		<fo:block border-top-color="#7cb00d" border-top-width="1pt" font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+																		<fo:block border-top-color="#7cb00d" border-top-width="1pt" font-size="16pt" font-weight="bold" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
 																			<fo:inline>
 																				<xsl:text>(</xsl:text>
 																			</fo:inline>
@@ -882,7 +882,7 @@
 																						<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" line-height="111%" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="before">
 																							<fo:block-container overflow="hidden">
 																								<fo:block text-align="left">
-																									<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																									<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																										<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Focus.png&apos;"/>
 																										<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																											<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -962,7 +962,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" padding-right="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-right="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 2 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -971,7 +971,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="@id">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -986,7 +986,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 13 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -995,7 +995,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="@language">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1010,7 +1010,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<altova:inline-container-substitute font-weight="bold">
 																																		<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 12 and Language = $language]/Value"/>
 																																	</altova:inline-container-substitute>
@@ -1021,7 +1021,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="@duration">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1069,7 +1069,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 8 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -1078,7 +1078,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="@deliveryType">
 																																		<fo:inline>
 																																			<xsl:value-of select="string(.)"/>
@@ -1093,7 +1093,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 3 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -1102,7 +1102,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="TARGET_GROUP">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1117,7 +1117,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" padding-right="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-right="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 9 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -1126,7 +1126,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-left="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="PREREQUISITE">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1141,7 +1141,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 10 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -1150,7 +1150,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="COURSE_METHOD">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1165,7 +1165,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 11 and Language = $language]/Value"/>
 																																</fo:block>
 																															</fo:block>
@@ -1174,7 +1174,7 @@
 																													<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																														<fo:block-container overflow="hidden">
 																															<fo:block text-align="left">
-																																<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																																<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																	<xsl:for-each select="COURSE_LEVEL">
 																																		<altova:inline-container-substitute>
 																																			<xsl:apply-templates/>
@@ -1204,7 +1204,7 @@
 																<fo:block-container overflow="hidden">
 																	<fo:block text-align="left">
 																		<xsl:if test="fn:count(fn:distinct-values(DATE-LIST/DATE[@id &gt; 0]/@id) )&gt; 0">
-																			<fo:block color="#618f05" font-size="14pt" font-weight="bold" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																			<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																				<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Dates.png&apos;"/>
 																				<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																					<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1279,8 +1279,8 @@
 																				<xsl:with-param name="outputType" select="$SV_OutputFormat "/>
 																				<xsl:with-param name="validCities" select='string-join(fn:distinct-values($XML4/LOCATION-LIST/COUNTRY-LIST/COUNTRY/CITY-LIST/CITY[GROUP-LIST/GROUP_ID = fn:tokenize($locationGroups, ",")]/fn:string(NAME)), ",")'/>
 																			</xsl:call-template>
-																			<fo:block font-size="0.13in" line-height="171%" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
-																				<fo:block font-size="10pt" line-height="normal" margin="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
+																			<fo:block font-size="0.13in" line-height="171%" margin-top="0pt" padding-top="0pt" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
+																				<fo:block font-size="10pt" line-height="normal" margin="0pt" margin-top="0pt" padding-top="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
 																					<xsl:choose>
 																						<xsl:when test="$language = &apos;en&apos;">
 																							<fo:inline>
@@ -1304,8 +1304,8 @@
 												</fo:table>
 											</xsl:variable>
 											<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
-											<fo:block font-size="0.13in" keep-together.within-page="auto" keep-together.within-column="auto" line-height="171%" margin-right="5pt + 100% - 100%" space-before="0" space-after="0" margin="0pt">
-												<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+											<fo:block font-size="0.13in" keep-together.within-page="always" keep-together.within-column="always" line-height="171%" margin-right="5pt + 100% - 100%" margin-top="0pt" padding-top="0pt" space-before="0" space-after="0" margin="0pt">
+												<fo:block color="#618f05" font-size="14pt" font-weight="bold" keep-together.within-page="always" keep-together.within-column="always" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 													<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Overview.png&apos;"/>
 													<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 														<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1374,7 +1374,7 @@
 														</xsl:when>
 													</xsl:choose>
 												</fo:block>
-												<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+												<fo:block font-size="10pt" keep-together.within-page="always" keep-together.within-column="always" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 													<xsl:for-each select="OBJECTIVES">
 														<altova:inline-container-substitute>
 															<xsl:apply-templates/>
@@ -1383,8 +1383,6 @@
 												</fo:block>
 											</fo:block>
 											<xsl:apply-templates select="Module-List"/>
-											<altova:line-break/>
-											<altova:line-break/>
 										</altova:level>
 									</xsl:for-each>
 								</xsl:for-each>
@@ -1411,11 +1409,11 @@
 												<xsl:variable name="altova:CurrContextGrid_3" select="."/>
 												<xsl:variable name="altova:ColumnData"/>
 												<fo:table-body border="0pt" start-indent="0pt">
-													<fo:table-row border="0pt">
+													<fo:table-row border="0pt" height="auto">
 														<fo:table-cell border-bottom-color="black" border-bottom-style="dotted" border-bottom-width="thin" border-left="0pt" border-right="0pt" border-top="0pt" font-family="Verdana" font-size="10pt" padding="0pt" border="solid 1pt gray" display-align="after">
 															<fo:block-container overflow="hidden">
 																<fo:block text-align="left">
-																	<fo:block border-top-color="#7cb00d" border-top-width="1pt" font-size="16pt" font-weight="bold" margin-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
+																	<fo:block border-top-color="#7cb00d" border-top-width="1pt" font-size="16pt" font-weight="bold" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="0.83em" space-after="0.83em" margin="0pt">
 																		<fo:inline>
 																			<xsl:text>(</xsl:text>
 																		</fo:inline>
@@ -1493,7 +1491,7 @@
 																					<fo:table-cell border="0.00in" font-family="Verdana" font-size="10pt" line-height="111%" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="before">
 																						<fo:block-container overflow="hidden">
 																							<fo:block text-align="left">
-																								<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																								<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																									<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Focus.png&apos;"/>
 																									<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																										<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1573,7 +1571,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" padding-right="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-right="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 2 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1582,7 +1580,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="@id">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1597,7 +1595,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 13 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1606,7 +1604,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="@language">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1621,7 +1619,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<altova:inline-container-substitute font-weight="bold">
 																																	<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 12 and Language = $language]/Value"/>
 																																</altova:inline-container-substitute>
@@ -1632,7 +1630,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="@duration">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1680,7 +1678,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 8 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1689,7 +1687,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="@deliveryType">
 																																	<fo:inline>
 																																		<xsl:value-of select="string(.)"/>
@@ -1704,7 +1702,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 3 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1713,7 +1711,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="TARGET_GROUP">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1728,7 +1726,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" padding-right="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-right="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 9 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1737,7 +1735,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" padding-left="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-left="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="PREREQUISITE">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1752,7 +1750,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 10 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1761,7 +1759,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" line-height="111%" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="COURSE_METHOD">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1776,7 +1774,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" height="auto" margin-bottom="2pt" margin-left="0pt" margin-right="2pt" margin-top="2pt" padding="3pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" font-weight="bold" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:value-of select="$XML2/Translation-List/Translation[number(ID) = 11 and Language = $language]/Value"/>
 																															</fo:block>
 																														</fo:block>
@@ -1785,7 +1783,7 @@
 																												<fo:table-cell font-family="Verdana" font-size="10pt" padding="2pt" display-align="center">
 																													<fo:block-container overflow="hidden">
 																														<fo:block text-align="left">
-																															<fo:block font-size="10pt" line-height="12pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+																															<fo:block font-size="10pt" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 																																<xsl:for-each select="COURSE_LEVEL">
 																																	<altova:inline-container-substitute>
 																																		<xsl:apply-templates/>
@@ -1815,7 +1813,7 @@
 															<fo:block-container overflow="hidden">
 																<fo:block text-align="left">
 																	<xsl:if test="fn:count(fn:distinct-values(DATE-LIST/DATE[@id &gt; 0]/@id) )&gt; 0">
-																		<fo:block color="#618f05" font-size="14pt" font-weight="bold" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+																		<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-top="0pt" padding-top="0pt" text-align="left" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 																			<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Dates.png&apos;"/>
 																			<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 																				<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1890,8 +1888,8 @@
 																			<xsl:with-param name="outputType" select="$SV_OutputFormat "/>
 																			<xsl:with-param name="validCities" select='string-join(fn:distinct-values($XML4/LOCATION-LIST/COUNTRY-LIST/COUNTRY/CITY-LIST/CITY[GROUP-LIST/GROUP_ID = fn:tokenize($locationGroups, ",")]/fn:string(NAME)), ",")'/>
 																		</xsl:call-template>
-																		<fo:block font-size="0.13in" line-height="171%" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
-																			<fo:block font-size="10pt" line-height="normal" margin="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
+																		<fo:block font-size="0.13in" line-height="171%" margin-top="0pt" padding-top="0pt" text-align="right" width="100%" margin-right="100% - 100%" space-before="0" space-after="0" margin="0pt">
+																			<fo:block font-size="10pt" line-height="normal" margin="0pt" margin-top="0pt" padding-top="0pt" text-align="right" width="100%" margin-right="0pt + 100% - 100%">
 																				<xsl:choose>
 																					<xsl:when test="$language = &apos;en&apos;">
 																						<fo:inline>
@@ -1915,8 +1913,8 @@
 											</fo:table>
 										</xsl:variable>
 										<xsl:apply-templates select="$altova:table" mode="altova:copy-table"/>
-										<fo:block font-size="0.13in" keep-together.within-page="auto" keep-together.within-column="auto" line-height="171%" margin-right="5pt + 100% - 100%" space-before="0" space-after="0" margin="0pt">
-											<fo:block color="#618f05" font-size="14pt" font-weight="bold" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
+										<fo:block font-size="0.13in" keep-together.within-page="always" keep-together.within-column="always" line-height="171%" margin-right="5pt + 100% - 100%" margin-top="0pt" padding-top="0pt" space-before="0" space-after="0" margin="0pt">
+											<fo:block color="#618f05" font-size="14pt" font-weight="bold" keep-together.within-page="always" keep-together.within-column="always" margin-top="0pt" padding-top="0pt" margin-right="100% - 100%" space-before="1.12em" space-after="1.12em" margin="0pt">
 												<xsl:variable name="altova:sUrlOrData" select="&apos;../Images/Overview.png&apos;"/>
 												<xsl:variable name="altova:seqWidthHeight" as="xs:integer*">
 													<xsl:choose use-when="function-available('altovaext:get-width-and-height-from-image-data')">
@@ -1985,7 +1983,7 @@
 													</xsl:when>
 												</xsl:choose>
 											</fo:block>
-											<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+											<fo:block font-size="10pt" keep-together.within-page="always" keep-together.within-column="always" line-height="12pt" margin-top="0pt" padding-top="0pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-after="1.12em">
 												<xsl:for-each select="OBJECTIVES">
 													<altova:inline-container-substitute>
 														<xsl:apply-templates/>
@@ -1994,8 +1992,6 @@
 											</fo:block>
 										</fo:block>
 										<xsl:apply-templates select="Module-List"/>
-										<altova:line-break/>
-										<altova:line-break/>
 									</altova:level>
 								</xsl:for-each>
 							</xsl:for-each>
@@ -2282,7 +2278,7 @@
 						<xsl:for-each select="Module">
 							<xsl:if test="fn:position() &gt; 1">
 								<fo:block font-size="10pt" keep-together.within-page="always" keep-together.within-column="always" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
-									<fo:block font-size="12pt" margin-right="100% - 100%" font-weight="bold" space-before="1.5em" space-after="1.5em" margin="0pt">
+									<fo:block font-size="12pt" keep-together.within-page="always" keep-together.within-column="always" margin-right="100% - 100%" font-weight="bold" space-before="1.5em" space-after="1.5em" margin="0pt">
 										<xsl:for-each select="Order">
 											<altova:inline-container-substitute keep-together.within-page="always" keep-together.within-column="always">
 												<xsl:apply-templates/>
@@ -2297,7 +2293,7 @@
 											</altova:inline-container-substitute>
 										</xsl:for-each>
 									</fo:block>
-									<fo:block font-size="10pt" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
+									<fo:block font-size="10pt" keep-together.within-page="always" keep-together.within-column="always" line-height="12pt" text-align="justify" margin-right="100% - 100%" margin="0pt" space-before="1.12em" space-after="1.12em">
 										<xsl:if test="count(Length) != 0">
 											<fo:inline>
 												<xsl:text>(</xsl:text>
