@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" escape-uri-attributes="yes"/>	
 	
 	<xsl:attribute-set name="tableBorder">
 		<xsl:attribute name="border">1pt black solid</xsl:attribute>		
@@ -55,18 +55,54 @@
 
 <xsl:copy-of select="$test"/>
 	</xsl:template-->
+	<xsl:template name="cityThumbnail">
+		<xsl:param name="city"/>
+		<xsl:param name="outputType"/>
+		<xsl:choose>
+			<xsl:when test="$outputType = 'PDF'">
+			<fo:block>
+				<fo:inline float="left"><fo:external-graphic width=".63in" height=".55in" content-width="scale-to-fit" content-height="scale-to-fit" scaling="non-uniform">
+				
+				
+					<xsl:attribute name="src">
+    			<xsl:value-of select="concat('../Images/Comelio_', $city, '.png')"/>
+    		</xsl:attribute>
+				</fo:external-graphic>
+				</fo:inline>
+				<fo:inline>
+				<xsl:value-of select="$city"/>
+				</fo:inline>
+			</fo:block>
+			
+			</xsl:when>
+			<xsl:when test="$outputType = 'HTML'">
+			<div>
+				<img display="inline" float="left" class="cityThumbnail">
+				
+				<xsl:attribute name="src">
+    			<xsl:value-of select="concat('../Images/Comelio_', $city, '.png')"/>
+    		</xsl:attribute>
+				</img>
+				<xsl:value-of select="$city"/>
+				</div>
+				
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template name="OutputCalendar">
 	
 		<xsl:param name="pDateList"/>	
 		<xsl:param name="language"/>
+		<xsl:param name="validCities"/>
 		<xsl:param name="outputType"/>
+		
 		<xsl:choose>
 			<xsl:when test="$outputType = 'PDF'">
 		<xsl:variable name="firstCity" select="$pDateList/DATE[1]/CITY"/>	
 		
 		<xsl:for-each select="$pDateList">
 			
-			<xsl:variable name="unsortedCities" select="distinct-values(DATE/CITY)"/>
+			<xsl:variable name="unsortedCities" select="distinct-values(DATE[CITY = tokenize($validCities, ',')]/CITY)"/>
 			<xsl:variable name="cities" as="xs:string *">
 				<xsl:for-each select="$unsortedCities">
 					<xsl:sort select="." data-type="text" order="ascending"/>
@@ -172,27 +208,26 @@
 											</fo:block>
 											<fo:block xsl:use-attribute-sets="dateCell">
 												
-												<fo:inline>
-													<xsl:value-of select="concat(($pDateList/DATE[CITY =  $currentCity])[1]/PRICE/@currencySymbol, ($pDateList/DATE[CITY =$currentCity][1])/PRICE)"/>													
-												</fo:inline>
-												<fo:inline vertical-align="super" font-size="4pt">*</fo:inline>
+												
+													<xsl:value-of select="concat( ($pDateList/DATE[CITY =$currentCity][1])/PRICE, ' ', ($pDateList/DATE[CITY =  $currentCity])[1]/PRICE/@currencyCode)"/>					
+												
 											</fo:block>
 											<fo:block xsl:use-attribute-sets="dateCell">
-												<xsl:for-each select="$pDateList/DATE[CITY =$currentCity]">
+												<xsl:for-each select="$pDateList/DATE[CITY =$currentCity][position() le 4]">
 													<fo:block>
 													<xsl:choose>
 														<xsl:when test="year-from-date(START_DATE) = year-from-date(END_DATE)">
 															<xsl:choose>									
 																<xsl:when test="month-from-date(START_DATE) = month-from-date(END_DATE)">
-																	<xsl:value-of select="concat(format-date(START_DATE, '[D]'), '-', format-date(END_DATE, '[D] [MNn,1-1]', $language, (), ()))"/>								
+																	<xsl:value-of select="concat(format-date(START_DATE, '[D, 2-2]'), '-', format-date(END_DATE, '[D, 2-2] [MNn,1-1]', $language, (), ()))"/>								
 																</xsl:when>
 																<xsl:otherwise>
-																	<xsl:value-of select="concat(format-date(START_DATE, '[D] [MNn,1-1]', $language, (), ()), ' - ', format-date(END_DATE,'[D] [MNn,1-1]', $language, (), ()))"/>	
+																	<xsl:value-of select="concat(format-date(START_DATE, '[D, 2-2] [MNn,1-1]', $language, (), ()), ' - ', format-date(END_DATE,'[D, 2-2] [MNn,1-1]', $language, (), ()))"/>	
 																</xsl:otherwise>
 															</xsl:choose>
 														</xsl:when>
 														<xsl:otherwise>
-															<xsl:value-of select="concat(format-date(START_DATE, '[D] [MNn,1-1]', $language, (), ()), ' - ', format-date(END_DATE,'[D] [MNn,1-1]', $language, (), ()))"/>	
+															<xsl:value-of select="concat(format-date(START_DATE, '[D, 2-2] [MNn,1-1]', $language, (), ()), ' - ', format-date(END_DATE,'[D, 2-2] [MNn,1-1]', $language, (), ()))"/>	
 														</xsl:otherwise>								
 													</xsl:choose>
 													</fo:block>
@@ -316,7 +351,7 @@
 												<div class="inline super">*</div>
 											</div>
 											<div class="dateCell">
-												<xsl:for-each select="$pDateList/DATE[CITY =$currentCity]">
+												<xsl:for-each select="$pDateList/DATE[CITY =$currentCity][position() le 4]">
 													<div>
 													<xsl:choose>
 														<xsl:when test="year-from-date(START_DATE) = year-from-date(END_DATE)">

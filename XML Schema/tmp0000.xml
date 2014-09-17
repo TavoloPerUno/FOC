@@ -1,0 +1,3510 @@
+<?xml-stylesheet type="text/xsl" href="..\XSLT\Catalog_ByTitle.xsl"?>
+<?altova_xslfo ..\XSLT\Catalog_ByTitle.xsl?>
+<COURSE-LIST>
+  <COURSE id="2021781" languageId="1" language="de" deliveryType="Online">
+    <TITLE>MS Visual Studio 2010</TITLE>
+    <SUBTITLE>Neue Features in Visual Studio 2010 und C# 4.0</SUBTITLE>
+    <SHORT_TITLE>Neue Features in Visual Studio 2010 und C# 4.0</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="7">Programmierung</SUBCATEGORY>
+    <PREREQUISITE id="645">Grundkenntnisse des objektorientierten programmierens</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="255">Developers, IT Professionals</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Version 4.0 der Programmiersprache C# ist Bestandteil des neuen Visual Studio 2010 und des .NET Framework 4. Der Fokus in diesem Seminar liegt auf dem Umgang mit dynamischen Sprachkonstrukten. Lernen Sie, wie Ihnen C# 4.0 die Arbeit mit dynamischen Konstrukten erleichtert und wie Sie einfacher COM-Objekte in .NET einsetzen können.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Dynamische Erweiterungen (Dynamic Language Runtime – DLR)</Title>
+        <Synopsis>Schlüsselwort Dynamic – Klasse DynamicObject – Interface DynamicObject</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Verbesserungen bei Parametern</Title>
+        <Synopsis>optionale Parameter – benannte Parameter – Hinweis auf Fallstricke bei optionalen Parametern</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Co- und Kontra-Varianz</Title>
+        <Synopsis>für Delegates – für generische Mengen: IEnumerable &lt;out T&gt;, Rückgabe anonymer Typen durch Funktionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Code Contracts</Title>
+        <Synopsis>Vorbedingungen – Nachbedingungen – Invarianten – Prüfung zur Kompilierzeit – Prüfung zur Laufzeit</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Nuget</Title>
+        <Synopsis>Grundlagen – Interessante Nuget Packete: ELMAH (Error Logging Modules and Handlers), Glimpse ("what Firebug is to debugging your client side code, Glimpse is to debugging your server within the client"), Ninject (Dependency Injection)</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="84" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Programmierung/MS_Visual_Studio_2010-Neue_Features_in_Visual_Studio_2010_und_C%23_4.0</URL>
+    <DATE-LIST>
+      <DATE id="850926">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-21</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>1</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">900</PRICE>
+      </DATE>
+      <DATE id="858863">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-21</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>1</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="860451">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-21</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>1</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1200</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1015714" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Oracle 11g</TITLE>
+    <SUBTITLE>Oracle BI Discoverer / Relationale und OLAP-Daten analysieren</SUBTITLE>
+    <SHORT_TITLE>Oracle 11g - Oracle BI Discoverer / Relationale und OLAP-Daten analysieren</SHORT_TITLE>
+    <PREDECESSOR id="393">Oracle 10g - SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="182">Oracle SQL, PL/SQL</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="13">Oracle</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Mit dem Oracle BI Discoverer kann man auf der Basis von OLAP-Würfeln Analysen durchführen und Berichte gestalten. Dabei sind Berichtsparameter,  Diagramme, Ergebnisdarstellungen als Pivot-Tabellen und Interaktivität mit dem OLAP-Würfel Basiselemente, die Sie im Rahmen dieses Seminars anhand von praktischen Übungen kennenlernen.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einfache Berichte</Title>
+        <Length>0.75</Length>
+        <Synopsis>Workbook (Arbeitsmappen) und Worksheets (Arbeitsblätter) - Abfragen - Tabellen und Kreuztabellen - Seitenelemente (Kopfzeilen, Titel, Spalten formatieren, Grafiken) - Ergebnisse sortieren und gruppieren - Aggregate</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Diagramme</Title>
+        <Length>0.25</Length>
+        <Synopsis>Diagrammtypen - Berichte und Diagramme kombinieren</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Komplexe Techniken</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bedingungen und bedingte Formatierungen - OLAP-Operationen: Pivotierung, Drilling und Hyper-Drilling - Statische und dynamische Parameter - Berechnungen - Daten exportieren - Fortgeschrittene Analysen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Administration von Berichten</Title>
+        <Length>0.5</Length>
+        <Synopsis>Scheduling Manager - Batch-Ausführung von Berichten - Workbooks verwalten, veröffentlichen, exportieren</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="46" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/Oracle_11g-Oracle_BI_Discoverer_%2F_Relationale_und_OLAP-Daten_analysieren</URL>
+    <DATE-LIST />
+  </COURSE>
+  <COURSE id="1015712" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Oracle 12c</TITLE>
+    <SUBTITLE>Oracle BI Discoverer / Relationale und OLAP-Daten analysieren</SUBTITLE>
+    <SHORT_TITLE>Oracle 11g - Oracle BI Discoverer / Relationale und OLAP-Daten analysieren</SHORT_TITLE>
+    <PREDECESSOR id="393">Oracle 10g - SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="182">Oracle SQL, PL/SQL</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="13">Oracle</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Mit dem Oracle BI Discoverer kann man auf der Basis von OLAP-Würfeln Analysen durchführen und Berichte gestalten. Dabei sind Berichtsparameter,  Diagramme, Ergebnisdarstellungen als Pivot-Tabellen und Interaktivität mit dem OLAP-Würfel Basiselemente, die Sie im Rahmen dieses Seminars anhand von praktischen Übungen kennenlernen.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einfache Berichte</Title>
+        <Length>0.75</Length>
+        <Synopsis>Workbook (Arbeitsmappen) und Worksheets (Arbeitsblätter) - Abfragen - Tabellen und Kreuztabellen - Seitenelemente (Kopfzeilen, Titel, Spalten formatieren, Grafiken) - Ergebnisse sortieren und gruppieren - Aggregate</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Diagramme</Title>
+        <Length>0.25</Length>
+        <Synopsis>Diagrammtypen - Berichte und Diagramme kombinieren</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Komplexe Techniken</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bedingungen und bedingte Formatierungen - OLAP-Operationen: Pivotierung, Drilling und Hyper-Drilling - Statische und dynamische Parameter - Berechnungen - Daten exportieren - Fortgeschrittene Analysen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Administration von Berichten</Title>
+        <Length>0.5</Length>
+        <Synopsis>Scheduling Manager - Batch-Ausführung von Berichten - Workbooks verwalten, veröffentlichen, exportieren</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="46" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/Oracle_12c-Oracle_BI_Discoverer_%2F_Relationale_und_OLAP-Daten_analysieren</URL>
+    <DATE-LIST>
+      <DATE id="817698">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="819150">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="819705">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="815363">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="818465">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="813555">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="872240">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="872655">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872854">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="813556">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="872241">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="872656">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-18</START_DATE>
+        <END_DATE>2014-12-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872855">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-18</START_DATE>
+        <END_DATE>2014-12-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="872242">
+        <CITY id="5">München</CITY>
+        <START_DATE>2015-01-22</START_DATE>
+        <END_DATE>2015-01-23</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="873088">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-29</START_DATE>
+        <END_DATE>2015-01-30</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="872657">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-02-05</START_DATE>
+        <END_DATE>2015-02-06</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872856">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-02-05</START_DATE>
+        <END_DATE>2015-02-06</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021329" languageId="1" language="de" deliveryType="Online">
+    <TITLE>Oracle 12c</TITLE>
+    <SUBTITLE>OLAP</SUBTITLE>
+    <SHORT_TITLE>Oracle 11g - OLAP</SHORT_TITLE>
+    <PREDECESSOR id="393">Oracle 10g - SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="182">Oracle SQL, PL/SQL</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="13">Oracle</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Auf Basis eines relationalen Datenbankmodells in Oracle 11g lassen sich mit Hilfe des Analytic Workspace Manager 11g (AWM 11g) OLAP-Würfel für die mehrdimensionale Datenanalyse aufbauen. Berichte kann man dann entweder in MS Excel oder mit Hilfe von Oracle Application Express sowie dem Oracle Business Intelligence Discoverer 11g erstellen. Dieses Seminar zeigt die Philosophie und Theorie von OLAP und Data Warehousing, stellt die typischen Datenmodelle für die relationale Datenbank dar und begleitet Sie dann anhand von praktischen Beispielen durch ein vereinfachtes OLAP-Projekt. Sie lernen, OLAP-Würfel mit Measures, Attributen und Hierarchien sowie Berechnungen aufzubauen und zu verwalten.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Multdimensionale Datenstrukturen und OLAP</Title>
+        <Length>0.25</Length>
+        <Synopsis>Oracle OLAP und die Oracle BI / DW Plattform - Architektur eines Data Warehouses und einer OLAP-Lösung - Elemente einer OLAP-Lösung</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>OLAP-Würfel und der Analytic Workspace Manager 11g (AWM 11g)</Title>
+        <Length>0.5</Length>
+        <Synopsis>Dimensionen mit Attributen und Hierarchien - Measures und Berechnungen mit dem  Calculation Builder - Daten laden und auf mehrdimensionale Strukturen mappen</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>SQL-Abfragen für Oracle OLAP Cubes</Title>
+        <Length>0.5</Length>
+        <Synopsis>Cube Views - Berechnungen und Aggregate - Filter - Relationale Daten und OLAP verbinden</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Cube-Organized Materialized Views (Cube MVs)</Title>
+        <Length>0.25</Length>
+        <Synopsis>Cube MV Summary Management - Cube MVs erstellen und verwenden</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>OLAP Cube-Administration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Implementierung von Sicherheit - Leistungssteigerung - Cube-Verwaltung</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="46" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Data_Warehousing/Oracle_12c-OLAP</URL>
+    <DATE-LIST>
+      <DATE id="850291">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>      
+      <DATE id="850292">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>      
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1015713" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Oracle 11g</TITLE>
+    <SUBTITLE>OLAP und Data Warehousing</SUBTITLE>
+    <SHORT_TITLE>Oracle 11g - OLAP</SHORT_TITLE>
+    <PREDECESSOR id="393">Oracle 10g - SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="182">Oracle SQL, PL/SQL</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="13">Oracle</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Auf Basis eines relationalen Datenbankmodells in Oracle 11g lassen sich mit Hilfe des Analytic Workspace Manager 11g (AWM 11g) OLAP-Würfel für die mehrdimensionale Datenanalyse aufbauen. Berichte kann man dann entweder in MS Excel oder mit Hilfe von Oracle Application Express sowie dem Oracle Business Intelligence Discoverer 11g erstellen. Dieses Seminar zeigt die Philosophie und Theorie von OLAP und Data Warehousing, stellt die typischen Datenmodelle für die relationale Datenbank dar und begleitet Sie dann anhand von praktischen Beispielen durch ein vereinfachtes OLAP-Projekt. Sie lernen, OLAP-Würfel mit Measures, Attributen und Hierarchien sowie Berechnungen aufzubauen und zu verwalten.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Multdimensionale Datenstrukturen und OLAP</Title>
+        <Length>0.25</Length>
+        <Synopsis>Oracle OLAP und die Oracle BI / DW Plattform - Architektur eines Data Warehouses und einer OLAP-Lösung - Elemente einer OLAP-Lösung</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>OLAP-Würfel und der Analytic Workspace Manager 11g (AWM 11g)</Title>
+        <Length>0.5</Length>
+        <Synopsis>Dimensionen mit Attributen und Hierarchien - Measures und Berechnungen mit dem  Calculation Builder - Daten laden und auf mehrdimensionale Strukturen mappen</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>SQL-Abfragen für Oracle OLAP Cubes</Title>
+        <Length>0.5</Length>
+        <Synopsis>Cube Views - Berechnungen und Aggregate - Filter - Relationale Daten und OLAP verbinden</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Cube-Organized Materialized Views (Cube MVs)</Title>
+        <Length>0.25</Length>
+        <Synopsis>Cube MV Summary Management - Cube MVs erstellen und verwenden</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>OLAP Cube-Administration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Implementierung von Sicherheit - Leistungssteigerung - Cube-Verwaltung</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="46" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/Oracle_11g-OLAP_und_Data_Warehousing</URL>
+    <DATE-LIST>
+      <DATE id="819153">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="819708">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="813560">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="813561">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="873216">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-12</START_DATE>
+        <END_DATE>2015-02-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021634" languageId="1" language="de" deliveryType="Online">
+    <TITLE>Data Mining</TITLE>
+    <SUBTITLE>Mit MS Excel 2010</SUBTITLE>
+    <SHORT_TITLE>Data Mining mit MS Excel 2007</SHORT_TITLE>
+    <PREDECESSOR id="519">MOC 2794 - Designen einer BI Lösung für Unternehmen mit Microsoft SQL Server 2005</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="259">Allgemeine Kenntnisse der Mathematik</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="268">Information Worker, IT Professional</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die SQL Server 2012 Data Mining-Add-Ins für Office 2010 bieten Assistenten und Tools, die die Gewinnung aussagekräftiger Informationen aus Daten erleichtern. Sie helfen Ihnen dabei, in komplexen Daten verborgene Muster und Trends zu erkennen, diese Muster in Diagrammen und interaktiven Viewern darzustellen und aus den so gewonnenen Daten aussagekräftige, farbige Zusammenfassungen zu erstellen, die für Präsentationen und Geschäftsanalysen verwendet werden können. Sie können Korrelationen analysieren und Vorhersagen für Daten ausführen, die in Microsoft Office Excel-Tabellen gespeichert sind. Sie können aber auch Data Mining-Modelle erstellen und vorhandene Modelle ändern, die in einer Instanz von SQL Server Analysis Services (SSAS) gespeichert sind, und die Ergebnisse in Microsoft Office Visio grafisch darstellen. Dieses Seminar führt Verwender von MS Excel in die Verwendung des Data Mining-Add Ins und die Kombination mit MS SQL Server Analysis Services ein und klärt Grundbegriffe der verwendbaren Data Mining-Verfahren.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Data Mining und die Architektur von MS SQL Server und MS Excel</Title>
+        <Length>0.5</Length>
+        <Synopsis>Business Intelligence und Data Mining - Einsatzbereiche von Data Mining – Data Mining-Verfahren in Microsoft SQL Server und MS Excel – Server- und Client-Komponenten: MS SQL Server Analysis Services und Data Mining Add Ins für MS Excel und MS Visio</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Tabellenanalysetools in MS Excel</Title>
+        <Length>0.5</Length>
+        <Synopsis>Wichtige Einflussfaktoren analysieren - Kategorien erkennen - Aus Beispiel füllen - Planung - Ausnahmen hervorheben - Szenarienanalyse - Vorhersagerechner - Warenkorbanalyse</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Data Mining-Modelle aus MS Excel erstellen und verwalten</Title>
+        <Length>0.5</Length>
+        <Synopsis>Datenvorbereitung: Durchsuchen von Daten, Bereinigen von Daten, Beispieldaten - Datenmodellierung: Modell erstellen und Data Mining-Verfahren anwenden - Genauigkeit und Überprüfung: Genauigkeitsdiagramm, Klassifikationsmatrix, Gewinndiagramm, Kreuzvalidierung - Modellverwendung und -verwaltung: Durchsuchen, Dokumentmodell, Abfrage</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Data Mining-Verfahren in MS Excel und MS SQL Server</Title>
+        <Length>0.75</Length>
+        <Synopsis>Klassifizieren mit Entscheidungsbäumen - Cluster Analyse – Assoziationsanalyse – Zeitreihenanalyse – Naive Bayes – Künstliche neuronale Netze – Lineare und logistische Regression</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Abfragen von Data Mining-Modellen und Ergebnissen </Title>
+        <Length>0.5</Length>
+        <Synopsis>Excel-Funktionen für Data Mining: DMPREDICT, DMPREDICTTABLEROW,  DMCONTENTQUERY – DMX (Data Mining Extensions) für Abfrage und Vorhersage in MS Excel und dem MS SQL Server Management  Studio</Synopsis>
+      </Module>
+      <Module>
+        <Order>F</Order>
+        <Title>Data Mining-Vorlagen für MS Visio </Title>
+        <Length>0.25</Length>
+        <Synopsis>Abhängigkeitsnetzwerk - Clusterdiagramm - Entscheidungsstruktur - Regressionsstruktur</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Data_Warehousing/Data_Mining-Mit_MS_Excel_2010</URL>
+    <DATE-LIST>
+      
+      <DATE id="858523">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-01</START_DATE>
+        <END_DATE>2014-09-03</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="860111">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-01</START_DATE>
+        <END_DATE>2014-09-03</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      
+      <DATE id="858522">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-10-13</START_DATE>
+        <END_DATE>2014-10-15</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="860110">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-10-13</START_DATE>
+        <END_DATE>2014-10-15</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      
+      <DATE id="858521">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-24</START_DATE>
+        <END_DATE>2014-11-26</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="860109">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-24</START_DATE>
+        <END_DATE>2014-11-26</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2024707" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Altova MissionKit</TITLE>
+    <SUBTITLE>BPMN mit UModel</SUBTITLE>
+    <SHORT_TITLE>BPMN - Geschäftsprozessmodellierung</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="152">Kenntnisse in der Softwareentwicklung, Projekterfahrung</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="12">OMG</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Business Process Model and Notation (BPMN, engl. Modellierungsnotation für Geschäftsprozesse, früher Business Process Modeling Notation) ist eine grafische Spezifikationssprache in der Wirtschaftsinformatik. Sie stellt Symbole zur Verfügung, mit denen Fach- und Informatikspezialisten Geschäftsprozesse und Arbeitsabläufe (techn.: Workflows) modellieren und dokumentieren können. Dieses Seminar versetzt Sie in die Lage, die BPMN für die Strukturierung und Modellierung von Geschäftsprozessen anzuwenden.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Overview</Title>
+        <Synopsis>BPMN Scope - BPMN Elements - BPMN Diagram Types - Use of Text, Color, Size, and Lines in a Diagram - Flow Object Connection Rules - BPMN Extensibility</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Collaboration</Title>
+        <Synopsis>Basic Collaboration Concepts - Pool and Participant - Message Flow - Conversations - Process within Collaboration - Choreography within Collaboration</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Process</Title>
+        <Synopsis>Basic Process Concepts - Activities - Items and Data - Events - Gateways - Compensation - Lanes - Process Instances, Unmodeled Activities, and Public Processes - Auditing - Monitoring</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Choreography</Title>
+        <Synopsis>Basic Choreography Concepts - Data - Use of BPMN Common Elements - Choreography Activities - Events - Gateways - Choreography within Collaboration</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="21" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/Altova_MissionKit-BPMN_mit_UModel</URL>
+    <DATE-LIST>
+      <DATE id="865016">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865203">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866140">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866247">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865308">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865501">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866036">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865711">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865017">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865204">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866141">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866248">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865309">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-10-23</START_DATE>
+        <END_DATE>2014-10-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865502">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865712">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866037">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865018">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865205">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866142">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866249">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865310">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="873130">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-15</START_DATE>
+        <END_DATE>2015-01-16</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2023682" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Enterprise Architect</TITLE>
+    <SUBTITLE>BPMN und Geschäftsprozessmodellierung</SUBTITLE>
+    <SHORT_TITLE>BPMN - Geschäftsprozessmodellierung</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="152">Kenntnisse in der Softwareentwicklung, Projekterfahrung</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="12">OMG</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Business Process Model and Notation (BPMN, engl. Modellierungsnotation für Geschäftsprozesse, früher Business Process Modeling Notation) ist eine grafische Spezifikationssprache in der Wirtschaftsinformatik. Sie stellt Symbole zur Verfügung, mit denen Fach- und Informatikspezialisten Geschäftsprozesse und Arbeitsabläufe (techn.: Workflows) modellieren und dokumentieren können. Dieses Seminar versetzt Sie in die Lage, die BPMN für die Strukturierung und Modellierung von Geschäftsprozessen anzuwenden.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Overview</Title>
+        <Synopsis>BPMN Scope - BPMN Elements - BPMN Diagram Types - Use of Text, Color, Size, and Lines in a Diagram - Flow Object Connection Rules - BPMN Extensibility</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Collaboration</Title>
+        <Synopsis>Basic Collaboration Concepts - Pool and Participant - Message Flow - Conversations - Process within Collaboration - Choreography within Collaboration</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Process</Title>
+        <Synopsis>Basic Process Concepts - Activities - Items and Data - Events - Gateways - Compensation - Lanes - Process Instances, Unmodeled Activities, and Public Processes - Auditing - Monitoring</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Choreography</Title>
+        <Synopsis>Basic Choreography Concepts - Data - Use of BPMN Common Elements - Choreography Activities - Events - Gateways - Choreography within Collaboration</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="21" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/Enterprise_Architect-BPMN_und_Gesch%E4ftsprozessmodellierung</URL>
+    <DATE-LIST>
+      <DATE id="869777">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="870369">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="815500">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="869008">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="869778">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="870370">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871168">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="872308">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-23</START_DATE>
+        <END_DATE>2014-10-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="869779">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="870371">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871169">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="869009">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="872309">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-18</START_DATE>
+        <END_DATE>2014-12-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="869780">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-01-22</START_DATE>
+        <END_DATE>2015-01-23</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="870372">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2015-01-22</START_DATE>
+        <END_DATE>2015-01-23</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871170">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-01-22</START_DATE>
+        <END_DATE>2015-01-23</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="869010">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-29</START_DATE>
+        <END_DATE>2015-01-30</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="872310">
+        <CITY id="5">München</CITY>
+        <START_DATE>2015-02-05</START_DATE>
+        <END_DATE>2015-02-06</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2024717" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>BPMN</TITLE>
+    <SUBTITLE>Business Process Model and Notation mit Enterprise Architect</SUBTITLE>
+    <SHORT_TITLE>BPMN - Geschäftsprozessmodellierung</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="152">Kenntnisse in der Softwareentwicklung, Projekterfahrung</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="12">OMG</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Business Process Model and Notation (BPMN, engl. Modellierungsnotation für Geschäftsprozesse, früher Business Process Modeling Notation) ist eine grafische Spezifikationssprache in der Wirtschaftsinformatik. Sie stellt Symbole zur Verfügung, mit denen Fach- und Informatikspezialisten Geschäftsprozesse und Arbeitsabläufe (techn.: Workflows) modellieren und dokumentieren können. Dieses Seminar versetzt Sie in die Lage, die BPMN für die Strukturierung und Modellierung von Geschäftsprozessen anzuwenden.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Overview</Title>
+        <Synopsis>BPMN Scope - BPMN Elements - BPMN Diagram Types - Use of Text, Color, Size, and Lines in a Diagram - Flow Object Connection Rules - BPMN Extensibility</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Collaboration</Title>
+        <Synopsis>Basic Collaboration Concepts - Pool and Participant - Message Flow - Conversations - Process within Collaboration - Choreography within Collaboration</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Process</Title>
+        <Synopsis>Basic Process Concepts - Activities - Items and Data - Events - Gateways - Compensation - Lanes - Process Instances, Unmodeled Activities, and Public Processes - Auditing - Monitoring</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Choreography</Title>
+        <Synopsis>Basic Choreography Concepts - Data - Use of BPMN Common Elements - Choreography Activities - Events - Gateways - Choreography within Collaboration</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="21" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/BPMN-Business_Process_Model_and_Notation_mit_Enterprise_Architect</URL>
+    <DATE-LIST>
+      <DATE id="865740">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866057">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865334">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866167">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866274">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865044">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865231">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865530">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865741">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-23</START_DATE>
+        <END_DATE>2014-10-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865335">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866168">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866275">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865232">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865045">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="866058">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865531">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865742">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="873133">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-08</START_DATE>
+        <END_DATE>2015-01-09</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="873134">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2024713" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>BPMN</TITLE>
+    <SUBTITLE>Notation und Konzepte</SUBTITLE>
+    <SHORT_TITLE>BPMN - Geschäftsprozessmodellierung</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="152">Kenntnisse in der Softwareentwicklung, Projekterfahrung</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="12">OMG</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Business Process Model and Notation (BPMN, engl. Modellierungsnotation für Geschäftsprozesse, früher Business Process Modeling Notation) ist eine grafische Spezifikationssprache in der Wirtschaftsinformatik. Sie stellt Symbole zur Verfügung, mit denen Fach- und Informatikspezialisten Geschäftsprozesse und Arbeitsabläufe (techn.: Workflows) modellieren und dokumentieren können. Dieses Seminar versetzt Sie in die Lage, die BPMN für die Strukturierung und Modellierung von Geschäftsprozessen anzuwenden.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Overview</Title>
+        <Synopsis>BPMN Scope - BPMN Elements - BPMN Diagram Types - Use of Text, Color, Size, and Lines in a Diagram - Flow Object Connection Rules - BPMN Extensibility</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Collaboration</Title>
+        <Synopsis>Basic Collaboration Concepts - Pool and Participant - Message Flow - Conversations - Process within Collaboration - Choreography within Collaboration</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Process</Title>
+        <Synopsis>Basic Process Concepts - Activities - Items and Data - Events - Gateways - Compensation - Lanes - Process Instances, Unmodeled Activities, and Public Processes - Auditing - Monitoring</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Choreography</Title>
+        <Synopsis>Basic Choreography Concepts - Data - Use of BPMN Common Elements - Choreography Activities - Events - Gateways - Choreography within Collaboration</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="21" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/BPMN-Notation_und_Konzepte</URL>
+    <DATE-LIST>
+      <DATE id="865518">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865728">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865034">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="866048">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866158">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866265">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865221">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865326">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865519">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865729">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865035">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-23</START_DATE>
+        <END_DATE>2014-10-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865222">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866159">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866266">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865327">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866049">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865520">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865730">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865036">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="873247">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-12</START_DATE>
+        <END_DATE>2015-02-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2024714" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>BPMN</TITLE>
+    <SUBTITLE>Business Process Model and Notation mit Altova UModel</SUBTITLE>
+    <SHORT_TITLE>BPMN - Geschäftsprozessmodellierung</SHORT_TITLE>
+    <PREDECESSOR id="1203" />
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="152">Kenntnisse in der Softwareentwicklung, Projekterfahrung</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="12">OMG</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Die Business Process Model and Notation (BPMN, engl. Modellierungsnotation für Geschäftsprozesse, früher Business Process Modeling Notation) ist eine grafische Spezifikationssprache in der Wirtschaftsinformatik. Sie stellt Symbole zur Verfügung, mit denen Fach- und Informatikspezialisten Geschäftsprozesse und Arbeitsabläufe (techn.: Workflows) modellieren und dokumentieren können. Dieses Seminar versetzt Sie in die Lage, die BPMN für die Strukturierung und Modellierung von Geschäftsprozessen anzuwenden.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Overview</Title>
+        <Synopsis>BPMN Scope - BPMN Elements - BPMN Diagram Types - Use of Text, Color, Size, and Lines in a Diagram - Flow Object Connection Rules - BPMN Extensibility</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Collaboration</Title>
+        <Synopsis>Basic Collaboration Concepts - Pool and Participant - Message Flow - Conversations - Process within Collaboration - Choreography within Collaboration</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Process</Title>
+        <Synopsis>Basic Process Concepts - Activities - Items and Data - Events - Gateways - Compensation - Lanes - Process Instances, Unmodeled Activities, and Public Processes - Auditing - Monitoring</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Choreography</Title>
+        <Synopsis>Basic Choreography Concepts - Data - Use of BPMN Common Elements - Choreography Activities - Events - Gateways - Choreography within Collaboration</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="21" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/BPMN-Business_Process_Model_and_Notation_mit_Altova_UModel</URL>
+    <DATE-LIST>
+      <DATE id="865524">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865734">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866052">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865040">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865330">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865226">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866163">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866270">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865525">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865735">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866053">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-10-23</START_DATE>
+        <END_DATE>2014-10-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="865041">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-06</START_DATE>
+        <END_DATE>2014-11-07</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865227">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="866164">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="866271">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="865331">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865526">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="865736">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="866054">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="873131">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-08</START_DATE>
+        <END_DATE>2015-01-09</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="873132">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021802" languageId="1" language="de" deliveryType="Online">
+    <TITLE>Ontologien</TITLE>
+    <SUBTITLE>Ontologien mit Protégé</SUBTITLE>
+    <SHORT_TITLE>Protégé</SHORT_TITLE>
+    <PREDECESSOR id="207">XML - Kurzüberblick</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="14">Allgemeine XML-Kentnnisse</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="19">W3C</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Protégé ist ein Editor zur Modellierung von Ontologien, der an der Stanford University entwickelt wurde. Das im Seminar vorgestellte Protégé-OWL beruht auf der Web Ontology Language (OWL), dem Standard zur Ontologie-Erstellung innerhalb des Semantic Web. Teilnehmer des Protégé-Seminars lernen , mit Hilfe des Tools OWL-Ontologien zu erstellen, zu validieren und mit der SPARQL-Abfragesprache abzufragen. Verschiedene Plugins für die grafische Darstellung, Import/Export und die praktische Verwendung von OWL-Ontologien werden anhand von praktischen Beispielen vorgestellt.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>OWL-Ontologien mit Protége</Title>
+        <Length>0.75</Length>
+        <Synopsis>Klassen und Klassen-Hierarchien - Eigenschaften und Hierarchien - Beziehungen - Instanzen - Validierung und Inkonsistenzen – Verwaltung von OWL-Ontologien in Protégé</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Abfrage von OWL-Ontologien</Title>
+        <Length>0.5</Length>
+        <Synopsis>Einführung in SPARQL – Abfragen mit OWL2Query – Formulierung von einfachen und komplexen Abfragen</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Visualisierung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Hierarchiedarstellung mit OWLViz – Darstellung von Beziehungen mit OntoGraf - Netzdarstellung mit NavigOWL – Ontologie-Visualisierung mit SOVA</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Reasoning in Protégé</Title>
+        <Length>0.25</Length>
+        <Synopsis>Reasoning und Inferenz mit HermiT - Differenzen zwischen Ontologien mit LogDiffViz finden -  </Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Import und Export</Title>
+        <Length>0.25</Length>
+        <Synopsis>UML-Export mit OWL2UML – Dokumentation mit OWLDoc - </Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="119" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Softwaredesign/Ontologien-Ontologien_mit_Prot%E9g%E9</URL>
+    <DATE-LIST>
+      <DATE id="850978">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="858916">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="860504">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="850979">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="858915">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="860503">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1010487" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>Ontologien</TITLE>
+    <SUBTITLE>Ontologien mit Protégé</SUBTITLE>
+    <SHORT_TITLE>Protégé</SHORT_TITLE>
+    <PREDECESSOR id="207">XML - Kurzüberblick</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="9">Softwaredesign</SUBCATEGORY>
+    <PREREQUISITE id="14">Allgemeine XML-Kentnnisse</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="104">Projektleiter, Systemanalytiker, Programmierer, Entwickler, Berater</TARGET_GROUP>
+    <MANUFACTURER id="19">W3C</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Protégé ist ein Editor zur Modellierung von Ontologien, der an der Stanford University entwickelt wurde. Das im Seminar vorgestellte Protégé-OWL beruht auf der Web Ontology Language (OWL), dem Standard zur Ontologie-Erstellung innerhalb des Semantic Web. Teilnehmer des Protégé-Seminars lernen , mit Hilfe des Tools OWL-Ontologien zu erstellen, zu validieren und mit der SPARQL-Abfragesprache abzufragen. Verschiedene Plugins für die grafische Darstellung, Import/Export und die praktische Verwendung von OWL-Ontologien werden anhand von praktischen Beispielen vorgestellt.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>OWL-Ontologien mit Protége</Title>
+        <Length>0.75</Length>
+        <Synopsis>Klassen und Klassen-Hierarchien - Eigenschaften und Hierarchien - Beziehungen - Instanzen - Validierung und Inkonsistenzen – Verwaltung von OWL-Ontologien in Protégé</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Abfrage von OWL-Ontologien</Title>
+        <Length>0.5</Length>
+        <Synopsis>Einführung in SPARQL – Abfragen mit OWL2Query – Formulierung von einfachen und komplexen Abfragen</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Visualisierung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Hierarchiedarstellung mit OWLViz – Darstellung von Beziehungen mit OntoGraf - Netzdarstellung mit NavigOWL – Ontologie-Visualisierung mit SOVA</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Reasoning in Protégé</Title>
+        <Length>0.25</Length>
+        <Synopsis>Reasoning und Inferenz mit HermiT - Differenzen zwischen Ontologien mit LogDiffViz finden -  </Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Import und Export</Title>
+        <Length>0.25</Length>
+        <Synopsis>UML-Export mit OWL2UML – Dokumentation mit OWLDoc - </Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="119" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Softwaredesign/Ontologien-Ontologien_mit_Prot%E9g%E9</URL>
+    <DATE-LIST>
+      <DATE id="812946">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-21</START_DATE>
+        <END_DATE>2014-08-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865914">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-08-28</START_DATE>
+        <END_DATE>2014-08-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="815663">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="815196">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-11</START_DATE>
+        <END_DATE>2014-09-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="817380">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="870402">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="872573">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872786">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="812947">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865915">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-10-16</START_DATE>
+        <END_DATE>2014-10-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="870403">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-11-13</START_DATE>
+        <END_DATE>2014-11-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871572">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="872574">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872787">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-20</START_DATE>
+        <END_DATE>2014-11-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="812948">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="865916">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="870404">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2015-01-08</START_DATE>
+        <END_DATE>2015-01-09</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="872575">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-01-08</START_DATE>
+        <END_DATE>2015-01-09</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872788">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-01-08</START_DATE>
+        <END_DATE>2015-01-09</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="871573">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2015-01-15</START_DATE>
+        <END_DATE>2015-01-16</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="873024">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-22</START_DATE>
+        <END_DATE>2015-01-23</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="870405">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="872576">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="872789">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2022783" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>MS SQL Server 2012</TITLE>
+    <SUBTITLE>Business Intelligence mit Tabular Model</SUBTITLE>
+    <SHORT_TITLE>MS SQL Server 2012 - Business Intelligence mit Tabular Model</SHORT_TITLE>
+    <PREDECESSOR id="1266">MOC 10774 - Querying Microsoft SQL Server 2012</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Tabellarische Modelle (Tabular Models) stellen in Analysis Services Datenbanken im Arbeitsspeicher dar. Dabei werden Komprimierungsalgorithmen verwendet, um Berichte mit Microsoft Excel und Microsoft Power View erstellen zu können. Tabellarische Modelle unterstützen den Datenzugriff in zwei Modi: im Modus mit Zwischenspeicherung und im DirectQuery-Modus. Sie können Daten aus mehreren Quellen importieren und das Modell erweitern, indem Sie Beziehungen, berechnete Spalten, Measures, KPIs und Hierarchien hinzufügen. Bereitgestellte Modelle können genauso wie mehrdimensionale Modelle in SQL Server Management Studio verwaltet werden. Sie können partitioniert werden, um die Verarbeitung zu optimieren, und durch die Verwendung der rollenbasierten Sicherheit bis auf Zeilenebene gesichert werden. Dieses Seminar zeigt Ihnen, wie sie im Tabular Model Datenbanken für komplexe Berichtserstellung aufbauen. </OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Length>0,5 Tage</Length>
+        <Title>Tabular Model-Einführung</Title>
+        <Synopsis>Tabellen-Modell-Designer - Arbeitsbereichsdatenbank - Tabellenmodellprojekte und Projektvorlagen - Datenquellen  - DirectQuery-Modus - Eigenschaften von Arbeitsbereichsdatenbanken - Verwenden von SSMS zur Verwaltung von Arbeitsbereichsdatenbanken</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Length>0,5 Tage</Length>
+        <Title>Modellierung</Title>
+        <Synopsis>Berechnungen - Measures einrichten - KPIs definieren - Hierarchien aufbauen - DAX - Hinzufügen von Spalten zu einer Tabelle - Berechnete Spalten - Filtern und Sortieren von Daten - Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen - Anlegen, löschen und ändern von Tabellen und Spalten im Tabular Model</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Length>0,25 Tage</Length>
+        <Title>Fortgeschrittene Modellierung</Title>
+        <Synopsis>Partitionen: Verarbeitung von Partitionen - Partitionen in der Arbeitsbereichsdatenbank des Modells - Partitionen in der Datenbank eines bereitgestellten Modells - Perspektiven: Erstellen und Verwalten von Perspektiven</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Length>0,25 Tage</Length>
+        <Title>Sicherheit</Title>
+        <Synopsis>Rollenkonzept - Grundlegendes zu Rollen - Berechtigungen - Zeilenfilter - Dynamische Sicherheit - Testen von Rollen </Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Length>0,5</Length>
+        <Title>Berichte und Bereitstellung</Title>
+        <Synopsis>Analysieren in Excel - Bereitstellung von Tabellenmodelllösungen</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="122" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/MS_SQL_Server_2012-Business_Intelligence_mit_Tabular_Model</URL>
+    <DATE-LIST>
+      <DATE id="813936">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-04</START_DATE>
+        <END_DATE>2014-09-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="817891">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-09-18</START_DATE>
+        <END_DATE>2014-09-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1050</PRICE>
+      </DATE>
+      <DATE id="870307">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871089">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="871159">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-25</START_DATE>
+        <END_DATE>2014-09-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="871811">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-10-09</START_DATE>
+        <END_DATE>2014-10-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="813937">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-27</START_DATE>
+        <END_DATE>2014-11-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+      <DATE id="871090">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="871160">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-04</START_DATE>
+        <END_DATE>2014-12-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="870308">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-12-11</START_DATE>
+        <END_DATE>2014-12-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871812">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-12-18</START_DATE>
+        <END_DATE>2014-12-19</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871091">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-02-05</START_DATE>
+        <END_DATE>2015-02-06</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1150</PRICE>
+      </DATE>
+      <DATE id="871161">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-02-05</START_DATE>
+        <END_DATE>2015-02-06</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1350</PRICE>
+      </DATE>
+      <DATE id="870309">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2015-02-12</START_DATE>
+        <END_DATE>2015-02-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="871813">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2015-02-19</START_DATE>
+        <END_DATE>2015-02-20</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1100</PRICE>
+      </DATE>
+      <DATE id="873122">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-26</START_DATE>
+        <END_DATE>2015-02-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>2</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1000</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1010321" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>MS SQL Server 2008</TITLE>
+    <SUBTITLE>Analysis Services (SSAS), OLAP und Data Warehousing</SUBTITLE>
+    <SHORT_TITLE>MOC 6234 - Implementing and Maintaining MS SQL Server 2008 Analysis Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Mit den Microsoft SQL Server Analysis Services ist es möglich, OLAP-Würfel und komplexe Datenstrukturen für Data Warehouses zu entwerfen, mit Daten zu füllen. Die Daten eines solchen Würfels lassen sich in MS Excel, in eigenen Anwendungen mit Hilfe von MDX-Abfragen oder mit den Reporting Services verwenden. Dieses SQL Server-Seminar zeigt Ihnen, wie Sie eine Data Warehouse-Datenbanken mit Dimensions- und Faktentabellen aufbauen, daraus OLAP-Cubes ableiten und diese mit Dimensionen, Hierarchien und Measures füllen. Danach lernen die Teilnehmer, wie Sie eine Analysis Services-Lösung bereitstellen und auf dem Server verwalten.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in SQL Server Analysis Services (SSAS)</Title>
+        <Length>0.125</Length>
+        <Synopsis>Grundlagen Data Warehousing und OLAP - Typische DW-Datenmodelle - Architektur und Tools von SSAS - Vorgehensweise und Lebenszyklus einer Data Warehouse-Lösung mit MS SQL Server</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Erstellen einer multidimensionalen Analysis Services-Lösung</Title>
+        <Length>0.125</Length>
+        <Synopsis>Business Intelligence Development Studio (BIDS) - Designer und Wizards - Datenquellen und -sichten - Allgemeine Vorgehensweise bei der Cube-Erstellung, -Aufbereitung und -Anzeige</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Arbeiten mit Dimensionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Erstellung von Dimensionen - Hierarchien und Aggregierung - Sortierung und Gruppierung - Typologie von Dimensionen: Zeit, Währung, Sprache - Gültigkeiten bei Dimensionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Arbeiten mit Measures und Measuregruppen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Konfiguration - Darstellung - Multidimensional Expression (MDX) und Measures - Aggregation - Speichermodelle (HOLAP, MOLAP, ROLAP)</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Abfragen von Cubes mit MDX und MS Excel</Title>
+        <Length>0.25</Length>
+        <Synopsis>Grundlagen MDX - Nutzung von MDX in MS SQL Server Management Studio - Verwendung von MS Excel als OLAP-Werkzeug</Synopsis>
+      </Module>
+      <Module>
+        <Order>F</Order>
+        <Title>Anpassen von Cube-Funktionalitäten</Title>
+        <Length>0.125</Length>
+        <Synopsis>Key Performance Indicators (KPI) - Aktionen und Interaktivität - Perspektiven auf einen Cube - Lokalisierung des Metamodells</Synopsis>
+      </Module>
+      <Module>
+        <Order>G</Order>
+        <Title>Deployment und Sicherheitseinstellungen einer Analysis Services-Datenbank</Title>
+        <Length>0.25</Length>
+        <Synopsis>Techniken zur Bereitstellung im Produktivsystem - Sicherheitsmodell - DB-Rollen - Benutzerrechte - Dimensionssicherheit - XML/A-Skripte generieren, anpassen und verwenden</Synopsis>
+      </Module>
+      <Module>
+        <Order>H</Order>
+        <Title>Verwalten multidimensionaler Lösungen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Konfiguration und Tools zur Ablaufsteuerung - SQL Server Integration Services (SSIS) - Monitoring mit SQL Server Profiler zur Leistungsüberwachung und Optimierung</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/MS_SQL_Server_2008-Analysis_Services_%28SSAS%29%2C_OLAP_und_Data_Warehousing</URL>
+    <DATE-LIST>
+      <DATE id="814191">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812115">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="816164">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-08-25</START_DATE>
+        <END_DATE>2014-08-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865566">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-09-01</START_DATE>
+        <END_DATE>2014-09-03</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="815591">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-08</START_DATE>
+        <END_DATE>2014-09-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="815106">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="818827">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="819422">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="812116">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="865829">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-10-06</START_DATE>
+        <END_DATE>2014-10-08</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="865567">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-13</START_DATE>
+        <END_DATE>2014-10-15</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871465">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-10-20</START_DATE>
+        <END_DATE>2014-10-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871868">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-10-27</START_DATE>
+        <END_DATE>2014-10-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812117">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="865568">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-11-24</START_DATE>
+        <END_DATE>2014-11-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="865830">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-12-01</START_DATE>
+        <END_DATE>2014-12-03</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871466">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-12-08</START_DATE>
+        <END_DATE>2014-12-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871869">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="872976">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-12</START_DATE>
+        <END_DATE>2015-01-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="871467">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2015-01-19</START_DATE>
+        <END_DATE>2015-01-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871870">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2015-01-26</START_DATE>
+        <END_DATE>2015-01-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="872977">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-02-23</START_DATE>
+        <END_DATE>2015-02-25</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021440" languageId="1" language="de" deliveryType="Online">
+    <TITLE>MS SQL Server 2008</TITLE>
+    <SUBTITLE>Analysis Services (SSAS), OLAP und Data Warehousing</SUBTITLE>
+    <SHORT_TITLE>MOC 6234 - Implementing and Maintaining MS SQL Server 2008 Analysis Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>Mit den Microsoft SQL Server Analysis Services ist es möglich, OLAP-Würfel und komplexe Datenstrukturen für Data Warehouses zu entwerfen, mit Daten zu füllen. Die Daten eines solchen Würfels lassen sich in MS Excel, in eigenen Anwendungen mit Hilfe von MDX-Abfragen oder mit den Reporting Services verwenden. Dieses SQL Server-Seminar zeigt Ihnen, wie Sie eine Data Warehouse-Datenbanken mit Dimensions- und Faktentabellen aufbauen, daraus OLAP-Cubes ableiten und diese mit Dimensionen, Hierarchien und Measures füllen. Danach lernen die Teilnehmer, wie Sie eine Analysis Services-Lösung bereitstellen und auf dem Server verwalten.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in SQL Server Analysis Services (SSAS)</Title>
+        <Length>0.125</Length>
+        <Synopsis>Grundlagen Data Warehousing und OLAP - Typische DW-Datenmodelle - Architektur und Tools von SSAS - Vorgehensweise und Lebenszyklus einer Data Warehouse-Lösung mit MS SQL Server</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Erstellen einer multidimensionalen Analysis Services-Lösung</Title>
+        <Length>0.125</Length>
+        <Synopsis>Business Intelligence Development Studio (BIDS) - Designer und Wizards - Datenquellen und -sichten - Allgemeine Vorgehensweise bei der Cube-Erstellung, -Aufbereitung und -Anzeige</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Arbeiten mit Dimensionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Erstellung von Dimensionen - Hierarchien und Aggregierung - Sortierung und Gruppierung - Typologie von Dimensionen: Zeit, Währung, Sprache - Gültigkeiten bei Dimensionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Arbeiten mit Measures und Measuregruppen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Konfiguration - Darstellung - Multidimensional Expression (MDX) und Measures - Aggregation - Speichermodelle (HOLAP, MOLAP, ROLAP)</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Abfragen von Cubes mit MDX und MS Excel</Title>
+        <Length>0.25</Length>
+        <Synopsis>Grundlagen MDX - Nutzung von MDX in MS SQL Server Management Studio - Verwendung von MS Excel als OLAP-Werkzeug</Synopsis>
+      </Module>
+      <Module>
+        <Order>F</Order>
+        <Title>Anpassen von Cube-Funktionalitäten</Title>
+        <Length>0.125</Length>
+        <Synopsis>Key Performance Indicators (KPI) - Aktionen und Interaktivität - Perspektiven auf einen Cube - Lokalisierung des Metamodells</Synopsis>
+      </Module>
+      <Module>
+        <Order>G</Order>
+        <Title>Deployment und Sicherheitseinstellungen einer Analysis Services-Datenbank</Title>
+        <Length>0.25</Length>
+        <Synopsis>Techniken zur Bereitstellung im Produktivsystem - Sicherheitsmodell - DB-Rollen - Benutzerrechte - Dimensionssicherheit - XML/A-Skripte generieren, anpassen und verwenden</Synopsis>
+      </Module>
+      <Module>
+        <Order>H</Order>
+        <Title>Verwalten multidimensionaler Lösungen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Konfiguration und Tools zur Ablaufsteuerung - SQL Server Integration Services (SSIS) - Monitoring mit SQL Server Profiler zur Leistungsüberwachung und Optimierung</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Data_Warehousing/MS_SQL_Server_2008-Analysis_Services_%28SSAS%29%2C_OLAP_und_Data_Warehousing</URL>
+    <DATE-LIST>
+      <DATE id="850352">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858292">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859880">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="850353">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-22</START_DATE>
+        <END_DATE>2014-09-24</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858291">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-22</START_DATE>
+        <END_DATE>2014-09-24</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859879">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-22</START_DATE>
+        <END_DATE>2014-09-24</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="850354">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-03</START_DATE>
+        <END_DATE>2014-11-05</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858290">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-03</START_DATE>
+        <END_DATE>2014-11-05</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859878">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-03</START_DATE>
+        <END_DATE>2014-11-05</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="850355">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858289">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859877">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021449" languageId="1" language="de" deliveryType="Online">
+    <TITLE>MS SQL Server 2008</TITLE>
+    <SUBTITLE>Integration Services (SSIS) und ETL</SUBTITLE>
+    <SHORT_TITLE>MOC 6235 - Implementing and Maintaining MS SQL Server 2008 Integration Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>ETL (Extraktion, Transformation, Laden) ist ein zentraler Bestandteil von Business Intelligence und Data Warehousing, da über ETL-Prozesse Daten aus beliebigen Quellen exportiert und dann in das Data Warehouse importiert werden können. Teilnehmer dieses Kurses lernen, eine MS SQL Server Integration Services-Lösung für ETL-Module zu erstellen, zu verwalten und als eigenständige Anwendung zu nutzen oder in eine bestehende Anwendung zu integrieren. Der Schwerpunkt dieses SQL Server-Seminars liegt dabei auf der Erstellung von ETL-Szenarien und ETL-Paketen für Import-/Export-Szenarien. Doch auch der Einsatz von Integration Services für verschiedene Administrationsaufgaben im MS SQL Server wird gezeigt. Danach lernen die Teilnehmer, wie sie diese Integration Services-Pakete bereitstellen und eine MS SQL Server Integration Services-Lösung verwalten können. Weitere Themen sind Sicherheit und anspruchsvolle Lösungsanforderungen wie Transaktionen und Fehlerbehandlung.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in die SQL Server Integration Services</Title>
+        <Length>0.25</Length>
+        <Synopsis>Überblick und Einsatzbereiche - Phasen von Extract, Transform, Load (ETL) - Werkzeuge und Wizards im Visual Studio</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Entwickeln einer Integration Services-Lösung</Title>
+        <Length>1.25</Length>
+        <Synopsis>Einsatz von Integration Services für Daten-Integration - Struktur von SSIS-Paketen - Control Flow Tasks für gängige Szenarien bei ETL-Prozessen - Precedence Constraints für Reihenfolgen - Transformationen im Data Flow-Task - Debugging mit dem Datenviewer - Fehlerausgaben konfigurieren - Verarbeitung von Datenbank/MS Excel-/Text-/XML-Dateien - SQL-Abfragen als Quelle - Verwendung von Variablen und dynamischen Ausdrücken</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Integration Services für administrative Aufgaben</Title>
+        <Length>0.5</Length>
+        <Synopsis>Administration einer relationalen Datenbank über Integration Services mit Maintenance Tasks und T-SQL - Administration einer Data Warehouse-DB und eines OLAP-Würfels mit Integration Services</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Fehlerbehandlung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Protokollierung: Konfiguration und Verwendung von Logging-Providern,  Log Events, Individuelle Protokollierung - Debugging und Fehlerbehandlung: Breakpoints, Debugger, SSIS Designer und Data Viewer</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Checkpoints und Transaktionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Ablaufüberwachung durch Checkpoints - Einfache und komplexe Transaktionen - Isolation Levels - Native Transaktionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Bereitstellung und Konfiguration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bereitstellung von Paketen: Paketkonfiguration, Deployment und seine Varianten, Deployment Wizard - Paketverwaltung und Sicherheitseinstellungen - Konfiguration und Ausführung von Paketen über Integration Services-Tools - Zeitgesteuerte Durchführung im SQL Server Agent (DB-Jobs) und Paket-Überwachung - Sichern und Wiederherstellen - Sicherheitsstufen</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Data_Warehousing/MS_SQL_Server_2008-Integration_Services_%28SSIS%29_und_ETL</URL>
+    <DATE-LIST>
+      <DATE id="850360">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858298">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859886">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="850361">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858297">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859885">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="850362">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="858296">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="859884">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="2021450" languageId="1" language="de" deliveryType="Online">
+    <TITLE>MS SQL Server 2012</TITLE>
+    <SUBTITLE>Integration Services (SSIS) und ETL</SUBTITLE>
+    <SHORT_TITLE>MOC 6235 - Implementing and Maintaining MS SQL Server 2008 Integration Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>ETL (Extraktion, Transformation, Laden) ist ein zentraler Bestandteil von Business Intelligence und Data Warehousing, da über ETL-Prozesse Daten aus beliebigen Quellen exportiert und dann in das Data Warehouse importiert werden können. Teilnehmer dieses Kurses lernen, eine MS SQL Server Integration Services-Lösung für ETL-Module zu erstellen, zu verwalten und als eigenständige Anwendung zu nutzen oder in eine bestehende Anwendung zu integrieren. Der Schwerpunkt dieses SQL Server-Seminars liegt dabei auf der Erstellung von ETL-Szenarien und ETL-Paketen für Import-/Export-Szenarien. Doch auch der Einsatz von Integration Services für verschiedene Administrationsaufgaben im MS SQL Server wird gezeigt. Danach lernen die Teilnehmer, wie sie diese Integration Services-Pakete bereitstellen und eine MS SQL Server Integration Services-Lösung verwalten können. Weitere Themen sind Sicherheit und anspruchsvolle Lösungsanforderungen wie Transaktionen und Fehlerbehandlung.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in die SQL Server Integration Services</Title>
+        <Length>0.25</Length>
+        <Synopsis>Überblick und Einsatzbereiche - Phasen von Extract, Transform, Load (ETL) - Werkzeuge und Wizards im Visual Studio</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Entwickeln einer Integration Services-Lösung</Title>
+        <Length>1.25</Length>
+        <Synopsis>Einsatz von Integration Services für Daten-Integration - Struktur von SSIS-Paketen - Control Flow Tasks für gängige Szenarien bei ETL-Prozessen - Precedence Constraints für Reihenfolgen - Transformationen im Data Flow-Task - Debugging mit dem Datenviewer - Fehlerausgaben konfigurieren - Verarbeitung von Datenbank/MS Excel-/Text-/XML-Dateien - SQL-Abfragen als Quelle - Verwendung von Variablen und dynamischen Ausdrücken</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Integration Services für administrative Aufgaben</Title>
+        <Length>0.5</Length>
+        <Synopsis>Administration einer relationalen Datenbank über Integration Services mit Maintenance Tasks und T-SQL - Administration einer Data Warehouse-DB und eines OLAP-Würfels mit Integration Services</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Fehlerbehandlung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Protokollierung: Konfiguration und Verwendung von Logging-Providern,  Log Events, Individuelle Protokollierung - Debugging und Fehlerbehandlung: Breakpoints, Debugger, SSIS Designer und Data Viewer</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Checkpoints und Transaktionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Ablaufüberwachung durch Checkpoints - Einfache und komplexe Transaktionen - Isolation Levels - Native Transaktionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Bereitstellung und Konfiguration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bereitstellung von Paketen: Paketkonfiguration, Deployment und seine Varianten, Deployment Wizard - Paketverwaltung und Sicherheitseinstellungen - Konfiguration und Ausführung von Paketen über Integration Services-Tools - Zeitgesteuerte Durchführung im SQL Server Agent (DB-Jobs) und Paket-Überwachung - Sichern und Wiederherstellen - Sicherheitsstufen</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/online-IT-seminare/Data_Warehousing/MS_SQL_Server_2012-Integration_Services_%28SSIS%29_und_ETL</URL>
+    <DATE-LIST>
+      <DATE id="850367">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-08</START_DATE>
+        <END_DATE>2014-09-10</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      
+      <DATE id="850368">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-20</START_DATE>
+        <END_DATE>2014-10-22</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      
+      <DATE id="850369">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-01</START_DATE>
+        <END_DATE>2014-12-03</END_DATE>
+        <START_TIME>09:00</START_TIME>
+        <END_TIME>17:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+     
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1010319" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>MS SQL Server 2008</TITLE>
+    <SUBTITLE>Integration Services (SSIS) und ETL</SUBTITLE>
+    <SHORT_TITLE>MOC 6235 - Implementing and Maintaining MS SQL Server 2008 Integration Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>ETL (Extraktion, Transformation, Laden) ist ein zentraler Bestandteil von Business Intelligence und Data Warehousing, da über ETL-Prozesse Daten aus beliebigen Quellen exportiert und dann in das Data Warehouse importiert werden können. Teilnehmer dieses Kurses lernen, eine MS SQL Server Integration Services-Lösung für ETL-Module zu erstellen, zu verwalten und als eigenständige Anwendung zu nutzen oder in eine bestehende Anwendung zu integrieren. Der Schwerpunkt dieses SQL Server-Seminars liegt dabei auf der Erstellung von ETL-Szenarien und ETL-Paketen für Import-/Export-Szenarien. Doch auch der Einsatz von Integration Services für verschiedene Administrationsaufgaben im MS SQL Server wird gezeigt. Danach lernen die Teilnehmer, wie sie diese Integration Services-Pakete bereitstellen und eine MS SQL Server Integration Services-Lösung verwalten können. Weitere Themen sind Sicherheit und anspruchsvolle Lösungsanforderungen wie Transaktionen und Fehlerbehandlung.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in die SQL Server Integration Services</Title>
+        <Length>0.25</Length>
+        <Synopsis>Überblick und Einsatzbereiche - Phasen von Extract, Transform, Load (ETL) - Werkzeuge und Wizards im Visual Studio</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Entwickeln einer Integration Services-Lösung</Title>
+        <Length>1.25</Length>
+        <Synopsis>Einsatz von Integration Services für Daten-Integration - Struktur von SSIS-Paketen - Control Flow Tasks für gängige Szenarien bei ETL-Prozessen - Precedence Constraints für Reihenfolgen - Transformationen im Data Flow-Task - Debugging mit dem Datenviewer - Fehlerausgaben konfigurieren - Verarbeitung von Datenbank/MS Excel-/Text-/XML-Dateien - SQL-Abfragen als Quelle - Verwendung von Variablen und dynamischen Ausdrücken</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Integration Services für administrative Aufgaben</Title>
+        <Length>0.5</Length>
+        <Synopsis>Administration einer relationalen Datenbank über Integration Services mit Maintenance Tasks und T-SQL - Administration einer Data Warehouse-DB und eines OLAP-Würfels mit Integration Services</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Fehlerbehandlung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Protokollierung: Konfiguration und Verwendung von Logging-Providern,  Log Events, Individuelle Protokollierung - Debugging und Fehlerbehandlung: Breakpoints, Debugger, SSIS Designer und Data Viewer</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Checkpoints und Transaktionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Ablaufüberwachung durch Checkpoints - Einfache und komplexe Transaktionen - Isolation Levels - Native Transaktionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Bereitstellung und Konfiguration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bereitstellung von Paketen: Paketkonfiguration, Deployment und seine Varianten, Deployment Wizard - Paketverwaltung und Sicherheitseinstellungen - Konfiguration und Ausführung von Paketen über Integration Services-Tools - Zeitgesteuerte Durchführung im SQL Server Agent (DB-Jobs) und Paket-Überwachung - Sichern und Wiederherstellen - Sicherheitsstufen</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/MS_SQL_Server_2008-Integration_Services_%28SSIS%29_und_ETL</URL>
+    <DATE-LIST>
+      <DATE id="815097">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812101">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="815583">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-08-25</START_DATE>
+        <END_DATE>2014-08-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865560">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-09-01</START_DATE>
+        <END_DATE>2014-09-03</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="816157">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-09-08</START_DATE>
+        <END_DATE>2014-09-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="814182">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="818817">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="819412">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="865821">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-22</START_DATE>
+        <END_DATE>2014-09-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="812102">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="871670">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-10-06</START_DATE>
+        <END_DATE>2014-10-08</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865561">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-10-13</START_DATE>
+        <END_DATE>2014-10-15</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871334">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-10-20</START_DATE>
+        <END_DATE>2014-10-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865822">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-11-03</START_DATE>
+        <END_DATE>2014-11-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="812103">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="865562">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-11-24</START_DATE>
+        <END_DATE>2014-11-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871671">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-12-01</START_DATE>
+        <END_DATE>2014-12-03</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871335">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-12-08</START_DATE>
+        <END_DATE>2014-12-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865823">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871672">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2015-01-12</START_DATE>
+        <END_DATE>2015-01-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871336">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2015-01-19</START_DATE>
+        <END_DATE>2015-01-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="872974">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-26</START_DATE>
+        <END_DATE>2015-01-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="871673">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2015-02-23</START_DATE>
+        <END_DATE>2015-02-25</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  <COURSE id="1010479" languageId="1" language="de" deliveryType="Classroom">
+    <TITLE>MS SQL Server 2012</TITLE>
+    <SUBTITLE>Integration Services (SSIS) und ETL</SUBTITLE>
+    <SHORT_TITLE>MOC 6235 - Implementing and Maintaining MS SQL Server 2008 Integration Services</SHORT_TITLE>
+    <PREDECESSOR id="1019">MOC 2778 - Writing Queries Using Microsoft SQL Server 2008 Transact-SQL</PREDECESSOR>
+    <CATEGORY id="1">IT</CATEGORY>
+    <SUBCATEGORY id="10">Data Warehousing</SUBCATEGORY>
+    <PREREQUISITE id="301">Grundlagen MS SQL Server</PREREQUISITE>
+    <COURSE_LEVEL id="1">Einsteiger</COURSE_LEVEL>
+    <TARGET_GROUP id="332">Business Intelligence-Entwickler</TARGET_GROUP>
+    <MANUFACTURER id="9">Microsoft</MANUFACTURER>
+    <COURSE_METHOD id="2">Vortrag mit Beispielen und Übungen.</COURSE_METHOD>
+    <OBJECTIVES>ETL (Extraktion, Transformation, Laden) ist ein zentraler Bestandteil von Business Intelligence und Data Warehousing, da über ETL-Prozesse Daten aus beliebigen Quellen exportiert und dann in das Data Warehouse importiert werden können. Teilnehmer dieses Kurses lernen, eine MS SQL Server Integration Services-Lösung für ETL-Module zu erstellen, zu verwalten und als eigenständige Anwendung zu nutzen oder in eine bestehende Anwendung zu integrieren. Der Schwerpunkt dieses SQL Server-Seminars liegt dabei auf der Erstellung von ETL-Szenarien und ETL-Paketen für Import-/Export-Szenarien. Doch auch der Einsatz von Integration Services für verschiedene Administrationsaufgaben im MS SQL Server wird gezeigt. Danach lernen die Teilnehmer, wie sie diese Integration Services-Pakete bereitstellen und eine MS SQL Server Integration Services-Lösung verwalten können. Weitere Themen sind Sicherheit und anspruchsvolle Lösungsanforderungen wie Transaktionen und Fehlerbehandlung.</OBJECTIVES>
+    <Module-List>
+      <Module>
+        <Order>A</Order>
+        <Title>Einführung in die SQL Server Integration Services</Title>
+        <Length>0.25</Length>
+        <Synopsis>Überblick und Einsatzbereiche - Phasen von Extract, Transform, Load (ETL) - Werkzeuge und Wizards im Visual Studio</Synopsis>
+      </Module>
+      <Module>
+        <Order>B</Order>
+        <Title>Entwickeln einer Integration Services-Lösung</Title>
+        <Length>1.25</Length>
+        <Synopsis>Einsatz von Integration Services für Daten-Integration - Struktur von SSIS-Paketen - Control Flow Tasks für gängige Szenarien bei ETL-Prozessen - Precedence Constraints für Reihenfolgen - Transformationen im Data Flow-Task - Debugging mit dem Datenviewer - Fehlerausgaben konfigurieren - Verarbeitung von Datenbank/MS Excel-/Text-/XML-Dateien - SQL-Abfragen als Quelle - Verwendung von Variablen und dynamischen Ausdrücken</Synopsis>
+      </Module>
+      <Module>
+        <Order>C</Order>
+        <Title>Integration Services für administrative Aufgaben</Title>
+        <Length>0.5</Length>
+        <Synopsis>Administration einer relationalen Datenbank über Integration Services mit Maintenance Tasks und T-SQL - Administration einer Data Warehouse-DB und eines OLAP-Würfels mit Integration Services</Synopsis>
+      </Module>
+      <Module>
+        <Order>D</Order>
+        <Title>Fehlerbehandlung</Title>
+        <Length>0.25</Length>
+        <Synopsis>Protokollierung: Konfiguration und Verwendung von Logging-Providern,  Log Events, Individuelle Protokollierung - Debugging und Fehlerbehandlung: Breakpoints, Debugger, SSIS Designer und Data Viewer</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Checkpoints und Transaktionen</Title>
+        <Length>0.25</Length>
+        <Synopsis>Ablaufüberwachung durch Checkpoints - Einfache und komplexe Transaktionen - Isolation Levels - Native Transaktionen</Synopsis>
+      </Module>
+      <Module>
+        <Order>E</Order>
+        <Title>Bereitstellung und Konfiguration</Title>
+        <Length>0.5</Length>
+        <Synopsis>Bereitstellung von Paketen: Paketkonfiguration, Deployment und seine Varianten, Deployment Wizard - Paketverwaltung und Sicherheitseinstellungen - Konfiguration und Ausführung von Paketen über Integration Services-Tools - Zeitgesteuerte Durchführung im SQL Server Agent (DB-Jobs) und Paket-Überwachung - Sichern und Wiederherstellen - Sicherheitsstufen</Synopsis>
+      </Module>
+    </Module-List>
+    <TRAINER id="17" />
+    <URL>http://www.comelio-seminare.com/IT-seminare/Data_Warehousing/MS_SQL_Server_2012-Integration_Services_%28SSIS%29_und_ETL</URL>
+    <DATE-LIST>
+      <DATE id="816507">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="818901">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="819496">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-08-11</START_DATE>
+        <END_DATE>2014-08-13</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="817367">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-08-18</START_DATE>
+        <END_DATE>2014-08-20</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="815177">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-08-25</START_DATE>
+        <END_DATE>2014-08-27</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812905">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-09-08</START_DATE>
+        <END_DATE>2014-09-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="815645">
+        <CITY id="4">Frankfurt</CITY>
+        <START_DATE>2014-09-15</START_DATE>
+        <END_DATE>2014-09-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="870118">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-09-22</START_DATE>
+        <END_DATE>2014-09-24</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865907">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="872564">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="872773">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-09-29</START_DATE>
+        <END_DATE>2014-10-01</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="871944">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-10-06</START_DATE>
+        <END_DATE>2014-10-08</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812906">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-10-20</START_DATE>
+        <END_DATE>2014-10-22</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="871373">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2014-10-27</START_DATE>
+        <END_DATE>2014-10-29</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="870119">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-11-03</START_DATE>
+        <END_DATE>2014-11-05</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="865908">
+        <CITY id="6">Stuttgart</CITY>
+        <START_DATE>2014-11-10</START_DATE>
+        <END_DATE>2014-11-12</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871945">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2014-11-24</START_DATE>
+        <END_DATE>2014-11-26</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="812907">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2014-12-01</START_DATE>
+        <END_DATE>2014-12-03</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="872176">
+        <CITY id="5">München</CITY>
+        <START_DATE>2014-12-08</START_DATE>
+        <END_DATE>2014-12-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="872565">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2014-12-08</START_DATE>
+        <END_DATE>2014-12-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="872774">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2014-12-08</START_DATE>
+        <END_DATE>2014-12-10</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="870120">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2014-12-15</START_DATE>
+        <END_DATE>2014-12-17</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="871374">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2015-01-12</START_DATE>
+        <END_DATE>2015-01-14</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="873187">
+        <CITY id="2">Berlin</CITY>
+        <START_DATE>2015-01-19</START_DATE>
+        <END_DATE>2015-01-21</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1350</PRICE>
+      </DATE>
+      <DATE id="870121">
+        <CITY id="18">Dresden</CITY>
+        <START_DATE>2015-01-26</START_DATE>
+        <END_DATE>2015-01-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="872566">
+        <CITY id="9">Wien</CITY>
+        <START_DATE>2015-01-26</START_DATE>
+        <END_DATE>2015-01-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1600</PRICE>
+      </DATE>
+      <DATE id="872775">
+        <CITY id="10">Zürich</CITY>
+        <START_DATE>2015-01-26</START_DATE>
+        <END_DATE>2015-01-28</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="CHF" currencySymbol="CHF">1850</PRICE>
+      </DATE>
+      <DATE id="871946">
+        <CITY id="3">Hamburg</CITY>
+        <START_DATE>2015-02-02</START_DATE>
+        <END_DATE>2015-02-04</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+      <DATE id="872177">
+        <CITY id="5">München</CITY>
+        <START_DATE>2015-02-09</START_DATE>
+        <END_DATE>2015-02-11</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1450</PRICE>
+      </DATE>
+      <DATE id="871375">
+        <CITY id="15">Düsseldorf</CITY>
+        <START_DATE>2015-02-23</START_DATE>
+        <END_DATE>2015-02-25</END_DATE>
+        <START_TIME>10:00</START_TIME>
+        <END_TIME>16:30</END_TIME>
+        <DURATION>3</DURATION>
+        <PRICE currencyCode="EUR" currencySymbol="€">1500</PRICE>
+      </DATE>
+    </DATE-LIST>
+  </COURSE>
+  </COURSE-LIST>
