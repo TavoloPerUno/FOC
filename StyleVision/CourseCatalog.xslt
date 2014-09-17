@@ -11,11 +11,11 @@
 	<xsl:param name="SV_GeneratedFileNamePrefix" select="if ( $SV_BaseOutputFileName ) then $SV_BaseOutputFileName else &apos;CourseCatalog&apos;" as="xs:string?"/>
 	<xsl:param name="language" select="'de'"/>
 	<xsl:param name="locationGroups" select="'1,2,3'"/>
-	<xsl:param name="XML2" select="'../XML/Translation-List.xml'"/>
+	<xsl:param name="XML2"/>
 	<xsl:variable name="XML" select="/"/>
-	<xsl:param name="XML3" select="'../XML/Number-List.xml'"/>
-	<xsl:param name="XML4" select="'../XML/LocationList.xml'"/>
-	<xsl:param name="XML5" select="'../XML/Country-List.xml'"/>
+	<xsl:param name="XML3"/>
+	<xsl:param name="XML4"/>
+	<xsl:param name="XML5"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Project%20Repositories/FOC/XML%20Schema/Translation-List.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Project%20Repositories/FOC/XML%20Schema/CourseList.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
 	<xsl:import-schema schema-location="file:///C:/Users/Manoradhan%20M/Desktop/Project%20Repositories/FOC/XML%20Schema/Number-List.xsd" use-when="system-property('xsl:is-schema-aware')='yes'"/>
